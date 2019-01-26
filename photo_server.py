@@ -12,10 +12,10 @@ def hello():
 def photo():
     print(request.is_json)
     content = request.get_json()
-    print(type(content))
+    print(content)
     encoded_image = content['data']
-    send_photo_for_analysis(encoded_image)
-    return 'JSON posted'
+    #send_photo_for_analysis(encoded_image)
+    return send_photo_for_analysis(encoded_image)
 
 if __name__ == "__main__":
     app.run()
