@@ -22,7 +22,7 @@ import base64
 
 with open("lesha.jpg", "rb") as image_file:
   encoded_string = image_file.read()
-
+print(base64.b64encode(encoded_string).decode('ascii'))
 parameters_post = {
   "api_key": "d45fd466-51e2-4701-8da8-04351c872236",
   "file_base64":base64.b64encode(encoded_string).decode('ascii'),
