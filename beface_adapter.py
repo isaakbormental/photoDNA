@@ -16,5 +16,6 @@ def send_photo_for_analysis(photo_string):
     zapros = requests.post('http://www.betafaceapi.com/api/v2/media',
                            json=parameters_post,
                            headers={'Content-type': 'application/json'})
+    #print(type(zapros.json()))
+    return str(type(zapros.json()))
     #return json.dumps(zapros.json())
-    return json.loads(zapros.json())
