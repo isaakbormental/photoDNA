@@ -18,4 +18,4 @@ def photo():
     return send_photo_for_analysis(encoded_image)
 
 if __name__ == "__main__":
-    app.run(port=8090)
+    app.run()
