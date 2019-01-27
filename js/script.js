@@ -29,7 +29,7 @@ function sendImg(form) {
         url:form.getAttribute("action"),
         contentType: 'application/json',
         dataType : "json",
-        data:data,
+        data:JSON.stringify(data),
         success: function(response){
             console.log(response);
         }
