@@ -21,3 +21,6 @@ def send_photo_for_analysis(photo_string):
     print(zapros.text)
     print(zapros.content)
     return json.dumps(zapros.json())
+
+def send_photo_race_analysis():
+    pass
