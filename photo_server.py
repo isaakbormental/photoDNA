@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-from photoDNA.beface_adapter import send_photo_for_analysis
+from beface_adapter import send_photo_for_analysis
 app = Flask(__name__)
 
 
