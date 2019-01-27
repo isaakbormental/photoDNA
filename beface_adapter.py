@@ -17,4 +17,7 @@ def send_photo_for_analysis(photo_string):
                            json=parameters_post,
                            headers={'Content-type': 'application/json; charset=utf-8'})
     # return str(zapros.json())
+    print('________')
+    print(zapros.text)
+    print(zapros.content)
     return json.dumps(zapros.json())
