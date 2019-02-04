@@ -12,6 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            appEnv: 'production',
             page: 'default',
             img: false,
             shareCountry: '',
@@ -21,18 +22,23 @@ class App extends Component {
 
     chooseImgFromApi() {
         // TODO: pick right method (see callback API)
-        /*const http = new XMLHttpRequest();
-        http.open("GET", "callback:nativePhotoSelect?func=appUploaded");
-        http.send();*/
-        window.appUploaded('test');
+        if (this.state.appEnv === 'production') {
+            const http = new XMLHttpRequest();
+            http.open("GET", "callback:nativePhotoSelect?func=appUploaded");
+            http.send();
+        } else {
+            window.appUploaded('test');
+        }
     }
     shareThroughApi() {
         // TODO: pick right method (see callback API)
-        /*const http = new XMLHttpRequest();
-        http.open("GET", "callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg&og_title=Мега%20Фото&og_d
-escription=Расшарьте%20пожалуйста%21&func=appShare");
-        http.send();*/
-        console.log('share-share');
+        if (this.state.appEnv === 'production') {
+            const http = new XMLHttpRequest();
+            http.open("GET", "callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg&og_title=Мега%20Фото&og_description=Расшарьте%20пожалуйста%21&func=appShare");
+            http.send();
+        } else {
+            console.log('share-share');
+        }
     }
 
     switchPage(page) {
@@ -42,16 +48,18 @@ escription=Расшарьте%20пожалуйста%21&func=appShare");
     componentWillMount(){
         window.appUploaded = (obj) => {
             // TODO: remove obj test declaration
-            obj = {
-                "photos": [
-                    {
-                        "image_url":"https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg",
-                        "crop":[0.17292,0.00000,0.83958,1.00000],
-                        "rotation":0,
-                        "flip":0
-                    }
-                ]
-            };
+            if (this.state.appEnv !== 'production') {
+                obj = {
+                    "photos": [
+                        {
+                            "image_url":"https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg",
+                            "crop":[0.17292,0.00000,0.83958,1.00000],
+                            "rotation":0,
+                            "flip":0
+                        }
+                    ]
+                };
+            }
             let imgUrl = obj.photos[0].image_url;
 
             window.getDataUri(imgUrl)
@@ -69,93 +77,93 @@ escription=Расшарьте%20пожалуйста%21&func=appShare");
     sendImg() {
         this.switchPage("loading");
 
-        const fakeResponse = {
-            "nationality": [
-                {
-                    "name": "Saudi Arabian",
-                    "confidence": 80
-                },
-                {
-                    "name": "Russian",
-                    "confidence": 80
-                },
-                {
-                    "name": "Ethiopian",
-                    "confidence": 47
-                }
-            ],
-            "straight": 90,
-            "gay": 10,
-            "gender": "male",
-            "facial features": {
-                "lips": {
-                    "nation": "Czech",
-                    "confidence": 97.0
-                },
-                "nose": {
-                    "nation": "Samoan",
-                    "confidence": 55.0
-                },
-                "eyes": {
-                    "nation": "Romanian",
-                    "confidence": 64.0
-                }
-            },
-            "age": 37
-        };
-
         // TODO: delete fake json and pick true request
-        /*fetch('/handler',{
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                img: this.state.img
-            })
-        }).then((response) => {
-            if (!response.ok) {
-                throw Error(response.statusText);
-            }
-            return response.json();
-        }).then((data) => {
-            this.setState({data});
-            this.switchPage('results')
-        }).catch(() => {
-            this.switchPage('error')
-        });*/
-
-        fetch('http://www.betafaceapi.com/api/v2/media',{
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                "api_key": "d45fd466-51e2-4701-8da8-04351c872236",
-                "file_base64": this.state.img.split(',')[1],
-                "detection_flags": "basicpoints,propoints,classifiers,content",
-                "recognize_targets": [
-                    "all@mynamespace"
-                ],
-                "original_filename": "sample.png"
-            })
-        }).then((response) => {
-            if (!response.ok) {
-                throw Error(response.statusText);
-            }
-            return response.json();
-        }).then((data) => {
-            this.setState({
-                data:fakeResponse,
-                shareCountry: fakeResponse.nationality[0]
+        if (this.state.appEnv === 'production') {
+            fetch('/handler',{
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    img: this.state.img
+                })
+            }).then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response.json();
+            }).then((data) => {
+                this.setState({data});
+                this.switchPage('results')
+            }).catch(() => {
+                this.switchPage('error')
             });
-            this.switchPage('results')
-        }).catch((error) => {
-            this.switchPage('error')
-        });
-
+        } else {
+            const fakeResponse = {
+                "nationality": [
+                    {
+                        "name": "Saudi Arabian",
+                        "confidence": 80
+                    },
+                    {
+                        "name": "Russian",
+                        "confidence": 80
+                    },
+                    {
+                        "name": "Ethiopian",
+                        "confidence": 47
+                    }
+                ],
+                "straight": 90,
+                "gay": 10,
+                "gender": "male",
+                "facial features": {
+                    "lips": {
+                        "nation": "Czech",
+                        "confidence": 97.0
+                    },
+                    "nose": {
+                        "nation": "Samoan",
+                        "confidence": 55.0
+                    },
+                    "eyes": {
+                        "nation": "Romanian",
+                        "confidence": 64.0
+                    }
+                },
+                "age": 37
+            };
+            fetch('http://www.betafaceapi.com/api/v2/media',{
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "api_key": "d45fd466-51e2-4701-8da8-04351c872236",
+                    "file_base64": this.state.img.split(',')[1],
+                    "detection_flags": "basicpoints,propoints,classifiers,content",
+                    "recognize_targets": [
+                        "all@mynamespace"
+                    ],
+                    "original_filename": "sample.png"
+                })
+            }).then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response.json();
+            }).then((data) => {
+                this.setState({
+                    data:fakeResponse,
+                    shareCountry: fakeResponse.nationality[0]
+                });
+                this.switchPage('results')
+            }).catch((error) => {
+                this.switchPage('error')
+            });
+        }
     }
 
     render() {
