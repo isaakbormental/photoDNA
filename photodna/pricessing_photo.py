@@ -20,6 +20,9 @@ def process(encoded_image):
 
     our_dict, gender, age, facial = get_cost_dictionary(encoded_image, df_males, df_females, the_mask, do)
 
+    if (gender is None and age is None and facial is None):
+        return '{"faces":0}'
+
     age = int(age)
     if (age > 40):
         age -= 10
@@ -114,7 +117,7 @@ def get_cost_dictionary(the_64,df_males,df_females,the_mask, do):
 
     data = zapros.json()
     if (data['media']['faces'] == 'None'):
-        return '{"faces":0}'
+        return '{"faces":0}', None, None, None
     # with open('request.json', 'w') as outfile:
     #     json.dump(data,outfile,indent=4)
 

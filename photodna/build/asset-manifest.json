@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.d0eb7e1d.chunk.css",
-  "main.js": "/static/js/main.503513ff.chunk.js",
-  "main.js.map": "/static/js/main.503513ff.chunk.js.map",
+  "main.css": "/static/css/main.c10f2a5d.chunk.css",
+  "main.js": "/static/js/main.d0a57bc6.chunk.js",
+  "main.js.map": "/static/js/main.d0a57bc6.chunk.js.map",
   "static/js/1.8ceaed14.chunk.js": "/static/js/1.8ceaed14.chunk.js",
   "static/js/1.8ceaed14.chunk.js.map": "/static/js/1.8ceaed14.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -10,10 +10,10 @@
   "static/media/afghan.png": "/static/media/afghan.7b651c41.png",
   "static/media/welsh.png": "/static/media/welsh.dbbb93a1.png",
   "static/media/loading.svg": "/static/media/loading.97c1fa3b.svg",
-  "static/media/Preview.scss": "/static/media/male.2111053a.svg",
+  "static/media/Preview.scss": "/static/media/cat-bg.e8ce2dba.jpg",
   "static/media/icon-chart.svg": "/static/media/icon-chart.57a7f483.svg",
-  "static/css/main.d0eb7e1d.chunk.css.map": "/static/css/main.d0eb7e1d.chunk.css.map",
+  "static/css/main.c10f2a5d.chunk.css.map": "/static/css/main.c10f2a5d.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.4755465bb05d3a89fe6b1595766bb856.js": "/precache-manifest.4755465bb05d3a89fe6b1595766bb856.js",
+  "precache-manifest.6e3c3aea18bcb503f21f7ae59e95dc05.js": "/precache-manifest.6e3c3aea18bcb503f21f7ae59e95dc05.js",
   "service-worker.js": "/service-worker.js"
 }
