@@ -20,15 +20,15 @@ class PageResult extends Component {
                     <BackArrow switchPage={(page) => this.props.switchPage(page)}/>
                 </Preview>
                 <div className="page_result__body">
-                    <div className="page_result__charts">
+                    <form className="page_result__charts">
                         {this.props.data.nationality.map((item) => {
                             return(
-                                <div key={item.name}>
+                                <label className="page_result__chart" key={item.name}>
                                     <Chart data={item}/>
-                                </div>
+                                </label>
                             )
                         })}
-                    </div>
+                    </form>
                 </div>
                 <div className="page_result__bottom">
                     <div className="page_result__text">To get a full report</div>

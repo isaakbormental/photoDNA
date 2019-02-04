@@ -1,13 +1,35 @@
-.back-arrow {
-  width: .6em;
-  height: 1.05em;
-  padding: 0;
-  border: none;
-  background: transparent;
-  position: absolute;
-  top: 1.3em;
-  left: .9em;
-  svg {
+.chart {
+  position: relative;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75%;
     width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
+
+  &__img {
+    display: block;
+  }
+
+  &__percent {
+    font-weight: 500;
+    line-height: .9;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: .7em;
+    letter-spacing: 0.02em;
+    color: #787878;
+  }
+
 }
