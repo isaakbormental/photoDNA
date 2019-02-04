@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from photodna.beface_adapter import get_analysis
+from photodna.pricessing_photo import process
 from django.views.generic import View
 from django.conf import settings
 import logging
@@ -19,16 +20,14 @@ def photoload(request):
 @csrf_exempt
 def process_image(request):
     content = request.body
-    # print(content)
-    print('_____________________')
+
     content = json.loads(content.decode('utf-8'))
 
     # print(content['img'].split(',', 1)[1])
     encoded_image = content['img'].split(',', 1)[1]
-    # return get_analysis(encoded_image)
-    # return HttpResponse('<h2>prinyal</h2>')
     # results = json.dumps(get_analysis(encoded_image))
-    results = get_analysis(encoded_image)
+    # results = get_analysis(encoded_image)
+    results = process(encoded_image)
     print(results)
     print(type(results))
     return HttpResponse(results, content_type="application/json")

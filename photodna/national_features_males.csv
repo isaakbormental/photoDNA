@@ -1,0 +1,1846 @@
+countries,feature,value,confidence,meaning
+Afghan,5oclock shadow,yes,0.55,1
+Afghan,arched eyebrows,no,0.66,1
+Afghan,attractive,no,0.67,1
+Afghan,bags under eyes,yes,0.07,1
+Afghan,bald,no,0.68,1
+Afghan,bangs,no,0.69,1
+Afghan,beard,yes,0.66,1
+Afghan,big lips,no,0.45,1
+Afghan,big nose,no,0.04,1
+Afghan,black hair,yes,0.59,1
+Afghan,blond hair,no,1.0,1
+Afghan,blurry,no,0.13,1
+Afghan,brown hair,no,0.75,1
+Afghan,bushy eyebrows,yes,0.75,1
+Afghan,chubby,no,0.08,1
+Afghan,double chin,no,0.47,1
+Afghan,expression,neutral,0.57,1
+Afghan,gender,male,1.0,1
+Afghan,glasses,no,1.0,1
+Afghan,goatee,yes,0.33,1
+Afghan,gray hair,no,1.0,1
+Afghan,heavy makeup,no,0.96,1
+Afghan,high cheekbones,no,0.39,1
+Afghan,mouth open,no,0.91,1
+Afghan,mustache,yes,0.34,1
+Afghan,narrow eyes,no,0.12,1
+Afghan,oval face,yes,0.26,1
+Afghan,pale skin,no,1.0,1
+Afghan,pointy nose,no,0.91,1
+Afghan,race,white,0.54,1
+Afghan,receding hairline,no,0.86,1
+Afghan,rosy cheeks,no,0.9,1
+Afghan,sideburns,yes,0.23,1
+Afghan,straight hair,yes,0.31,1
+Afghan,wavy hair,no,1.0,1
+Afghan,wearing earrings,no,0.82,1
+Afghan,wearing hat,yes,0.05,1
+Afghan,wearing lipstick,no,0.99,1
+Afghan,wearing necklace,no,0.9,1
+Afghan,wearing necktie,no,0.14,1
+Afghan,young,yes,0.35,1
+African American,5oclock shadow,yes,0.38,1
+African American,arched eyebrows,no,0.29,1
+African American,attractive,no,0.81,1
+African American,bags under eyes,no,0.14,1
+African American,bald,yes,0.1,1
+African American,bangs,no,1.0,1
+African American,beard,yes,0.95,1
+African American,big lips,yes,0.56,1
+African American,big nose,yes,0.56,1
+African American,black hair,yes,0.27,1
+African American,blond hair,no,1.0,1
+African American,blurry,no,0.6,1
+African American,brown hair,no,0.57,1
+African American,bushy eyebrows,yes,0.65,1
+African American,chubby,yes,0.3,1
+African American,double chin,no,0.22,1
+African American,expression,neutral,0.71,1
+African American,gender,male,0.95,1
+African American,glasses,no,1.0,1
+African American,goatee,yes,0.89,1
+African American,gray hair,no,0.96,1
+African American,heavy makeup,no,0.98,1
+African American,high cheekbones,no,0.43,1
+African American,mouth open,no,0.78,1
+African American,mustache,yes,0.77,1
+African American,narrow eyes,no,1.0,1
+African American,oval face,yes,0.6,1
+African American,pale skin,no,1.0,1
+African American,pointy nose,no,1.0,1
+African American,race,black,1.0,1
+African American,receding hairline,yes,0.33,1
+African American,rosy cheeks,no,1.0,1
+African American,sideburns,yes,0.6,1
+African American,straight hair,no,0.3,1
+African American,wavy hair,no,1.0,1
+African American,wearing earrings,no,0.42,1
+African American,wearing hat,no,0.22,1
+African American,wearing lipstick,no,0.99,1
+African American,wearing necklace,no,0.63,1
+African American,wearing necktie,no,0.24,1
+African American,young,yes,0.46,1
+Argentinian,5oclock shadow,yes,0.59,1
+Argentinian,arched eyebrows,no,0.59,1
+Argentinian,attractive,no,0.03,1
+Argentinian,bags under eyes,no,0.45,1
+Argentinian,bald,no,1.0,1
+Argentinian,bangs,no,0.62,1
+Argentinian,beard,yes,0.31,1
+Argentinian,big lips,no,0.68,1
+Argentinian,big nose,no,0.54,1
+Argentinian,black hair,yes,0.18,1
+Argentinian,blond hair,no,1.0,1
+Argentinian,blurry,no,0.64,1
+Argentinian,brown hair,yes,0.02,1
+Argentinian,bushy eyebrows,yes,0.79,1
+Argentinian,chubby,no,0.83,1
+Argentinian,double chin,no,1.0,1
+Argentinian,expression,neutral,1.0,1
+Argentinian,gender,male,1.0,1
+Argentinian,glasses,no,1.0,1
+Argentinian,goatee,no,0.16,1
+Argentinian,gray hair,no,1.0,1
+Argentinian,heavy makeup,no,1.0,1
+Argentinian,high cheekbones,no,1.0,1
+Argentinian,mouth open,no,0.97,1
+Argentinian,mustache,no,0.16,1
+Argentinian,narrow eyes,no,0.42,1
+Argentinian,oval face,yes,0.27,1
+Argentinian,pale skin,no,0.66,1
+Argentinian,pointy nose,no,0.58,1
+Argentinian,race,white,1.0,1
+Argentinian,receding hairline,no,1.0,1
+Argentinian,rosy cheeks,no,1.0,1
+Argentinian,sideburns,no,0.17,1
+Argentinian,straight hair,yes,0.86,1
+Argentinian,wavy hair,no,1.0,1
+Argentinian,wearing earrings,no,0.99,1
+Argentinian,wearing hat,no,0.62,1
+Argentinian,wearing lipstick,no,1.0,1
+Argentinian,wearing necklace,no,1.0,1
+Argentinian,wearing necktie,yes,0.14,1
+Argentinian,young,yes,0.97,1
+Austrian,5oclock shadow,yes,0.02,1
+Austrian,arched eyebrows,no,0.9,1
+Austrian,attractive,no,0.48,1
+Austrian,bags under eyes,no,0.36,1
+Austrian,bald,no,0.49,1
+Austrian,bangs,no,1.0,1
+Austrian,beard,no,0.45,1
+Austrian,big lips,no,1.0,1
+Austrian,big nose,no,0.43,1
+Austrian,black hair,no,0.75,1
+Austrian,blond hair,no,0.71,1
+Austrian,blurry,no,0.62,1
+Austrian,brown hair,yes,0.24,1
+Austrian,bushy eyebrows,yes,0.02,1
+Austrian,chubby,no,0.33,1
+Austrian,double chin,no,0.54,1
+Austrian,expression,neutral,0.76,1
+Austrian,gender,male,0.94,1
+Austrian,glasses,no,1.0,1
+Austrian,goatee,no,0.94,1
+Austrian,gray hair,no,0.46,1
+Austrian,heavy makeup,no,0.94,1
+Austrian,high cheekbones,no,0.73,1
+Austrian,mouth open,no,0.96,1
+Austrian,mustache,no,0.74,1
+Austrian,narrow eyes,no,0.94,1
+Austrian,oval face,yes,0.72,1
+Austrian,pale skin,no,0.75,1
+Austrian,pointy nose,no,0.69,1
+Austrian,race,white,1.0,1
+Austrian,receding hairline,no,0.13,1
+Austrian,rosy cheeks,no,0.91,1
+Austrian,sideburns,no,0.95,1
+Austrian,straight hair,yes,0.54,1
+Austrian,wavy hair,no,1.0,1
+Austrian,wearing earrings,no,0.83,1
+Austrian,wearing hat,no,1.0,1
+Austrian,wearing lipstick,no,0.96,1
+Austrian,wearing necklace,no,1.0,1
+Austrian,wearing necktie,yes,0.27,1
+Austrian,young,yes,0.2,1
+Brazilian,5oclock shadow,yes,0.16,1
+Brazilian,arched eyebrows,no,0.6,1
+Brazilian,attractive,no,0.7,1
+Brazilian,bags under eyes,no,0.54,1
+Brazilian,bald,no,0.61,1
+Brazilian,bangs,no,1.0,1
+Brazilian,beard,no,0.11,1
+Brazilian,big lips,no,0.5,1
+Brazilian,big nose,no,0.34,1
+Brazilian,black hair,yes,0.2,1
+Brazilian,blond hair,no,0.97,1
+Brazilian,blurry,no,0.33,1
+Brazilian,brown hair,no,0.51,1
+Brazilian,bushy eyebrows,yes,0.54,1
+Brazilian,chubby,no,0.33,1
+Brazilian,double chin,no,0.74,1
+Brazilian,expression,neutral,0.96,1
+Brazilian,gender,male,0.89,1
+Brazilian,glasses,no,1.0,1
+Brazilian,goatee,no,0.47,1
+Brazilian,gray hair,no,1.0,1
+Brazilian,heavy makeup,no,0.95,1
+Brazilian,high cheekbones,no,0.79,1
+Brazilian,mouth open,no,0.89,1
+Brazilian,mustache,no,0.38,1
+Brazilian,narrow eyes,no,0.9,1
+Brazilian,oval face,yes,0.48,1
+Brazilian,pale skin,no,1.0,1
+Brazilian,pointy nose,no,0.98,1
+Brazilian,race,hispanic,0.99,1
+Brazilian,receding hairline,no,0.33,1
+Brazilian,rosy cheeks,no,1.0,1
+Brazilian,sideburns,no,0.66,1
+Brazilian,straight hair,yes,0.38,1
+Brazilian,wavy hair,no,1.0,1
+Brazilian,wearing earrings,no,0.65,1
+Brazilian,wearing hat,no,0.23,1
+Brazilian,wearing lipstick,no,1.0,1
+Brazilian,wearing necklace,no,0.9,1
+Brazilian,wearing necktie,no,0.21,1
+Brazilian,young,yes,0.68,1
+Cambodian,5oclock shadow,yes,0.17,1
+Cambodian,arched eyebrows,no,0.29,1
+Cambodian,attractive,no,0.95,1
+Cambodian,bags under eyes,no,0.35,1
+Cambodian,bald,no,0.57,1
+Cambodian,bangs,no,1.0,1
+Cambodian,beard,yes,0.14,1
+Cambodian,big lips,no,0.29,1
+Cambodian,big nose,no,0.09,1
+Cambodian,black hair,yes,0.74,1
+Cambodian,blond hair,no,1.0,1
+Cambodian,blurry,yes,0.01,1
+Cambodian,brown hair,no,0.83,1
+Cambodian,bushy eyebrows,yes,0.86,1
+Cambodian,chubby,yes,0.09,1
+Cambodian,double chin,no,0.26,1
+Cambodian,expression,neutral,0.22,1
+Cambodian,gender,male,0.96,1
+Cambodian,glasses,no,1.0,1
+Cambodian,goatee,no,0.15,1
+Cambodian,gray hair,no,1.0,1
+Cambodian,heavy makeup,no,0.86,1
+Cambodian,high cheekbones,no,0.2,1
+Cambodian,mouth open,no,0.38,1
+Cambodian,mustache,no,0.05,1
+Cambodian,narrow eyes,yes,0.01,1
+Cambodian,oval face,yes,0.4,1
+Cambodian,pale skin,no,1.0,1
+Cambodian,pointy nose,no,1.0,1
+Cambodian,race,asian,1.0,1
+Cambodian,receding hairline,no,0.32,1
+Cambodian,rosy cheeks,no,1.0,1
+Cambodian,sideburns,no,0.37,1
+Cambodian,straight hair,yes,0.2,1
+Cambodian,wavy hair,no,1.0,1
+Cambodian,wearing earrings,no,0.56,1
+Cambodian,wearing hat,no,0.24,1
+Cambodian,wearing lipstick,no,0.94,1
+Cambodian,wearing necklace,no,0.89,1
+Cambodian,wearing necktie,no,0.13,1
+Cambodian,young,yes,0.46,1
+Canadian,5oclock shadow,yes,0.22,1
+Canadian,arched eyebrows,no,1.0,1
+Canadian,attractive,no,0.17,1
+Canadian,bags under eyes,no,0.61,1
+Canadian,bald,no,0.81,1
+Canadian,bangs,no,0.98,1
+Canadian,beard,no,0.24,1
+Canadian,big lips,no,0.92,1
+Canadian,big nose,no,0.74,1
+Canadian,black hair,no,0.72,1
+Canadian,blond hair,no,0.65,1
+Canadian,blurry,no,0.45,1
+Canadian,brown hair,yes,0.52,1
+Canadian,bushy eyebrows,no,0.05,1
+Canadian,chubby,no,0.81,1
+Canadian,double chin,no,1.0,1
+Canadian,expression,neutral,0.97,1
+Canadian,gender,male,1.0,1
+Canadian,glasses,no,1.0,1
+Canadian,goatee,no,0.73,1
+Canadian,gray hair,no,0.92,1
+Canadian,heavy makeup,no,0.95,1
+Canadian,high cheekbones,no,1.0,1
+Canadian,mouth open,no,0.88,1
+Canadian,mustache,no,0.66,1
+Canadian,narrow eyes,no,0.88,1
+Canadian,oval face,yes,0.5,1
+Canadian,pale skin,no,0.64,1
+Canadian,pointy nose,no,0.72,1
+Canadian,race,white,1.0,1
+Canadian,receding hairline,no,0.62,1
+Canadian,rosy cheeks,no,1.0,1
+Canadian,sideburns,no,0.73,1
+Canadian,straight hair,yes,0.78,1
+Canadian,wavy hair,no,1.0,1
+Canadian,wearing earrings,no,0.97,1
+Canadian,wearing hat,no,0.84,1
+Canadian,wearing lipstick,no,1.0,1
+Canadian,wearing necklace,no,1.0,1
+Canadian,wearing necktie,no,0.01,1
+Canadian,young,yes,0.73,1
+Chinese,5oclock shadow,no,0.26,1
+Chinese,arched eyebrows,no,0.56,1
+Chinese,attractive,no,0.32,1
+Chinese,bags under eyes,no,0.56,1
+Chinese,bald,no,0.93,1
+Chinese,bangs,no,0.65,1
+Chinese,beard,no,0.58,1
+Chinese,big lips,no,0.73,1
+Chinese,big nose,no,0.61,1
+Chinese,black hair,yes,0.83,1
+Chinese,blond hair,no,1.0,1
+Chinese,blurry,no,0.26,1
+Chinese,brown hair,no,0.64,1
+Chinese,bushy eyebrows,yes,0.5,1
+Chinese,chubby,no,0.49,1
+Chinese,double chin,no,0.9,1
+Chinese,expression,neutral,0.82,1
+Chinese,gender,male,0.82,1
+Chinese,glasses,no,1.0,1
+Chinese,goatee,no,0.92,1
+Chinese,gray hair,no,1.0,1
+Chinese,heavy makeup,no,0.87,1
+Chinese,high cheekbones,no,0.75,1
+Chinese,mouth open,no,0.91,1
+Chinese,mustache,no,0.74,1
+Chinese,narrow eyes,no,0.36,1
+Chinese,oval face,yes,0.62,1
+Chinese,pale skin,no,0.82,1
+Chinese,pointy nose,no,1.0,1
+Chinese,race,asian,1.0,1
+Chinese,receding hairline,no,0.62,1
+Chinese,rosy cheeks,no,1.0,1
+Chinese,sideburns,no,1.0,1
+Chinese,straight hair,yes,1.0,1
+Chinese,wavy hair,no,1.0,1
+Chinese,wearing earrings,no,0.69,1
+Chinese,wearing hat,no,0.8,1
+Chinese,wearing lipstick,no,0.9,1
+Chinese,wearing necklace,no,1.0,1
+Chinese,wearing necktie,yes,0.03,1
+Chinese,young,yes,0.85,1
+Czech,5oclock shadow,yes,0.2,1
+Czech,arched eyebrows,no,1.0,1
+Czech,attractive,no,0.04,1
+Czech,bags under eyes,no,0.6,1
+Czech,bald,no,0.56,1
+Czech,bangs,no,1.0,1
+Czech,beard,no,0.31,1
+Czech,big lips,no,0.78,1
+Czech,big nose,no,0.52,1
+Czech,black hair,no,0.75,1
+Czech,blond hair,no,0.53,1
+Czech,blurry,no,0.76,1
+Czech,brown hair,yes,0.25,1
+Czech,bushy eyebrows,no,0.46,1
+Czech,chubby,no,0.75,1
+Czech,double chin,no,0.93,1
+Czech,expression,neutral,0.93,1
+Czech,gender,male,0.92,1
+Czech,glasses,no,1.0,1
+Czech,goatee,no,0.8,1
+Czech,gray hair,no,0.71,1
+Czech,heavy makeup,no,1.0,1
+Czech,high cheekbones,no,1.0,1
+Czech,mouth open,no,0.83,1
+Czech,mustache,no,0.73,1
+Czech,narrow eyes,no,1.0,1
+Czech,oval face,yes,0.49,1
+Czech,pale skin,no,0.23,1
+Czech,pointy nose,no,0.59,1
+Czech,race,white,1.0,1
+Czech,receding hairline,no,0.24,1
+Czech,rosy cheeks,no,1.0,1
+Czech,sideburns,no,0.81,1
+Czech,straight hair,yes,0.81,1
+Czech,wavy hair,no,1.0,1
+Czech,wearing earrings,no,1.0,1
+Czech,wearing hat,no,0.91,1
+Czech,wearing lipstick,no,0.99,1
+Czech,wearing necklace,no,1.0,1
+Czech,wearing necktie,yes,0.17,1
+Czech,young,yes,0.57,1
+English,5oclock shadow,yes,0.12,1
+English,arched eyebrows,no,0.85,1
+English,attractive,no,0.3,1
+English,bags under eyes,no,0.61,1
+English,bald,no,0.79,1
+English,bangs,no,1.0,1
+English,beard,no,0.26,1
+English,big lips,no,0.73,1
+English,big nose,no,0.6,1
+English,black hair,no,0.27,1
+English,blond hair,no,0.82,1
+English,blurry,no,0.27,1
+English,brown hair,yes,0.01,1
+English,bushy eyebrows,yes,0.0,1
+English,chubby,no,0.8,1
+English,double chin,no,1.0,1
+English,expression,neutral,1.0,1
+English,gender,male,0.87,1
+English,glasses,no,1.0,1
+English,goatee,no,0.7,1
+English,gray hair,no,1.0,1
+English,heavy makeup,no,0.99,1
+English,high cheekbones,no,1.0,1
+English,mouth open,no,0.88,1
+English,mustache,no,0.67,1
+English,narrow eyes,no,0.82,1
+English,oval face,yes,0.45,1
+English,pale skin,no,0.6,1
+English,pointy nose,no,0.76,1
+English,race,white,1.0,1
+English,receding hairline,no,0.45,1
+English,rosy cheeks,no,1.0,1
+English,sideburns,no,0.8,1
+English,straight hair,yes,0.44,1
+English,wavy hair,no,1.0,1
+English,wearing earrings,no,0.82,1
+English,wearing hat,no,0.47,1
+English,wearing lipstick,no,1.0,1
+English,wearing necklace,no,0.98,1
+English,wearing necktie,no,0.27,1
+English,young,yes,0.8,1
+Ethiopian,5oclock shadow,yes,0.54,1
+Ethiopian,arched eyebrows,no,0.75,1
+Ethiopian,attractive,no,1.0,1
+Ethiopian,bags under eyes,no,0.25,1
+Ethiopian,bald,no,0.37,1
+Ethiopian,bangs,no,0.82,1
+Ethiopian,beard,yes,0.87,1
+Ethiopian,big lips,no,0.47,1
+Ethiopian,big nose,no,0.18,1
+Ethiopian,black hair,no,0.25,1
+Ethiopian,blond hair,no,0.72,1
+Ethiopian,blurry,yes,0.12,1
+Ethiopian,brown hair,yes,0.03,1
+Ethiopian,bushy eyebrows,no,0.08,1
+Ethiopian,chubby,no,0.13,1
+Ethiopian,double chin,no,0.5,1
+Ethiopian,expression,neutral,0.68,1
+Ethiopian,gender,male,0.86,1
+Ethiopian,glasses,no,1.0,1
+Ethiopian,goatee,yes,0.63,1
+Ethiopian,gray hair,no,0.85,1
+Ethiopian,heavy makeup,no,0.92,1
+Ethiopian,high cheekbones,no,0.6,1
+Ethiopian,mouth open,no,0.13,1
+Ethiopian,mustache,yes,0.5,1
+Ethiopian,narrow eyes,no,0.59,1
+Ethiopian,oval face,yes,0.29,1
+Ethiopian,pale skin,no,1.0,1
+Ethiopian,pointy nose,no,0.89,1
+Ethiopian,race,asian,0.93,1
+Ethiopian,receding hairline,no,0.22,1
+Ethiopian,rosy cheeks,no,0.9,1
+Ethiopian,sideburns,yes,0.53,1
+Ethiopian,straight hair,yes,0.16,1
+Ethiopian,wavy hair,no,0.97,1
+Ethiopian,wearing earrings,no,0.69,1
+Ethiopian,wearing hat,no,0.59,1
+Ethiopian,wearing lipstick,no,0.96,1
+Ethiopian,wearing necklace,no,0.8,1
+Ethiopian,wearing necktie,no,0.4,1
+Ethiopian,young,yes,0.14,1
+Filipino,5oclock shadow,yes,0.01,1
+Filipino,arched eyebrows,no,0.58,1
+Filipino,attractive,no,0.63,1
+Filipino,bags under eyes,no,0.55,1
+Filipino,bald,no,0.83,1
+Filipino,bangs,no,0.95,1
+Filipino,beard,no,0.16,1
+Filipino,big lips,no,0.42,1
+Filipino,big nose,no,0.36,1
+Filipino,black hair,yes,0.72,1
+Filipino,blond hair,no,1.0,1
+Filipino,blurry,no,0.24,1
+Filipino,brown hair,no,0.52,1
+Filipino,bushy eyebrows,yes,0.69,1
+Filipino,chubby,no,0.37,1
+Filipino,double chin,no,0.84,1
+Filipino,expression,neutral,0.86,1
+Filipino,gender,male,0.8,1
+Filipino,glasses,no,1.0,1
+Filipino,goatee,no,0.47,1
+Filipino,gray hair,no,1.0,1
+Filipino,heavy makeup,no,0.92,1
+Filipino,high cheekbones,no,0.66,1
+Filipino,mouth open,no,0.82,1
+Filipino,mustache,no,0.38,1
+Filipino,narrow eyes,no,0.62,1
+Filipino,oval face,yes,0.67,1
+Filipino,pale skin,no,1.0,1
+Filipino,pointy nose,no,1.0,1
+Filipino,race,asian,1.0,1
+Filipino,receding hairline,no,0.47,1
+Filipino,rosy cheeks,no,1.0,1
+Filipino,sideburns,no,0.66,1
+Filipino,straight hair,yes,0.71,1
+Filipino,wavy hair,no,1.0,1
+Filipino,wearing earrings,no,0.66,1
+Filipino,wearing hat,no,0.61,1
+Filipino,wearing lipstick,no,0.94,1
+Filipino,wearing necklace,no,0.89,1
+Filipino,wearing necktie,no,0.28,1
+Filipino,young,yes,0.88,1
+French,5oclock shadow,no,0.1,1
+French,arched eyebrows,no,0.8,1
+French,attractive,no,0.38,1
+French,bags under eyes,no,0.99,1
+French,bald,no,0.78,1
+French,bangs,no,0.78,1
+French,beard,no,0.42,1
+French,big lips,no,0.63,1
+French,big nose,no,0.75,1
+French,black hair,no,0.4,1
+French,blond hair,no,0.97,1
+French,blurry,no,0.31,1
+French,brown hair,yes,0.36,1
+French,bushy eyebrows,no,0.07,1
+French,chubby,no,0.79,1
+French,double chin,no,1.0,1
+French,expression,neutral,0.97,1
+French,gender,male,0.59,1
+French,glasses,no,1.0,1
+French,goatee,no,0.81,1
+French,gray hair,no,1.0,1
+French,heavy makeup,no,0.98,1
+French,high cheekbones,no,0.93,1
+French,mouth open,no,0.83,1
+French,mustache,no,0.79,1
+French,narrow eyes,no,1.0,1
+French,oval face,yes,0.65,1
+French,pale skin,no,0.79,1
+French,pointy nose,no,0.65,1
+French,race,white,1.0,1
+French,receding hairline,no,0.42,1
+French,rosy cheeks,no,0.98,1
+French,sideburns,no,0.91,1
+French,straight hair,yes,0.51,1
+French,wavy hair,no,1.0,1
+French,wearing earrings,no,0.62,1
+French,wearing hat,no,0.66,1
+French,wearing lipstick,no,0.93,1
+French,wearing necklace,no,0.78,1
+French,wearing necktie,no,0.47,1
+French,young,yes,0.87,1
+German,5oclock shadow,yes,0.22,1
+German,arched eyebrows,no,0.97,1
+German,attractive,no,0.46,1
+German,bags under eyes,no,0.21,1
+German,bald,no,0.49,1
+German,bangs,no,0.96,1
+German,beard,yes,0.09,1
+German,big lips,no,0.87,1
+German,big nose,no,0.3,1
+German,black hair,yes,0.02,1
+German,blond hair,no,1.0,1
+German,blurry,no,0.11,1
+German,brown hair,no,0.13,1
+German,bushy eyebrows,no,0.25,1
+German,chubby,no,0.28,1
+German,double chin,no,0.48,1
+German,expression,neutral,0.34,1
+German,gender,male,0.99,1
+German,glasses,no,1.0,1
+German,goatee,no,0.39,1
+German,gray hair,no,0.78,1
+German,heavy makeup,no,1.0,1
+German,high cheekbones,no,0.61,1
+German,mouth open,no,0.99,1
+German,mustache,no,0.34,1
+German,narrow eyes,no,0.59,1
+German,oval face,yes,0.41,1
+German,pale skin,no,0.77,1
+German,pointy nose,no,0.88,1
+German,race,white,1.0,1
+German,receding hairline,no,0.24,1
+German,rosy cheeks,no,1.0,1
+German,sideburns,no,0.44,1
+German,straight hair,yes,0.74,1
+German,wavy hair,no,1.0,1
+German,wearing earrings,no,1.0,1
+German,wearing hat,no,0.74,1
+German,wearing lipstick,no,1.0,1
+German,wearing necklace,no,1.0,1
+German,wearing necktie,yes,0.26,1
+German,young,yes,0.22,1
+Greek,5oclock shadow,yes,0.35,1
+Greek,arched eyebrows,no,0.77,1
+Greek,attractive,no,0.08,1
+Greek,bags under eyes,no,0.66,1
+Greek,bald,no,0.9,1
+Greek,bangs,no,0.83,1
+Greek,beard,yes,0.24,1
+Greek,big lips,no,0.88,1
+Greek,big nose,no,0.54,1
+Greek,black hair,yes,0.45,1
+Greek,blond hair,no,0.99,1
+Greek,blurry,no,0.46,1
+Greek,brown hair,no,0.3,1
+Greek,bushy eyebrows,yes,0.7,1
+Greek,chubby,no,0.66,1
+Greek,double chin,no,1.0,1
+Greek,expression,neutral,0.5,1
+Greek,gender,male,0.99,1
+Greek,glasses,no,1.0,1
+Greek,goatee,no,0.2,1
+Greek,gray hair,no,1.0,1
+Greek,heavy makeup,no,0.9,1
+Greek,high cheekbones,no,0.74,1
+Greek,mouth open,no,0.86,1
+Greek,mustache,no,0.19,1
+Greek,narrow eyes,no,0.74,1
+Greek,oval face,yes,0.81,1
+Greek,pale skin,no,0.81,1
+Greek,pointy nose,no,0.74,1
+Greek,race,white,1.0,1
+Greek,receding hairline,no,0.84,1
+Greek,rosy cheeks,no,0.98,1
+Greek,sideburns,no,0.24,1
+Greek,straight hair,yes,0.79,1
+Greek,wavy hair,no,1.0,1
+Greek,wearing earrings,no,0.94,1
+Greek,wearing hat,no,0.68,1
+Greek,wearing lipstick,no,0.97,1
+Greek,wearing necklace,no,1.0,1
+Greek,wearing necktie,no,0.03,1
+Greek,young,yes,0.97,1
+Hungarian,5oclock shadow,yes,0.25,1
+Hungarian,arched eyebrows,no,0.69,1
+Hungarian,attractive,no,0.51,1
+Hungarian,bags under eyes,no,0.58,1
+Hungarian,bald,no,0.88,1
+Hungarian,bangs,no,1.0,1
+Hungarian,beard,yes,0.07,1
+Hungarian,big lips,no,0.77,1
+Hungarian,big nose,no,0.76,1
+Hungarian,black hair,no,0.03,1
+Hungarian,blond hair,no,0.98,1
+Hungarian,blurry,yes,0.08,1
+Hungarian,brown hair,yes,0.07,1
+Hungarian,bushy eyebrows,yes,0.35,1
+Hungarian,chubby,no,0.69,1
+Hungarian,double chin,no,1.0,1
+Hungarian,expression,neutral,0.86,1
+Hungarian,gender,male,0.88,1
+Hungarian,glasses,no,1.0,1
+Hungarian,goatee,no,0.34,1
+Hungarian,gray hair,no,1.0,1
+Hungarian,heavy makeup,no,0.92,1
+Hungarian,high cheekbones,no,0.88,1
+Hungarian,mouth open,no,0.93,1
+Hungarian,mustache,no,0.37,1
+Hungarian,narrow eyes,no,0.04,1
+Hungarian,oval face,yes,0.26,1
+Hungarian,pale skin,no,1.0,1
+Hungarian,pointy nose,no,0.8,1
+Hungarian,race,white,1.0,1
+Hungarian,receding hairline,no,0.59,1
+Hungarian,rosy cheeks,no,1.0,1
+Hungarian,sideburns,no,0.4,1
+Hungarian,straight hair,yes,0.67,1
+Hungarian,wavy hair,no,1.0,1
+Hungarian,wearing earrings,no,0.72,1
+Hungarian,wearing hat,no,0.58,1
+Hungarian,wearing lipstick,no,0.99,1
+Hungarian,wearing necklace,no,1.0,1
+Hungarian,wearing necktie,no,0.24,1
+Hungarian,young,yes,0.77,1
+Indian,5oclock shadow,no,0.09,1
+Indian,arched eyebrows,no,0.6,1
+Indian,attractive,no,0.85,1
+Indian,bags under eyes,no,0.28,1
+Indian,bald,no,0.31,1
+Indian,bangs,no,1.0,1
+Indian,beard,no,0.25,1
+Indian,big lips,no,0.49,1
+Indian,big nose,yes,0.04,1
+Indian,black hair,yes,0.47,1
+Indian,blond hair,no,1.0,1
+Indian,blurry,no,0.36,1
+Indian,brown hair,no,0.84,1
+Indian,bushy eyebrows,yes,0.29,1
+Indian,chubby,yes,0.22,1
+Indian,double chin,no,0.14,1
+Indian,expression,neutral,0.77,1
+Indian,gender,male,0.98,1
+Indian,glasses,no,1.0,1
+Indian,goatee,no,0.63,1
+Indian,gray hair,no,0.7,1
+Indian,heavy makeup,no,0.97,1
+Indian,high cheekbones,no,0.64,1
+Indian,mouth open,no,0.9,1
+Indian,mustache,no,0.35,1
+Indian,narrow eyes,no,0.95,1
+Indian,oval face,yes,0.58,1
+Indian,pale skin,no,0.97,1
+Indian,pointy nose,no,1.0,1
+Indian,race,hispanic,0.54,1
+Indian,receding hairline,no,0.09,1
+Indian,rosy cheeks,no,1.0,1
+Indian,sideburns,no,0.8,1
+Indian,straight hair,yes,0.43,1
+Indian,wavy hair,no,1.0,1
+Indian,wearing earrings,no,0.78,1
+Indian,wearing hat,no,0.37,1
+Indian,wearing lipstick,no,0.97,1
+Indian,wearing necklace,no,0.96,1
+Indian,wearing necktie,yes,0.3,1
+Indian,young,yes,0.08,1
+Indonesian,5oclock shadow,yes,0.4,1
+Indonesian,arched eyebrows,no,0.46,1
+Indonesian,attractive,no,0.59,1
+Indonesian,bags under eyes,no,0.34,1
+Indonesian,bald,no,0.48,1
+Indonesian,bangs,no,1.0,1
+Indonesian,beard,yes,0.53,1
+Indonesian,big lips,no,0.11,1
+Indonesian,big nose,yes,0.17,1
+Indonesian,black hair,yes,0.88,1
+Indonesian,blond hair,no,1.0,1
+Indonesian,blurry,no,0.57,1
+Indonesian,brown hair,no,0.97,1
+Indonesian,bushy eyebrows,yes,0.87,1
+Indonesian,chubby,yes,0.13,1
+Indonesian,double chin,no,0.27,1
+Indonesian,expression,neutral,0.41,1
+Indonesian,gender,male,0.95,1
+Indonesian,glasses,no,1.0,1
+Indonesian,goatee,yes,0.19,1
+Indonesian,gray hair,no,1.0,1
+Indonesian,heavy makeup,no,0.94,1
+Indonesian,high cheekbones,no,0.44,1
+Indonesian,mouth open,no,0.88,1
+Indonesian,mustache,yes,0.31,1
+Indonesian,narrow eyes,no,1.0,1
+Indonesian,oval face,yes,0.68,1
+Indonesian,pale skin,no,1.0,1
+Indonesian,pointy nose,no,1.0,1
+Indonesian,race,asian,0.99,1
+Indonesian,receding hairline,no,0.39,1
+Indonesian,rosy cheeks,no,0.96,1
+Indonesian,sideburns,yes,0.0,1
+Indonesian,straight hair,yes,0.33,1
+Indonesian,wavy hair,no,1.0,1
+Indonesian,wearing earrings,no,0.65,1
+Indonesian,wearing hat,no,0.3,1
+Indonesian,wearing lipstick,no,0.93,1
+Indonesian,wearing necklace,no,0.8,1
+Indonesian,wearing necktie,yes,0.12,1
+Indonesian,young,yes,0.41,1
+Iranian,5oclock shadow,yes,0.45,1
+Iranian,arched eyebrows,no,0.61,1
+Iranian,attractive,yes,0.07,1
+Iranian,bags under eyes,no,0.63,1
+Iranian,bald,no,0.92,1
+Iranian,bangs,no,0.94,1
+Iranian,beard,yes,0.22,1
+Iranian,big lips,no,0.58,1
+Iranian,big nose,no,0.47,1
+Iranian,black hair,yes,0.68,1
+Iranian,blond hair,no,1.0,1
+Iranian,blurry,no,0.99,1
+Iranian,brown hair,no,0.59,1
+Iranian,bushy eyebrows,yes,1.0,1
+Iranian,chubby,no,0.73,1
+Iranian,double chin,no,1.0,1
+Iranian,expression,neutral,0.95,1
+Iranian,gender,male,1.0,1
+Iranian,glasses,no,1.0,1
+Iranian,goatee,no,0.22,1
+Iranian,gray hair,no,1.0,1
+Iranian,heavy makeup,no,0.95,1
+Iranian,high cheekbones,no,0.94,1
+Iranian,mouth open,no,0.92,1
+Iranian,mustache,no,0.15,1
+Iranian,narrow eyes,no,1.0,1
+Iranian,oval face,yes,0.58,1
+Iranian,pale skin,no,0.66,1
+Iranian,pointy nose,no,0.44,1
+Iranian,race,white,0.97,1
+Iranian,receding hairline,no,0.86,1
+Iranian,rosy cheeks,no,0.96,1
+Iranian,sideburns,no,0.29,1
+Iranian,straight hair,yes,0.76,1
+Iranian,wavy hair,no,1.0,1
+Iranian,wearing earrings,no,0.82,1
+Iranian,wearing hat,no,0.67,1
+Iranian,wearing lipstick,no,1.0,1
+Iranian,wearing necklace,no,1.0,1
+Iranian,wearing necktie,yes,0.25,1
+Iranian,young,yes,1.0,1
+Irish,5oclock shadow,no,0.06,1
+Irish,arched eyebrows,no,0.89,1
+Irish,attractive,no,0.06,1
+Irish,bags under eyes,no,0.14,1
+Irish,bald,no,0.81,1
+Irish,bangs,no,0.98,1
+Irish,beard,no,0.63,1
+Irish,big lips,no,1.0,1
+Irish,big nose,no,0.63,1
+Irish,black hair,no,0.7,1
+Irish,blond hair,no,0.73,1
+Irish,blurry,no,0.52,1
+Irish,brown hair,yes,0.66,1
+Irish,bushy eyebrows,yes,0.05,1
+Irish,chubby,no,0.66,1
+Irish,double chin,no,0.84,1
+Irish,expression,neutral,0.39,1
+Irish,gender,male,0.9,1
+Irish,glasses,no,1.0,1
+Irish,goatee,no,1.0,1
+Irish,gray hair,no,0.77,1
+Irish,heavy makeup,no,0.88,1
+Irish,high cheekbones,no,0.61,1
+Irish,mouth open,no,0.93,1
+Irish,mustache,no,0.98,1
+Irish,narrow eyes,no,0.53,1
+Irish,oval face,yes,0.66,1
+Irish,pale skin,no,0.66,1
+Irish,pointy nose,no,0.77,1
+Irish,race,white,1.0,1
+Irish,receding hairline,no,0.47,1
+Irish,rosy cheeks,no,0.98,1
+Irish,sideburns,no,1.0,1
+Irish,straight hair,yes,0.92,1
+Irish,wavy hair,no,1.0,1
+Irish,wearing earrings,no,1.0,1
+Irish,wearing hat,no,1.0,1
+Irish,wearing lipstick,no,0.91,1
+Irish,wearing necklace,no,1.0,1
+Irish,wearing necktie,yes,0.27,1
+Irish,young,yes,0.56,1
+Israeli,5oclock shadow,yes,0.38,1
+Israeli,arched eyebrows,no,0.78,1
+Israeli,attractive,no,0.33,1
+Israeli,bags under eyes,no,0.14,1
+Israeli,bald,no,0.49,1
+Israeli,bangs,no,0.97,1
+Israeli,beard,yes,0.17,1
+Israeli,big lips,no,0.99,1
+Israeli,big nose,no,0.29,1
+Israeli,black hair,no,0.45,1
+Israeli,blond hair,no,0.88,1
+Israeli,blurry,no,0.4,1
+Israeli,brown hair,yes,0.11,1
+Israeli,bushy eyebrows,yes,0.16,1
+Israeli,chubby,no,0.32,1
+Israeli,double chin,no,0.52,1
+Israeli,expression,neutral,0.06,1
+Israeli,gender,male,0.99,1
+Israeli,glasses,no,1.0,1
+Israeli,goatee,no,0.32,1
+Israeli,gray hair,no,0.72,1
+Israeli,heavy makeup,no,0.93,1
+Israeli,high cheekbones,no,0.45,1
+Israeli,mouth open,no,0.98,1
+Israeli,mustache,no,0.27,1
+Israeli,narrow eyes,no,0.59,1
+Israeli,oval face,yes,0.66,1
+Israeli,pale skin,no,0.9,1
+Israeli,pointy nose,no,0.82,1
+Israeli,race,white,1.0,1
+Israeli,receding hairline,no,0.35,1
+Israeli,rosy cheeks,no,0.95,1
+Israeli,sideburns,no,0.35,1
+Israeli,straight hair,yes,0.66,1
+Israeli,wavy hair,no,1.0,1
+Israeli,wearing earrings,no,1.0,1
+Israeli,wearing hat,no,0.71,1
+Israeli,wearing lipstick,no,0.98,1
+Israeli,wearing necklace,no,1.0,1
+Israeli,wearing necktie,yes,0.21,1
+Israeli,young,yes,0.34,1
+Italian,5oclock shadow,yes,0.49,1
+Italian,arched eyebrows,no,0.77,1
+Italian,attractive,yes,0.28,1
+Italian,bags under eyes,no,0.35,1
+Italian,bald,no,1.0,1
+Italian,bangs,no,1.0,1
+Italian,beard,no,0.05,1
+Italian,big lips,no,0.61,1
+Italian,big nose,no,0.45,1
+Italian,black hair,yes,0.4,1
+Italian,blond hair,no,1.0,1
+Italian,blurry,no,1.0,1
+Italian,brown hair,no,0.21,1
+Italian,bushy eyebrows,yes,0.64,1
+Italian,chubby,no,0.86,1
+Italian,double chin,no,1.0,1
+Italian,expression,neutral,1.0,1
+Italian,gender,male,1.0,1
+Italian,glasses,no,1.0,1
+Italian,goatee,no,0.62,1
+Italian,gray hair,no,1.0,1
+Italian,heavy makeup,no,0.98,1
+Italian,high cheekbones,no,1.0,1
+Italian,mouth open,no,0.87,1
+Italian,mustache,no,0.5,1
+Italian,narrow eyes,no,0.88,1
+Italian,oval face,yes,0.25,1
+Italian,pale skin,no,0.44,1
+Italian,pointy nose,no,0.44,1
+Italian,race,white,1.0,1
+Italian,receding hairline,no,0.79,1
+Italian,rosy cheeks,no,1.0,1
+Italian,sideburns,no,0.59,1
+Italian,straight hair,yes,1.0,1
+Italian,wavy hair,no,1.0,1
+Italian,wearing earrings,no,1.0,1
+Italian,wearing hat,no,0.91,1
+Italian,wearing lipstick,no,0.99,1
+Italian,wearing necklace,no,1.0,1
+Italian,wearing necktie,yes,0.39,1
+Italian,young,yes,0.96,1
+Japanese,5oclock shadow,yes,0.11,1
+Japanese,arched eyebrows,no,0.56,1
+Japanese,attractive,no,0.3,1
+Japanese,bags under eyes,no,0.27,1
+Japanese,bald,no,1.0,1
+Japanese,bangs,no,0.1,1
+Japanese,beard,yes,0.01,1
+Japanese,big lips,no,0.69,1
+Japanese,big nose,no,0.44,1
+Japanese,black hair,no,0.02,1
+Japanese,blond hair,no,1.0,1
+Japanese,blurry,no,0.34,1
+Japanese,brown hair,yes,0.5,1
+Japanese,bushy eyebrows,yes,0.32,1
+Japanese,chubby,no,0.64,1
+Japanese,double chin,no,1.0,1
+Japanese,expression,neutral,0.7,1
+Japanese,gender,male,0.84,1
+Japanese,glasses,no,1.0,1
+Japanese,goatee,no,0.36,1
+Japanese,gray hair,no,1.0,1
+Japanese,heavy makeup,no,0.88,1
+Japanese,high cheekbones,no,0.69,1
+Japanese,mouth open,no,0.68,1
+Japanese,mustache,no,0.35,1
+Japanese,narrow eyes,no,0.02,1
+Japanese,oval face,yes,0.69,1
+Japanese,pale skin,no,0.9,1
+Japanese,pointy nose,no,1.0,1
+Japanese,race,asian,1.0,1
+Japanese,receding hairline,no,0.87,1
+Japanese,rosy cheeks,no,1.0,1
+Japanese,sideburns,no,0.39,1
+Japanese,straight hair,yes,0.66,1
+Japanese,wavy hair,no,0.76,1
+Japanese,wearing earrings,no,0.8,1
+Japanese,wearing hat,no,1.0,1
+Japanese,wearing lipstick,no,0.87,1
+Japanese,wearing necklace,no,0.95,1
+Japanese,wearing necktie,no,0.27,1
+Japanese,young,yes,0.83,1
+Korean,5oclock shadow,no,0.72,1
+Korean,arched eyebrows,no,0.69,1
+Korean,attractive,no,0.36,1
+Korean,bags under eyes,yes,0.06,1
+Korean,bald,no,1.0,1
+Korean,bangs,yes,0.17,1
+Korean,beard,no,1.0,1
+Korean,big lips,no,0.78,1
+Korean,big nose,no,0.28,1
+Korean,black hair,yes,1.0,1
+Korean,blond hair,no,0.98,1
+Korean,blurry,no,0.14,1
+Korean,brown hair,no,0.8,1
+Korean,bushy eyebrows,yes,0.35,1
+Korean,chubby,no,0.18,1
+Korean,double chin,no,0.53,1
+Korean,expression,neutral,0.45,1
+Korean,gender,male,0.64,1
+Korean,glasses,no,1.0,1
+Korean,goatee,no,1.0,1
+Korean,gray hair,no,1.0,1
+Korean,heavy makeup,no,0.87,1
+Korean,high cheekbones,no,0.16,1
+Korean,mouth open,no,0.72,1
+Korean,mustache,no,1.0,1
+Korean,narrow eyes,yes,0.22,1
+Korean,oval face,yes,0.78,1
+Korean,pale skin,no,0.8,1
+Korean,pointy nose,no,1.0,1
+Korean,race,asian,1.0,1
+Korean,receding hairline,no,0.88,1
+Korean,rosy cheeks,no,0.96,1
+Korean,sideburns,no,1.0,1
+Korean,straight hair,yes,0.62,1
+Korean,wavy hair,no,0.81,1
+Korean,wearing earrings,no,0.61,1
+Korean,wearing hat,no,0.71,1
+Korean,wearing lipstick,no,0.84,1
+Korean,wearing necklace,no,0.89,1
+Korean,wearing necktie,yes,0.01,1
+Korean,young,yes,0.54,1
+Laotian,5oclock shadow,no,0.23,1
+Laotian,arched eyebrows,no,0.56,1
+Laotian,attractive,no,0.28,1
+Laotian,bags under eyes,yes,0.03,1
+Laotian,bald,no,0.98,1
+Laotian,bangs,no,0.97,1
+Laotian,beard,no,0.57,1
+Laotian,big lips,no,0.62,1
+Laotian,big nose,no,0.2,1
+Laotian,black hair,yes,1.0,1
+Laotian,blond hair,no,1.0,1
+Laotian,blurry,no,0.42,1
+Laotian,brown hair,no,0.62,1
+Laotian,bushy eyebrows,yes,0.83,1
+Laotian,chubby,no,0.27,1
+Laotian,double chin,no,0.66,1
+Laotian,expression,neutral,0.41,1
+Laotian,gender,male,0.76,1
+Laotian,glasses,no,1.0,1
+Laotian,goatee,no,0.88,1
+Laotian,gray hair,no,1.0,1
+Laotian,heavy makeup,no,0.88,1
+Laotian,high cheekbones,no,0.25,1
+Laotian,mouth open,no,0.87,1
+Laotian,mustache,no,0.7,1
+Laotian,narrow eyes,no,0.13,1
+Laotian,oval face,yes,0.7,1
+Laotian,pale skin,no,0.95,1
+Laotian,pointy nose,no,1.0,1
+Laotian,race,asian,1.0,1
+Laotian,receding hairline,no,0.61,1
+Laotian,rosy cheeks,no,1.0,1
+Laotian,sideburns,no,0.99,1
+Laotian,straight hair,yes,1.0,1
+Laotian,wavy hair,no,1.0,1
+Laotian,wearing earrings,no,0.73,1
+Laotian,wearing hat,no,0.93,1
+Laotian,wearing lipstick,no,0.86,1
+Laotian,wearing necklace,no,1.0,1
+Laotian,wearing necktie,yes,0.06,1
+Laotian,young,yes,0.84,1
+Mexican,5oclock shadow,yes,0.49,1
+Mexican,arched eyebrows,no,0.63,1
+Mexican,attractive,yes,0.1,1
+Mexican,bags under eyes,no,0.61,1
+Mexican,bald,no,0.84,1
+Mexican,bangs,no,0.98,1
+Mexican,beard,yes,0.48,1
+Mexican,big lips,no,0.66,1
+Mexican,big nose,no,0.51,1
+Mexican,black hair,yes,0.35,1
+Mexican,blond hair,no,1.0,1
+Mexican,blurry,no,0.64,1
+Mexican,brown hair,no,0.28,1
+Mexican,bushy eyebrows,yes,0.82,1
+Mexican,chubby,no,0.67,1
+Mexican,double chin,no,1.0,1
+Mexican,expression,neutral,0.76,1
+Mexican,gender,male,0.99,1
+Mexican,glasses,no,1.0,1
+Mexican,goatee,yes,0.09,1
+Mexican,gray hair,no,1.0,1
+Mexican,heavy makeup,no,0.94,1
+Mexican,high cheekbones,no,0.95,1
+Mexican,mouth open,no,1.0,1
+Mexican,mustache,yes,0.06,1
+Mexican,narrow eyes,no,0.83,1
+Mexican,oval face,yes,0.61,1
+Mexican,pale skin,no,0.62,1
+Mexican,pointy nose,no,0.75,1
+Mexican,race,hispanic,0.98,1
+Mexican,receding hairline,no,0.75,1
+Mexican,rosy cheeks,no,1.0,1
+Mexican,sideburns,yes,0.03,1
+Mexican,straight hair,yes,0.75,1
+Mexican,wavy hair,no,1.0,1
+Mexican,wearing earrings,no,0.91,1
+Mexican,wearing hat,no,0.67,1
+Mexican,wearing lipstick,no,0.97,1
+Mexican,wearing necklace,no,1.0,1
+Mexican,wearing necktie,yes,0.12,1
+Mexican,young,yes,0.99,1
+Mongolian,5oclock shadow,no,0.61,1
+Mongolian,arched eyebrows,no,0.66,1
+Mongolian,attractive,no,0.88,1
+Mongolian,bags under eyes,yes,0.16,1
+Mongolian,bald,no,0.64,1
+Mongolian,bangs,no,0.48,1
+Mongolian,beard,no,0.78,1
+Mongolian,big lips,no,0.92,1
+Mongolian,big nose,no,0.13,1
+Mongolian,black hair,yes,0.47,1
+Mongolian,blond hair,no,1.0,1
+Mongolian,blurry,yes,0.19,1
+Mongolian,brown hair,no,0.27,1
+Mongolian,bushy eyebrows,yes,0.12,1
+Mongolian,chubby,yes,0.31,1
+Mongolian,double chin,no,0.04,1
+Mongolian,expression,neutral,0.26,1
+Mongolian,gender,male,0.72,1
+Mongolian,glasses,no,1.0,1
+Mongolian,goatee,no,1.0,1
+Mongolian,gray hair,no,0.65,1
+Mongolian,heavy makeup,no,0.92,1
+Mongolian,high cheekbones,yes,0.01,1
+Mongolian,mouth open,no,1.0,1
+Mongolian,mustache,no,0.74,1
+Mongolian,narrow eyes,yes,0.47,1
+Mongolian,oval face,yes,0.52,1
+Mongolian,pale skin,no,1.0,1
+Mongolian,pointy nose,no,1.0,1
+Mongolian,race,asian,1.0,1
+Mongolian,receding hairline,no,0.44,1
+Mongolian,rosy cheeks,no,1.0,1
+Mongolian,sideburns,no,1.0,1
+Mongolian,straight hair,yes,0.72,1
+Mongolian,wavy hair,no,1.0,1
+Mongolian,wearing earrings,no,0.59,1
+Mongolian,wearing hat,no,0.74,1
+Mongolian,wearing lipstick,no,0.91,1
+Mongolian,wearing necklace,no,0.96,1
+Mongolian,wearing necktie,yes,0.21,1
+Mongolian,young,no,0.12,1
+Nepali,5oclock shadow,no,0.49,1
+Nepali,arched eyebrows,no,0.49,1
+Nepali,attractive,no,0.81,1
+Nepali,bags under eyes,no,0.14,1
+Nepali,bald,no,0.54,1
+Nepali,bangs,no,1.0,1
+Nepali,beard,no,0.54,1
+Nepali,big lips,no,0.87,1
+Nepali,big nose,no,0.51,1
+Nepali,black hair,no,0.28,1
+Nepali,blond hair,no,0.93,1
+Nepali,blurry,yes,0.39,1
+Nepali,brown hair,yes,0.25,1
+Nepali,bushy eyebrows,no,0.05,1
+Nepali,chubby,no,0.05,1
+Nepali,double chin,no,0.41,1
+Nepali,expression,neutral,0.13,1
+Nepali,gender,male,0.49,1
+Nepali,glasses,no,1.0,1
+Nepali,goatee,no,0.8,1
+Nepali,gray hair,no,0.77,1
+Nepali,heavy makeup,no,0.88,1
+Nepali,high cheekbones,no,0.09,1
+Nepali,mouth open,no,0.42,1
+Nepali,mustache,no,0.73,1
+Nepali,narrow eyes,yes,0.79,1
+Nepali,oval face,yes,0.47,1
+Nepali,pale skin,no,1.0,1
+Nepali,pointy nose,no,1.0,1
+Nepali,race,asian,1.0,1
+Nepali,receding hairline,no,0.06,1
+Nepali,rosy cheeks,no,1.0,1
+Nepali,sideburns,no,0.93,1
+Nepali,straight hair,yes,0.52,1
+Nepali,wavy hair,no,1.0,1
+Nepali,wearing earrings,no,0.36,1
+Nepali,wearing hat,no,0.77,1
+Nepali,wearing lipstick,no,0.94,1
+Nepali,wearing necklace,no,0.95,1
+Nepali,wearing necktie,no,0.24,1
+Nepali,young,yes,0.34,1
+Nigerian,5oclock shadow,yes,0.17,1
+Nigerian,arched eyebrows,no,0.6,1
+Nigerian,attractive,no,1.0,1
+Nigerian,bags under eyes,yes,0.02,1
+Nigerian,bald,yes,0.3,1
+Nigerian,bangs,no,1.0,1
+Nigerian,beard,yes,0.59,1
+Nigerian,big lips,yes,0.21,1
+Nigerian,big nose,yes,0.55,1
+Nigerian,black hair,no,0.35,1
+Nigerian,blond hair,no,0.7,1
+Nigerian,blurry,no,0.3,1
+Nigerian,brown hair,no,0.69,1
+Nigerian,bushy eyebrows,yes,0.03,1
+Nigerian,chubby,yes,0.47,1
+Nigerian,double chin,yes,0.09,1
+Nigerian,expression,neutral,0.37,1
+Nigerian,gender,male,0.95,1
+Nigerian,glasses,no,1.0,1
+Nigerian,goatee,yes,0.39,1
+Nigerian,gray hair,no,0.39,1
+Nigerian,heavy makeup,no,1.0,1
+Nigerian,high cheekbones,no,0.06,1
+Nigerian,mouth open,no,0.31,1
+Nigerian,mustache,yes,0.35,1
+Nigerian,narrow eyes,no,1.0,1
+Nigerian,oval face,yes,0.58,1
+Nigerian,pale skin,no,1.0,1
+Nigerian,pointy nose,no,1.0,1
+Nigerian,race,black,1.0,1
+Nigerian,receding hairline,yes,0.52,1
+Nigerian,rosy cheeks,no,0.92,1
+Nigerian,sideburns,yes,0.09,1
+Nigerian,straight hair,no,0.46,1
+Nigerian,wavy hair,no,1.0,1
+Nigerian,wearing earrings,no,0.46,1
+Nigerian,wearing hat,no,0.23,1
+Nigerian,wearing lipstick,no,1.0,1
+Nigerian,wearing necklace,no,0.66,1
+Nigerian,wearing necktie,no,0.18,1
+Nigerian,young,yes,0.05,1
+Peruvian,5oclock shadow,yes,0.13,1
+Peruvian,arched eyebrows,no,0.88,1
+Peruvian,attractive,no,0.34,1
+Peruvian,bags under eyes,no,0.42,1
+Peruvian,bald,no,0.87,1
+Peruvian,bangs,no,1.0,1
+Peruvian,beard,no,0.21,1
+Peruvian,big lips,no,0.85,1
+Peruvian,big nose,no,0.4,1
+Peruvian,black hair,yes,0.87,1
+Peruvian,blond hair,no,1.0,1
+Peruvian,blurry,no,0.34,1
+Peruvian,brown hair,no,0.81,1
+Peruvian,bushy eyebrows,yes,0.41,1
+Peruvian,chubby,no,0.32,1
+Peruvian,double chin,no,0.65,1
+Peruvian,expression,neutral,0.68,1
+Peruvian,gender,male,0.99,1
+Peruvian,glasses,no,1.0,1
+Peruvian,goatee,no,0.69,1
+Peruvian,gray hair,no,1.0,1
+Peruvian,heavy makeup,no,0.89,1
+Peruvian,high cheekbones,no,0.75,1
+Peruvian,mouth open,no,0.84,1
+Peruvian,mustache,no,0.49,1
+Peruvian,narrow eyes,no,0.69,1
+Peruvian,oval face,yes,0.51,1
+Peruvian,pale skin,no,0.85,1
+Peruvian,pointy nose,no,0.99,1
+Peruvian,race,hispanic,0.99,1
+Peruvian,receding hairline,no,0.68,1
+Peruvian,rosy cheeks,no,1.0,1
+Peruvian,sideburns,no,0.73,1
+Peruvian,straight hair,yes,0.82,1
+Peruvian,wavy hair,no,1.0,1
+Peruvian,wearing earrings,no,0.99,1
+Peruvian,wearing hat,no,0.58,1
+Peruvian,wearing lipstick,no,0.93,1
+Peruvian,wearing necklace,no,1.0,1
+Peruvian,wearing necktie,yes,0.3,1
+Peruvian,young,yes,0.56,1
+Polish,5oclock shadow,yes,0.0,1
+Polish,arched eyebrows,no,0.97,1
+Polish,attractive,no,0.62,1
+Polish,bags under eyes,no,0.65,1
+Polish,bald,no,0.45,1
+Polish,bangs,no,1.0,1
+Polish,beard,no,0.27,1
+Polish,big lips,no,1.0,1
+Polish,big nose,no,0.71,1
+Polish,black hair,no,0.77,1
+Polish,blond hair,no,0.5,1
+Polish,blurry,no,0.05,1
+Polish,brown hair,yes,0.07,1
+Polish,bushy eyebrows,no,0.56,1
+Polish,chubby,no,0.49,1
+Polish,double chin,no,0.79,1
+Polish,expression,neutral,1.0,1
+Polish,gender,male,0.89,1
+Polish,glasses,no,1.0,1
+Polish,goatee,no,0.69,1
+Polish,gray hair,no,0.54,1
+Polish,heavy makeup,no,0.94,1
+Polish,high cheekbones,no,1.0,1
+Polish,mouth open,no,0.9,1
+Polish,mustache,no,0.65,1
+Polish,narrow eyes,no,0.68,1
+Polish,oval face,yes,0.52,1
+Polish,pale skin,no,0.62,1
+Polish,pointy nose,no,0.8,1
+Polish,race,white,1.0,1
+Polish,receding hairline,no,0.09,1
+Polish,rosy cheeks,no,1.0,1
+Polish,sideburns,no,0.72,1
+Polish,straight hair,yes,0.62,1
+Polish,wavy hair,no,1.0,1
+Polish,wearing earrings,no,0.92,1
+Polish,wearing hat,no,0.83,1
+Polish,wearing lipstick,no,1.0,1
+Polish,wearing necklace,no,1.0,1
+Polish,wearing necktie,no,0.03,1
+Polish,young,yes,0.28,1
+Puertorican,5oclock shadow,yes,0.41,1
+Puertorican,arched eyebrows,no,0.52,1
+Puertorican,attractive,no,0.24,1
+Puertorican,bags under eyes,no,0.45,1
+Puertorican,bald,no,0.63,1
+Puertorican,bangs,no,1.0,1
+Puertorican,beard,yes,0.31,1
+Puertorican,big lips,no,0.38,1
+Puertorican,big nose,no,0.22,1
+Puertorican,black hair,yes,0.44,1
+Puertorican,blond hair,no,1.0,1
+Puertorican,blurry,no,0.78,1
+Puertorican,brown hair,no,0.56,1
+Puertorican,bushy eyebrows,yes,0.93,1
+Puertorican,chubby,no,0.41,1
+Puertorican,double chin,no,0.78,1
+Puertorican,expression,neutral,0.81,1
+Puertorican,gender,male,1.0,1
+Puertorican,glasses,no,1.0,1
+Puertorican,goatee,no,0.05,1
+Puertorican,gray hair,no,1.0,1
+Puertorican,heavy makeup,no,0.95,1
+Puertorican,high cheekbones,no,0.86,1
+Puertorican,mouth open,no,1.0,1
+Puertorican,mustache,yes,0.0,1
+Puertorican,narrow eyes,no,1.0,1
+Puertorican,oval face,yes,0.53,1
+Puertorican,pale skin,no,0.82,1
+Puertorican,pointy nose,no,0.7,1
+Puertorican,race,white,1.0,1
+Puertorican,receding hairline,no,0.41,1
+Puertorican,rosy cheeks,no,1.0,1
+Puertorican,sideburns,no,0.18,1
+Puertorican,straight hair,yes,0.57,1
+Puertorican,wavy hair,no,1.0,1
+Puertorican,wearing earrings,no,0.82,1
+Puertorican,wearing hat,no,0.57,1
+Puertorican,wearing lipstick,no,0.98,1
+Puertorican,wearing necklace,no,1.0,1
+Puertorican,wearing necktie,yes,0.16,1
+Puertorican,young,yes,0.77,1
+Romanian,5oclock shadow,no,0.14,1
+Romanian,arched eyebrows,no,0.71,1
+Romanian,attractive,yes,0.02,1
+Romanian,bags under eyes,no,0.61,1
+Romanian,bald,no,1.0,1
+Romanian,bangs,no,0.99,1
+Romanian,beard,no,0.74,1
+Romanian,big lips,no,0.89,1
+Romanian,big nose,no,0.68,1
+Romanian,black hair,no,0.06,1
+Romanian,blond hair,no,0.86,1
+Romanian,blurry,no,0.52,1
+Romanian,brown hair,yes,0.11,1
+Romanian,bushy eyebrows,yes,0.49,1
+Romanian,chubby,no,0.77,1
+Romanian,double chin,no,1.0,1
+Romanian,expression,neutral,0.37,1
+Romanian,gender,male,0.76,1
+Romanian,glasses,no,1.0,1
+Romanian,goatee,no,1.0,1
+Romanian,gray hair,no,1.0,1
+Romanian,heavy makeup,no,0.9,1
+Romanian,high cheekbones,no,0.58,1
+Romanian,mouth open,no,0.83,1
+Romanian,mustache,no,1.0,1
+Romanian,narrow eyes,no,0.76,1
+Romanian,oval face,yes,0.8,1
+Romanian,pale skin,no,0.72,1
+Romanian,pointy nose,no,0.86,1
+Romanian,race,white,1.0,1
+Romanian,receding hairline,no,0.72,1
+Romanian,rosy cheeks,no,0.93,1
+Romanian,sideburns,no,1.0,1
+Romanian,straight hair,yes,0.92,1
+Romanian,wavy hair,no,1.0,1
+Romanian,wearing earrings,no,0.69,1
+Romanian,wearing hat,no,0.78,1
+Romanian,wearing lipstick,no,0.91,1
+Romanian,wearing necklace,no,1.0,1
+Romanian,wearing necktie,no,0.09,1
+Romanian,young,yes,1.0,1
+Russian,5oclock shadow,yes,0.33,1
+Russian,arched eyebrows,no,0.93,1
+Russian,attractive,no,0.39,1
+Russian,bags under eyes,no,0.5,1
+Russian,bald,no,0.39,1
+Russian,bangs,no,0.95,1
+Russian,beard,yes,0.18,1
+Russian,big lips,no,0.69,1
+Russian,big nose,no,0.36,1
+Russian,black hair,no,0.68,1
+Russian,blond hair,no,0.77,1
+Russian,blurry,no,0.6,1
+Russian,brown hair,yes,0.16,1
+Russian,bushy eyebrows,no,0.02,1
+Russian,chubby,no,0.4,1
+Russian,double chin,no,0.75,1
+Russian,expression,neutral,0.88,1
+Russian,gender,male,0.97,1
+Russian,glasses,no,1.0,1
+Russian,goatee,no,0.2,1
+Russian,gray hair,no,0.77,1
+Russian,heavy makeup,no,0.94,1
+Russian,high cheekbones,no,0.9,1
+Russian,mouth open,no,0.88,1
+Russian,mustache,no,0.2,1
+Russian,narrow eyes,no,1.0,1
+Russian,oval face,yes,0.71,1
+Russian,pale skin,no,0.69,1
+Russian,pointy nose,no,0.91,1
+Russian,race,white,1.0,1
+Russian,receding hairline,no,0.25,1
+Russian,rosy cheeks,no,1.0,1
+Russian,sideburns,no,0.29,1
+Russian,straight hair,yes,0.41,1
+Russian,wavy hair,no,1.0,1
+Russian,wearing earrings,no,0.95,1
+Russian,wearing hat,no,0.61,1
+Russian,wearing lipstick,no,1.0,1
+Russian,wearing necklace,no,1.0,1
+Russian,wearing necktie,yes,0.05,1
+Russian,young,yes,0.54,1
+Samoan,5oclock shadow,yes,0.34,1
+Samoan,arched eyebrows,no,0.51,1
+Samoan,attractive,no,0.66,1
+Samoan,bags under eyes,no,0.33,1
+Samoan,bald,no,0.65,1
+Samoan,bangs,no,1.0,1
+Samoan,beard,yes,0.43,1
+Samoan,big lips,no,0.54,1
+Samoan,big nose,no,0.18,1
+Samoan,black hair,yes,0.92,1
+Samoan,blond hair,no,1.0,1
+Samoan,blurry,no,0.28,1
+Samoan,brown hair,no,0.9,1
+Samoan,bushy eyebrows,yes,0.9,1
+Samoan,chubby,no,0.08,1
+Samoan,double chin,no,0.55,1
+Samoan,expression,neutral,0.91,1
+Samoan,gender,male,0.96,1
+Samoan,glasses,no,1.0,1
+Samoan,goatee,yes,0.12,1
+Samoan,gray hair,no,1.0,1
+Samoan,heavy makeup,no,0.84,1
+Samoan,high cheekbones,no,0.71,1
+Samoan,mouth open,no,0.92,1
+Samoan,mustache,yes,0.17,1
+Samoan,narrow eyes,no,0.46,1
+Samoan,oval face,yes,0.51,1
+Samoan,pale skin,no,1.0,1
+Samoan,pointy nose,no,0.83,1
+Samoan,race,hispanic,0.92,1
+Samoan,receding hairline,no,0.34,1
+Samoan,rosy cheeks,no,0.93,1
+Samoan,sideburns,no,0.01,1
+Samoan,straight hair,yes,0.33,1
+Samoan,wavy hair,no,0.98,1
+Samoan,wearing earrings,no,0.69,1
+Samoan,wearing hat,no,0.69,1
+Samoan,wearing lipstick,no,0.91,1
+Samoan,wearing necklace,no,1.0,1
+Samoan,wearing necktie,yes,0.03,1
+Samoan,young,yes,0.41,1
+Saudi Arabian,5oclock shadow,yes,0.48,1
+Saudi Arabian,arched eyebrows,no,0.6,1
+Saudi Arabian,attractive,no,0.31,1
+Saudi Arabian,bags under eyes,no,0.52,1
+Saudi Arabian,bald,no,0.68,1
+Saudi Arabian,bangs,no,0.94,1
+Saudi Arabian,beard,yes,0.56,1
+Saudi Arabian,big lips,no,0.63,1
+Saudi Arabian,big nose,no,0.23,1
+Saudi Arabian,black hair,no,0.19,1
+Saudi Arabian,blond hair,no,0.9,1
+Saudi Arabian,blurry,no,0.62,1
+Saudi Arabian,brown hair,yes,0.21,1
+Saudi Arabian,bushy eyebrows,yes,0.9,1
+Saudi Arabian,chubby,no,0.31,1
+Saudi Arabian,double chin,no,0.64,1
+Saudi Arabian,expression,neutral,0.27,1
+Saudi Arabian,gender,male,0.92,1
+Saudi Arabian,glasses,no,1.0,1
+Saudi Arabian,goatee,yes,0.22,1
+Saudi Arabian,gray hair,no,1.0,1
+Saudi Arabian,heavy makeup,no,0.91,1
+Saudi Arabian,high cheekbones,no,0.58,1
+Saudi Arabian,mouth open,no,0.88,1
+Saudi Arabian,mustache,yes,0.22,1
+Saudi Arabian,narrow eyes,no,1.0,1
+Saudi Arabian,oval face,yes,0.87,1
+Saudi Arabian,pale skin,no,1.0,1
+Saudi Arabian,pointy nose,no,0.89,1
+Saudi Arabian,race,white,1.0,1
+Saudi Arabian,receding hairline,no,0.72,1
+Saudi Arabian,rosy cheeks,no,0.9,1
+Saudi Arabian,sideburns,yes,0.11,1
+Saudi Arabian,straight hair,yes,0.49,1
+Saudi Arabian,wavy hair,no,1.0,1
+Saudi Arabian,wearing earrings,no,0.77,1
+Saudi Arabian,wearing hat,no,0.62,1
+Saudi Arabian,wearing lipstick,no,0.93,1
+Saudi Arabian,wearing necklace,no,0.96,1
+Saudi Arabian,wearing necktie,no,0.05,1
+Saudi Arabian,young,yes,0.65,1
+Serbian,5oclock shadow,yes,0.52,1
+Serbian,arched eyebrows,no,0.66,1
+Serbian,attractive,yes,0.11,1
+Serbian,bags under eyes,no,0.56,1
+Serbian,bald,no,0.77,1
+Serbian,bangs,no,0.96,1
+Serbian,beard,yes,0.39,1
+Serbian,big lips,no,0.46,1
+Serbian,big nose,no,0.36,1
+Serbian,black hair,yes,0.01,1
+Serbian,blond hair,no,0.92,1
+Serbian,blurry,no,0.95,1
+Serbian,brown hair,yes,0.01,1
+Serbian,bushy eyebrows,yes,0.78,1
+Serbian,chubby,no,0.75,1
+Serbian,double chin,no,1.0,1
+Serbian,expression,neutral,0.94,1
+Serbian,gender,male,1.0,1
+Serbian,glasses,no,1.0,1
+Serbian,goatee,no,0.01,1
+Serbian,gray hair,no,1.0,1
+Serbian,heavy makeup,no,1.0,1
+Serbian,high cheekbones,no,0.99,1
+Serbian,mouth open,no,0.98,1
+Serbian,mustache,no,0.06,1
+Serbian,narrow eyes,no,1.0,1
+Serbian,oval face,yes,0.68,1
+Serbian,pale skin,no,0.59,1
+Serbian,pointy nose,no,0.72,1
+Serbian,race,white,1.0,1
+Serbian,receding hairline,no,0.65,1
+Serbian,rosy cheeks,no,1.0,1
+Serbian,sideburns,no,0.09,1
+Serbian,straight hair,yes,0.71,1
+Serbian,wavy hair,no,1.0,1
+Serbian,wearing earrings,no,0.83,1
+Serbian,wearing hat,no,0.6,1
+Serbian,wearing lipstick,no,1.0,1
+Serbian,wearing necklace,no,1.0,1
+Serbian,wearing necktie,no,0.01,1
+Serbian,young,yes,1.0,1
+South African,5oclock shadow,yes,0.17,1
+South African,arched eyebrows,no,0.36,1
+South African,attractive,no,1.0,1
+South African,bags under eyes,yes,0.1,1
+South African,bald,yes,0.03,1
+South African,bangs,no,0.85,1
+South African,beard,yes,0.75,1
+South African,big lips,yes,0.4,1
+South African,big nose,yes,0.63,1
+South African,black hair,yes,0.07,1
+South African,blond hair,no,1.0,1
+South African,blurry,no,0.26,1
+South African,brown hair,no,0.23,1
+South African,bushy eyebrows,yes,0.22,1
+South African,chubby,yes,0.61,1
+South African,double chin,yes,0.14,1
+South African,expression,neutral,0.2,1
+South African,gender,male,0.8,1
+South African,glasses,no,1.0,1
+South African,goatee,yes,0.67,1
+South African,gray hair,no,0.79,1
+South African,heavy makeup,no,0.96,1
+South African,high cheekbones,yes,0.19,1
+South African,mouth open,no,0.93,1
+South African,mustache,yes,0.61,1
+South African,narrow eyes,no,0.78,1
+South African,oval face,yes,0.7,1
+South African,pale skin,no,1.0,1
+South African,pointy nose,no,1.0,1
+South African,race,black,1.0,1
+South African,receding hairline,yes,0.28,1
+South African,rosy cheeks,no,0.95,1
+South African,sideburns,yes,0.38,1
+South African,straight hair,no,0.39,1
+South African,wavy hair,no,0.73,1
+South African,wearing earrings,no,0.3,1
+South African,wearing hat,no,0.42,1
+South African,wearing lipstick,no,0.93,1
+South African,wearing necklace,no,0.53,1
+South African,wearing necktie,no,0.29,1
+South African,young,yes,0.04,1
+Spaniard,5oclock shadow,yes,0.56,1
+Spaniard,arched eyebrows,no,0.59,1
+Spaniard,attractive,no,0.21,1
+Spaniard,bags under eyes,no,0.63,1
+Spaniard,bald,no,0.9,1
+Spaniard,bangs,no,0.83,1
+Spaniard,beard,yes,0.43,1
+Spaniard,big lips,no,0.81,1
+Spaniard,big nose,no,0.56,1
+Spaniard,black hair,yes,0.14,1
+Spaniard,blond hair,no,1.0,1
+Spaniard,blurry,no,0.6,1
+Spaniard,brown hair,yes,0.0,1
+Spaniard,bushy eyebrows,yes,0.96,1
+Spaniard,chubby,no,0.6,1
+Spaniard,double chin,no,0.89,1
+Spaniard,expression,neutral,0.61,1
+Spaniard,gender,male,1.0,1
+Spaniard,glasses,no,1.0,1
+Spaniard,goatee,no,0.0,1
+Spaniard,gray hair,no,1.0,1
+Spaniard,heavy makeup,no,0.91,1
+Spaniard,high cheekbones,no,0.83,1
+Spaniard,mouth open,no,0.8,1
+Spaniard,mustache,yes,0.0,1
+Spaniard,narrow eyes,no,0.73,1
+Spaniard,oval face,yes,0.64,1
+Spaniard,pale skin,no,1.0,1
+Spaniard,pointy nose,no,0.53,1
+Spaniard,race,white,1.0,1
+Spaniard,receding hairline,no,0.81,1
+Spaniard,rosy cheeks,no,0.9,1
+Spaniard,sideburns,no,0.05,1
+Spaniard,straight hair,yes,0.57,1
+Spaniard,wavy hair,no,0.96,1
+Spaniard,wearing earrings,no,0.79,1
+Spaniard,wearing hat,no,0.86,1
+Spaniard,wearing lipstick,no,0.97,1
+Spaniard,wearing necklace,no,1.0,1
+Spaniard,wearing necktie,yes,0.12,1
+Spaniard,young,yes,0.77,1
+Swiss,5oclock shadow,yes,0.58,1
+Swiss,arched eyebrows,no,0.63,1
+Swiss,attractive,yes,0.28,1
+Swiss,bags under eyes,no,0.88,1
+Swiss,bald,no,0.91,1
+Swiss,bangs,no,1.0,1
+Swiss,beard,yes,0.29,1
+Swiss,big lips,no,0.84,1
+Swiss,big nose,no,0.64,1
+Swiss,black hair,yes,0.17,1
+Swiss,blond hair,no,1.0,1
+Swiss,blurry,no,0.81,1
+Swiss,brown hair,no,0.13,1
+Swiss,bushy eyebrows,yes,0.79,1
+Swiss,chubby,no,0.92,1
+Swiss,double chin,no,1.0,1
+Swiss,expression,neutral,0.62,1
+Swiss,gender,male,1.0,1
+Swiss,glasses,no,1.0,1
+Swiss,goatee,no,0.21,1
+Swiss,gray hair,no,1.0,1
+Swiss,heavy makeup,no,0.94,1
+Swiss,high cheekbones,no,1.0,1
+Swiss,mouth open,no,0.88,1
+Swiss,mustache,no,0.26,1
+Swiss,narrow eyes,no,0.93,1
+Swiss,oval face,yes,0.65,1
+Swiss,pale skin,no,0.55,1
+Swiss,pointy nose,no,0.26,1
+Swiss,race,white,1.0,1
+Swiss,receding hairline,no,0.76,1
+Swiss,rosy cheeks,no,0.95,1
+Swiss,sideburns,no,0.23,1
+Swiss,straight hair,yes,0.72,1
+Swiss,wavy hair,no,1.0,1
+Swiss,wearing earrings,no,0.94,1
+Swiss,wearing hat,no,0.72,1
+Swiss,wearing lipstick,no,1.0,1
+Swiss,wearing necklace,no,1.0,1
+Swiss,wearing necktie,yes,0.15,1
+Swiss,young,yes,1.0,1
+Taiwanese,5oclock shadow,no,0.47,1
+Taiwanese,arched eyebrows,no,0.61,1
+Taiwanese,attractive,yes,0.13,1
+Taiwanese,bags under eyes,no,0.62,1
+Taiwanese,bald,no,0.95,1
+Taiwanese,bangs,no,0.51,1
+Taiwanese,beard,no,0.8,1
+Taiwanese,big lips,no,0.65,1
+Taiwanese,big nose,no,0.57,1
+Taiwanese,black hair,yes,1.0,1
+Taiwanese,blond hair,no,1.0,1
+Taiwanese,blurry,no,0.52,1
+Taiwanese,brown hair,no,0.81,1
+Taiwanese,bushy eyebrows,yes,0.41,1
+Taiwanese,chubby,no,0.53,1
+Taiwanese,double chin,no,0.95,1
+Taiwanese,expression,neutral,0.84,1
+Taiwanese,gender,male,0.69,1
+Taiwanese,glasses,no,1.0,1
+Taiwanese,goatee,no,1.0,1
+Taiwanese,gray hair,no,1.0,1
+Taiwanese,heavy makeup,no,0.82,1
+Taiwanese,high cheekbones,no,0.74,1
+Taiwanese,mouth open,no,1.0,1
+Taiwanese,mustache,no,0.84,1
+Taiwanese,narrow eyes,no,0.59,1
+Taiwanese,oval face,yes,0.77,1
+Taiwanese,pale skin,no,0.28,1
+Taiwanese,pointy nose,no,1.0,1
+Taiwanese,race,asian,1.0,1
+Taiwanese,receding hairline,no,0.54,1
+Taiwanese,rosy cheeks,no,1.0,1
+Taiwanese,sideburns,no,1.0,1
+Taiwanese,straight hair,yes,1.0,1
+Taiwanese,wavy hair,no,1.0,1
+Taiwanese,wearing earrings,no,0.74,1
+Taiwanese,wearing hat,no,1.0,1
+Taiwanese,wearing lipstick,no,0.77,1
+Taiwanese,wearing necklace,no,1.0,1
+Taiwanese,wearing necktie,yes,0.08,1
+Taiwanese,young,yes,1.0,1
+Thai,5oclock shadow,no,0.41,1
+Thai,arched eyebrows,no,0.77,1
+Thai,attractive,no,0.71,1
+Thai,bags under eyes,yes,0.04,1
+Thai,bald,no,0.85,1
+Thai,bangs,no,0.51,1
+Thai,beard,no,0.66,1
+Thai,big lips,no,0.72,1
+Thai,big nose,no,0.23,1
+Thai,black hair,yes,0.72,1
+Thai,blond hair,no,1.0,1
+Thai,blurry,yes,0.29,1
+Thai,brown hair,no,0.44,1
+Thai,bushy eyebrows,yes,0.14,1
+Thai,chubby,no,0.09,1
+Thai,double chin,no,0.37,1
+Thai,expression,smile,0.1,1
+Thai,gender,male,0.67,1
+Thai,glasses,no,1.0,1
+Thai,goatee,no,0.98,1
+Thai,gray hair,no,1.0,1
+Thai,heavy makeup,no,1.0,1
+Thai,high cheekbones,yes,0.07,1
+Thai,mouth open,no,0.09,1
+Thai,mustache,no,0.78,1
+Thai,narrow eyes,yes,0.2,1
+Thai,oval face,yes,0.61,1
+Thai,pale skin,no,1.0,1
+Thai,pointy nose,no,1.0,1
+Thai,race,asian,1.0,1
+Thai,receding hairline,no,0.58,1
+Thai,rosy cheeks,no,1.0,1
+Thai,sideburns,no,1.0,1
+Thai,straight hair,yes,0.51,1
+Thai,wavy hair,no,0.84,1
+Thai,wearing earrings,no,0.8,1
+Thai,wearing hat,no,0.64,1
+Thai,wearing lipstick,no,0.98,1
+Thai,wearing necklace,no,0.89,1
+Thai,wearing necktie,no,0.12,1
+Thai,young,yes,0.39,1
+Ukrainian,5oclock shadow,no,0.02,1
+Ukrainian,arched eyebrows,no,0.94,1
+Ukrainian,attractive,no,0.0,1
+Ukrainian,bags under eyes,no,0.74,1
+Ukrainian,bald,no,0.87,1
+Ukrainian,bangs,no,0.91,1
+Ukrainian,beard,no,0.58,1
+Ukrainian,big lips,no,0.89,1
+Ukrainian,big nose,no,0.82,1
+Ukrainian,black hair,no,0.81,1
+Ukrainian,blond hair,no,0.7,1
+Ukrainian,blurry,no,0.52,1
+Ukrainian,brown hair,yes,0.69,1
+Ukrainian,bushy eyebrows,no,0.1,1
+Ukrainian,chubby,no,0.89,1
+Ukrainian,double chin,no,1.0,1
+Ukrainian,expression,neutral,0.85,1
+Ukrainian,gender,male,0.88,1
+Ukrainian,glasses,no,1.0,1
+Ukrainian,goatee,no,1.0,1
+Ukrainian,gray hair,no,1.0,1
+Ukrainian,heavy makeup,no,0.95,1
+Ukrainian,high cheekbones,no,1.0,1
+Ukrainian,mouth open,no,0.84,1
+Ukrainian,mustache,no,0.96,1
+Ukrainian,narrow eyes,no,0.87,1
+Ukrainian,oval face,yes,0.56,1
+Ukrainian,pale skin,no,0.39,1
+Ukrainian,pointy nose,no,0.74,1
+Ukrainian,race,white,1.0,1
+Ukrainian,receding hairline,no,0.63,1
+Ukrainian,rosy cheeks,no,1.0,1
+Ukrainian,sideburns,no,1.0,1
+Ukrainian,straight hair,yes,0.9,1
+Ukrainian,wavy hair,no,1.0,1
+Ukrainian,wearing earrings,no,1.0,1
+Ukrainian,wearing hat,no,0.83,1
+Ukrainian,wearing lipstick,no,0.98,1
+Ukrainian,wearing necklace,no,1.0,1
+Ukrainian,wearing necktie,no,0.01,1
+Ukrainian,young,yes,0.95,1
+Uzbek,5oclock shadow,no,0.12,1
+Uzbek,arched eyebrows,no,0.79,1
+Uzbek,attractive,no,0.66,1
+Uzbek,bags under eyes,no,0.68,1
+Uzbek,bald,no,0.75,1
+Uzbek,bangs,no,0.91,1
+Uzbek,beard,no,0.36,1
+Uzbek,big lips,no,0.68,1
+Uzbek,big nose,no,0.51,1
+Uzbek,black hair,yes,0.7,1
+Uzbek,blond hair,no,1.0,1
+Uzbek,blurry,no,0.07,1
+Uzbek,brown hair,no,0.84,1
+Uzbek,bushy eyebrows,yes,0.32,1
+Uzbek,chubby,no,0.3,1
+Uzbek,double chin,no,0.79,1
+Uzbek,expression,neutral,1.0,1
+Uzbek,gender,male,0.92,1
+Uzbek,glasses,no,1.0,1
+Uzbek,goatee,no,0.72,1
+Uzbek,gray hair,no,1.0,1
+Uzbek,heavy makeup,no,0.86,1
+Uzbek,high cheekbones,no,0.79,1
+Uzbek,mouth open,no,0.89,1
+Uzbek,mustache,no,0.52,1
+Uzbek,narrow eyes,no,0.41,1
+Uzbek,oval face,yes,0.46,1
+Uzbek,pale skin,no,0.8,1
+Uzbek,pointy nose,no,1.0,1
+Uzbek,race,hispanic,0.86,1
+Uzbek,receding hairline,no,0.55,1
+Uzbek,rosy cheeks,no,1.0,1
+Uzbek,sideburns,no,0.82,1
+Uzbek,straight hair,yes,0.47,1
+Uzbek,wavy hair,no,1.0,1
+Uzbek,wearing earrings,no,0.65,1
+Uzbek,wearing hat,no,0.16,1
+Uzbek,wearing lipstick,no,0.96,1
+Uzbek,wearing necklace,no,1.0,1
+Uzbek,wearing necktie,no,0.12,1
+Uzbek,young,yes,0.69,1
+Vietnamese,5oclock shadow,no,0.41,1
+Vietnamese,arched eyebrows,no,0.55,1
+Vietnamese,attractive,no,0.29,1
+Vietnamese,bags under eyes,no,0.65,1
+Vietnamese,bald,no,0.95,1
+Vietnamese,bangs,no,0.85,1
+Vietnamese,beard,no,0.68,1
+Vietnamese,big lips,no,0.57,1
+Vietnamese,big nose,no,0.67,1
+Vietnamese,black hair,yes,0.78,1
+Vietnamese,blond hair,no,1.0,1
+Vietnamese,blurry,no,0.25,1
+Vietnamese,brown hair,no,0.56,1
+Vietnamese,bushy eyebrows,yes,0.52,1
+Vietnamese,chubby,no,0.54,1
+Vietnamese,double chin,no,1.0,1
+Vietnamese,expression,neutral,1.0,1
+Vietnamese,gender,male,0.6,1
+Vietnamese,glasses,no,1.0,1
+Vietnamese,goatee,no,0.92,1
+Vietnamese,gray hair,no,1.0,1
+Vietnamese,heavy makeup,no,0.89,1
+Vietnamese,high cheekbones,no,0.85,1
+Vietnamese,mouth open,no,1.0,1
+Vietnamese,mustache,no,0.78,1
+Vietnamese,narrow eyes,no,0.37,1
+Vietnamese,oval face,yes,0.57,1
+Vietnamese,pale skin,no,0.62,1
+Vietnamese,pointy nose,no,1.0,1
+Vietnamese,race,asian,1.0,1
+Vietnamese,receding hairline,no,0.52,1
+Vietnamese,rosy cheeks,no,1.0,1
+Vietnamese,sideburns,no,1.0,1
+Vietnamese,straight hair,yes,0.86,1
+Vietnamese,wavy hair,no,1.0,1
+Vietnamese,wearing earrings,no,0.58,1
+Vietnamese,wearing hat,no,0.74,1
+Vietnamese,wearing lipstick,no,0.84,1
+Vietnamese,wearing necklace,no,0.95,1
+Vietnamese,wearing necktie,no,0.24,1
+Vietnamese,young,yes,1.0,1
