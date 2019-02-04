@@ -7,8 +7,8 @@ import statistics
 import glob,os
 # print(os.getcwd())
 # os.chdir('D:\Education\Hackathones\photohack\photoDNA')
-os.chdir('D:\Education\Hackathones\photohack\djangoback\photodna')
-
+# os.chdir('D:\Education\Hackathones\photohack\djangoback\photodna')
+os.chdir('var/www/html/backend/photoDNA/photodna')
 def send_photo_for_analysis(photo_string):
     parameters_post = {
         "api_key": "d45fd466-51e2-4701-8da8-04351c872236",
