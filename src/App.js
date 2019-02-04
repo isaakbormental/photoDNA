@@ -23,9 +23,9 @@ class App extends Component {
     chooseImgFromApi() {
         // TODO: pick right method (see callback API)
         if (this.state.appEnv === 'production') {
-            const http = new XMLHttpRequest();
-            http.open("GET", "callback:nativePhotoSelect?func=appUploaded");
-            http.send();
+            const xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", "callback:nativePhotoSelect?func=appUploaded", false ); // false for synchronous request
+            xmlHttp.send( null );
         } else {
             window.appUploaded('test');
         }
