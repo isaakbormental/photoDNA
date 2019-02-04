@@ -1,0 +1,11 @@
+# Environments
+.env
+.venv
+env/
+myvenv/
+ENV/
+env.bak/
+venv.bak/
+
+*.sqlite3
+.idea/

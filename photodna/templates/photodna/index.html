@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PhotoLab hack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+{#    <link rel="stylesheet" href="../../static/photodna/css/style.css">#}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'photodna/css/style.css' %}" type="text/css">
+</head>
+<body>
+<div class="screen1" id="screen1" data-page="1">
+    <form class="form" action="/handler">
+        <div class="container">
+            <h1>My origin</h1>
+            <div class="form__photo">
+
+                <label class="form__add-btn btn">
+                    Добавить фото
+                    <input type="file" name="img" class="form__img-input" accept="image/jpeg,image/png,image/gif" required>
+                </label>
+
+            </div>
+            <button class="btn form__submit-btn" disabled type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+<div class="screen2" id="screen2" data-page="2">
+    <h1>Results</h1>
+    <div class="block6__template">
+
+        <div class="block6__graphic" data-percent="25">
+            <div class="block6__graphic-img">
+                <div class="block6__graphic-percentage">0</div>
+                <svg width="176px" height="176px">
+                    <linearGradient id="linearColors" x1="1" y1="1" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#35bfd0"></stop>
+                        <stop offset="100%" stop-color="#bc347a"></stop>
+                    </linearGradient>
+                    <circle class="block6__diag-circle" id="bar" cx="88" cy="88" r="75" fill="transparent" stroke="#5398cf" stroke-width="25" stroke-dasharray="0 471"></circle>
+                </svg>
+            </div>
+            <div class="block6__graphic-sign"></div>
+        </div>
+
+    </div>
+    <div class="block6__graphics">
+
+    </div>
+</div>
+<footer class="footer">
+    <!-- Begin Betafaceapi.com Attribution Snippet -->
+    <a href="http://betafaceapi.com/" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://betafaceapi.com/', 'Face Recognition by betafaceapi.com');" title="Face Recognition by betafaceapi.com">Face Recognition by betafaceapi.com</a>
+    <!-- End Betafaceapi.com Attribution Snippet -->
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{#<script src="../../../static/photodna/js/script.js"></script>#}
+{% load static %}
+<script src="{% static 'photodna/js/script.js' %}"></script>
+</body>
+</html>

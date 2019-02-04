@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "nation": "rumania",
+      "occuracy": 75
+    },
+    {
+      "nation": "ukraine",
+      "occuracy": 59
+    },
+    {
+      "nation": "france",
+      "occuracy": 48
+    }
+  ]
+}
