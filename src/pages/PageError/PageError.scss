@@ -1,0 +1,26 @@
+.page_error {
+  padding: 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: .8em .75em 5.5em;
+    flex-grow: 1;
+    background: linear-gradient(159.17deg, #6C23C8 -64.75%, #0D40C5 -64.73%, #EF59B3 120.73%);
+  }
+
+  &__emotion {
+    margin-top: 1.5em;
+    font-size: 3.2em;
+  }
+
+  &__text {
+    max-width: 200px;
+    margin: 1em auto 0;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+}

@@ -1,0 +1,64 @@
+.page_index {
+  padding: .75em .75em 5.5em;
+  background: linear-gradient(153.87deg, #6C23C8 -2.21%, #0D40C5 -2.2%, #EF59B3 106.38%);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin-top: 1em;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.19;
+    font-size: 2.1em;
+  }
+
+  &__subheading {
+    margin-top: .5em;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  &__list {
+    max-width: 230px;
+    margin: 1.5em auto 0;
+    padding: 0;
+    list-style: none;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-top: 1.5em;
+    }
+    &-icon {
+      min-width: 50px;
+      max-width: 50px;
+      margin-right: 1em;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  &__link {
+    font-size: .9em;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &__button {
+    margin-top: 3em;
+  }
+
+}
