@@ -20,24 +20,6 @@ window.getDataUri = async function(imageUrl) {
     })
 };
 
-window.appUploaded = function(obj) {
-    // remove obj test declaration
-    obj = {
-        "photos": [
-            {
-                "image_url":"https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg",
-                "crop":[0.17292,0.00000,0.83958,1.00000],
-                "rotation":0,
-                "flip":0
-            }
-        ]
-    };
-    let imgUrl = obj.photos[0].image_url;
-
-    window.getDataUri(imgUrl)
-        .then(result => console.log(result))
-        .catch(err => console.error(err));
-};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

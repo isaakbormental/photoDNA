@@ -12,30 +12,29 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: 'production',
+            appEnv: !'production',
             page: 'default',
             img: false,
             shareCountry: '',
-            shareOrientation: false
+            shareOrientation: false,
+            shareImg: 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg',
+            shareTitle: 'Awesome app!',
+            shareDescription: 'Some motivation goes here'
         };
     }
 
     chooseImgFromApi() {
         // TODO: pick right method (see callback API)
         if (this.state.appEnv === 'production') {
-            const xmlHttp = new XMLHttpRequest();
-            xmlHttp.open( "GET", "callback:nativePhotoSelect?func=appUploaded", false ); // false for synchronous request
-            xmlHttp.send( null );
+            window.location.href = "callback:nativePhotoSelect?func=appUploaded";
         } else {
-            window.appUploaded('test');
+            window.appUploaded(false);
         }
     }
     shareThroughApi() {
         // TODO: pick right method (see callback API)
         if (this.state.appEnv === 'production') {
-            const http = new XMLHttpRequest();
-            http.open("GET", "callback:nativeShare?og_image=https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg&og_title=Мега%20Фото&og_description=Расшарьте%20пожалуйста%21&func=appShare");
-            http.send();
+            window.location.href = `callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&func=appShare`;
         } else {
             console.log('share-share');
         }
@@ -69,9 +68,15 @@ class App extends Component {
                 })
                 .catch(err => this.switchPage('error'));
         };
-        window.updatePage = (page) => {
-            this.switchPage(page)
+
+        window.appShare = (boolean) => {
+            if (boolean) {
+                this.switchPage('report');
+            } else {
+                this.switchPage('default');
+            }
         };
+
     }
 
     sendImg() {
@@ -103,36 +108,42 @@ class App extends Component {
             const fakeResponse = {
                 "nationality": [
                     {
-                        "name": "Saudi Arabian",
-                        "confidence": 80
-                    },
-                    {
                         "name": "Russian",
-                        "confidence": 80
+                        "confidence": 76
                     },
                     {
-                        "name": "Ethiopian",
-                        "confidence": 47
+                        "name": "Latvian",
+                        "confidence": 57
+                    },
+                    {
+                        "name": "Uzbek",
+                        "confidence": 41
                     }
                 ],
-                "straight": 90,
-                "gay": 10,
-                "gender": "male",
-                "facial features": {
-                    "lips": {
-                        "nation": "Czech",
-                        "confidence": 97.0
+                "facial features": [
+                    {
+                        "lips": {
+                            "confidence": 100.0,
+                            "nation": "Israeli"
+                        }
                     },
-                    "nose": {
-                        "nation": "Samoan",
-                        "confidence": 55.0
+                    {
+                        "nose": {
+                            "confidence": 100.0,
+                            "nation": "Japanese"
+                        }
                     },
-                    "eyes": {
-                        "nation": "Romanian",
-                        "confidence": 64.0
+                    {
+                        "eyes": {
+                            "confidence": 100.0,
+                            "nation": "Iranian"
+                        }
                     }
-                },
-                "age": 37
+                ],
+                "gay": 13,
+                "age": 12,
+                "straight": 87,
+                "gender": "female"
             };
             fetch('http://www.betafaceapi.com/api/v2/media',{
                 method: 'POST',
