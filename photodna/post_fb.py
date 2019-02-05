@@ -79,11 +79,11 @@ def do_post_shit(jason):
         # sexim = Image.open(os.path.join('for_posting','orientation_gender_age','mars.png'))
         # sex = pil_image_to_cv(sexim)
         # sex = cv2.imread(root + '/for_posting/orientation_gender_age/mars.png', 1)
-        sex = cv2.imread(os.path.join('for_posting','orientation_gender_age','mars.png'), 1)
+        sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/mars.png', 1)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
     else:
         # sex = cv2.imread(root + '/for_posting/orientation_gender_age/venus.png', 1)
-        sex = cv2.imread(os.path.join('for_posting', 'orientation_gender_age', 'venus.png'), 1)
+        sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/venus.png', 1)
         # sexim = Image.open(os.path.join('for_posting', 'orientation_gender_age', 'venus.png'))
         # sex = pil_image_to_cv(sexim)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
@@ -128,7 +128,7 @@ def do_post_shit(jason):
     # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
     # the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
     # the_filter = pil_image_to_cv(the_filter_im)
-    the_filter = cv2.imread(os.path.join('for_posting', 'picture', 'filter.png'), cv2.IMREAD_UNCHANGED)
+    the_filter = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
     logging.error('Filter read')
 
     # logging.error(the_filter.shape, podlozhka.shape, new.shape)
@@ -233,7 +233,7 @@ def do_post_shit(jason):
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
         s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-2.png')
     # potim v amazon + return url
-    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-3.png'
+    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-2.png'
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
