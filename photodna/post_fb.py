@@ -145,8 +145,9 @@ def do_post_shit(jason):
     for file in glob.glob("*.png"):
         if (file[:-4] == the_flag):
             # true_flag = cv2.imread(root + "/for_posting/flags/" + file, 1)
-            true_flag_im = Image.open(os.path.join(root, 'for_posting', 'flags', file))
-            true_flag = pil_image_to_cv(true_flag_im)
+            # true_flag_im = Image.open(os.path.join(root, 'for_posting', 'flags', file))
+            # true_flag = pil_image_to_cv(true_flag_im)
+            true_flag = cv2.imread(root + "/var/www/html/backend/photoDNA/photodna/for_posting/flags/" + file, 1)
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
@@ -232,9 +233,9 @@ def do_post_shit(jason):
 
     #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
-        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-3.png')
+        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-5.png')
     # potim v amazon + return url
-    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-3.png'
+    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-5.png'
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
@@ -279,7 +280,7 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h+i, position_w+ j][0] = filter[i,j][0]
             podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][2]
-            podlozhka[position_h + i, position_w + j][3] = int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3.0)
+            podlozhka[position_h + i, position_w + j][3] = int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3)
     return podlozhka
 
 
