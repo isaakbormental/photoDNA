@@ -14,7 +14,7 @@ class PageError extends Component {
                     <div className="page_error__emotion">:-(</div>
                     <div className="page_error__text">We&nbsp;didn&rsquo;t find a&nbsp;face on&nbsp;this photo</div>
                     <Button
-                        className="button button_bottom page_error__button"
+                        className="button page_error__button"
                         onClick={() => this.props.chooseImgFromApi()}
                     >Try again</Button>
                 </div>
