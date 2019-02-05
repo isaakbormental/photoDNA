@@ -214,13 +214,13 @@ def do_post_shit(jason):
     x = text3_x - (text_size[0] / 2)
     draw.text((x, text3_y), flag3, font=font5, fill='#969696')
     #root + '/for_posting/final.png'
-    # img.save(os.path.join(os.getcwd(), 'for_posting', 'final.png'), 'PNG')
+    img.save('final.png')
 
     s3 = boto3.client('s3')
-    s3.upload_fileobj(img, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
+
     #'/for_posting/final.png'
-    # with open(os.path.join('for_posting', 'final.png'), 'r') as data:
-    #     s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
+    with open('final.png', 'r') as data:
+        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
     # potim v amazon + return url
     return 'http://storage.ws.pho.to/photohack/stckrs/final-test.png'
 
