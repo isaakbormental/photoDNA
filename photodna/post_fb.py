@@ -223,7 +223,7 @@ def do_post_shit(jason):
     s3 = boto3.client('s3')
 
     #'/for_posting/final.png'
-    with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'r') as data:
+    with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
         s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
     # potim v amazon + return url
     return 'http://storage.ws.pho.to/photohack/stckrs/final-test.png'
