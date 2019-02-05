@@ -18,8 +18,9 @@ def do_post_shit(jason):
     logging.error(str(os.listdir(os.getcwd())))
     # podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
     im = Image.open('gay_krug.png')
-    podlozhka = np.array(im)
-    podlozhka = podlozhka[:, :, ::-1].copy()
+    # podlozhka = np.array(im)
+    # podlozhka = podlozhka[:, :, ::-1].copy()
+    podlozhka = pil_image_to_cv(im)
     logging.error('PROCHITAL')
     # json_data = open('data.json').read()
 
@@ -75,10 +76,14 @@ def do_post_shit(jason):
     logging.error(root)
     # os.path.join(root, 'for')
     if (characteristics['data']['gender'] == 'male'):
-        sex = cv2.imread(root + '/for_posting/orientation_gender_age/mars.png', 1)
+        sexim = Image.open(os.path.join('for_posting','orientation_gender_age','mars.png'))
+        sex = pil_image_to_cv(sexim)
+        # sex = cv2.imread(root + '/for_posting/orientation_gender_age/mars.png', 1)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
     else:
-        sex = cv2.imread(root + '/for_posting/orientation_gender_age/venus.png', 1)
+        # sex = cv2.imread(root + '/for_posting/orientation_gender_age/venus.png', 1)
+        sexim = Image.open(os.path.join('for_posting', 'orientation_gender_age', 'venus.png'))
+        sex = pil_image_to_cv(sexim)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
 
     # image = cv2.imread(root + "/irish.jpg", 0)
@@ -249,3 +254,8 @@ def string_to_image(base64_string):
     cvimg = Image.open(BytesIO(imgdata))
     open_cv_image = np.array(cvimg)
     return open_cv_image[:, :, ::-1].copy()
+
+
+def pil_image_to_cv(pil_image):
+    podlozhka = np.array(pil_image)
+    return podlozhka[:, :, ::-1].copy()
