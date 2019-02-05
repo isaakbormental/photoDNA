@@ -37,19 +37,25 @@ import numpy as np
 # # cv2.waitKey(0)
 # # cv2.destroyAllWindows()
 
-def pil_image_to_cv(pil_image):
-    podlozhka = np.array(pil_image)
-    for i in range(podlozhka.shape[0]):
-        for j in range(podlozhka.shape[1]):
-            podlozhka[i][j][0] = 255 - podlozhka[i][j][0]
-            podlozhka[i][j][1] = 255 - podlozhka[i][j][1]
-            podlozhka[i][j][2] = 255 - podlozhka[i][j][2]
-    return podlozhka[:, :, ::-1].copy()
-
-# im = Image.open('gay_krug.png')
-# podlozhka = pil_image_to_cv(im)
-
-podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
-cv2.imshow('image',podlozhka)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# def pil_image_to_cv(pil_image):
+#     podlozhka = np.array(pil_image)
+#     for i in range(podlozhka.shape[0]):
+#         for j in range(podlozhka.shape[1]):
+#             podlozhka[i][j][0] = 255 - podlozhka[i][j][0]
+#             podlozhka[i][j][1] = 255 - podlozhka[i][j][1]
+#             podlozhka[i][j][2] = 255 - podlozhka[i][j][2]
+#     return podlozhka[:, :, ::-1].copy()
+#
+# # im = Image.open('gay_krug.png')
+# # podlozhka = pil_image_to_cv(im)
+#
+# podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
+# cv2.imshow('image',podlozhka)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
+import json
+url = 'poshel_nahui'
+didi = dict()
+didi['link'] = url
+resp = json.dumps(didi)
+print(resp)
