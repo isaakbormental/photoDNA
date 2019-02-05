@@ -88,7 +88,7 @@ def do_post_shit(jason):
 
     # image = cv2.imread(root + "/irish.jpg", 0)
     logging.error(len(characteristics['img']))
-    image = string_to_image(characteristics['img'])
+    image = string_to_image(characteristics['img'].split(',', 1)[1])
 
     '''
     618/630-коэффициент
