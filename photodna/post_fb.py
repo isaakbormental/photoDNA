@@ -10,10 +10,12 @@ from io import StringIO
 import base64
 import numpy as np
 
+os.chdir('/var/www/html/backend/photoDNA/photodna')
+
 def do_post_shit(jason):
+    logging.error('DoOING POSTING SHITTING')
     podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
 
-    logging.error('DoOING POSTING SHITTING')
     # json_data = open('data.json').read()
 
     characteristics = jason
