@@ -214,8 +214,10 @@ def do_post_shit(jason):
     x = text3_x - (text_size[0] / 2)
     draw.text((x, text3_y), flag3, font=font5, fill='#969696')
     #root + '/for_posting/final.png'
-    img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png')
-
+    with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'w') as fi:
+        img.save(fi)
+    # img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', format='PNG')
+    # img.tobytes()
     s3 = boto3.client('s3')
 
     #'/for_posting/final.png'
