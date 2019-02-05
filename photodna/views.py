@@ -31,7 +31,7 @@ def generate_amazon_post(request):
     logging.error(resp)
     logging.error(type(resp))
     logging.error('_____________________')
-    return HttpResponse(json.loads(resp), content_type="application/json")
+    return HttpResponse(resp, content_type="application/json")
 
 @csrf_exempt
 def process_image(request):
