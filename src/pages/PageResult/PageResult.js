@@ -5,6 +5,7 @@ import Button from "../../components/Button/Button";
 import Preview from "../../components/Preview/Preview";
 import BackArrow from "../../components/BackArrow/BackArrow";
 import Chart from "../../components/Chart/Chart";
+import Switcher from "../../components/Switcher/Switcher";
 
 
 class PageResult extends Component {
@@ -20,21 +21,35 @@ class PageResult extends Component {
                     <BackArrow switchPage={(page) => this.props.switchPage(page)}/>
                 </Preview>
                 <div className="page_result__body">
-                    <form className="page_result__charts">
+                    <div className="page_result__charts">
                         {this.props.data.nationality.map((item) => {
+                            let className = item.name === this.props.shareCountry.name ? 'page_result__chart page_result__chart_active' : 'page_result__chart';
                             return(
-                                <label className="page_result__chart" key={item.name}>
+                                <div
+                                    className={className} key={item.name}
+                                    onClick={() => this.props.switchShareCountry(item)}
+                                >
                                     <Chart data={item}/>
-                                </label>
+                                </div>
                             )
                         })}
-                    </form>
+                    </div>
+                    <div className="page_result__orientation">
+                        <Switcher
+                            active={this.props.shareOrientation}
+                            onClick={() => this.props.switchShareOrientation()}
+                        />
+                        <span
+                            onClick={() => this.props.switchShareOrientation()}
+                            className="page_result__orientation-text"
+                        >Show sexual orientation</span>
+                    </div>
                 </div>
                 <div className="page_result__bottom">
                     <div className="page_result__text">To get a full report</div>
                     <Button
                         className="button button_bottom page_result__button"
-                        onClick={() => console.log('share')}
+                        onClick={() => this.props.shareThroughApi()}
                     >Share</Button>
                 </div>
             </div>

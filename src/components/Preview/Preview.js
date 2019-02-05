@@ -5,17 +5,17 @@ import Flag from "../Flag/Flag";
 
 class Preview extends Component {
     render() {
-        const {
+        let {
             img,
             gender,
             age,
             shareCountry,
             children
         } = this.props;
-        const bg = img ? {backgroundImage: `url(${img})`} : {};
-        const ageEl = age ? <span className="preview__age">Age <span className="preview__age-num">{age}</span></span> : '';
-        const genderEl = gender ? <span className={"preview__gender preview__gender_"+gender}>Sex</span> : '';
-        const flag = shareCountry ? <Flag className="preview__flag" shareCountry={shareCountry}/> : '';
+        let bg = img ? {backgroundImage: `url(${img})`} : {};
+        let ageEl = age ? <span className="preview__age">Age <span className="preview__age-num">{age}</span></span> : '';
+        let genderEl = gender ? <span className={"preview__gender preview__gender_"+gender}>Sex</span> : '';
+        let flag = shareCountry ? <Flag className="preview__flag" shareCountry={shareCountry}/> : '';
 
         return (
             <div className="preview" style={bg}>

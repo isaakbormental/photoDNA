@@ -12,14 +12,16 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: !'production',
+            appEnv: 'production',
             page: 'default',
             img: false,
             shareCountry: '',
             shareOrientation: false,
             shareImg: 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg',
-            shareTitle: 'Awesome app!',
-            shareDescription: 'Some motivation goes here'
+            shareTitle: 'Learn more about yourself',
+            shareDescription: 'Machine leaning will tell your origin',
+            shareLpTitle: 'One more step to learn about yourself',
+            shareLpDescription: 'Our technology is integrated into Photo Lab app. Download it to learn your dominant nationalities and try out numerous photo filters and effects'
         };
     }
 
@@ -34,14 +36,44 @@ class App extends Component {
     shareThroughApi() {
         // TODO: pick right method (see callback API)
         if (this.state.appEnv === 'production') {
-            window.location.href = `callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&func=appShare`;
+
+            fetch('/amazgen',{
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    img: this.state.img,
+                    data: this.state.data,
+                    shareOrientation: this.state.shareOrientation,
+                    shareCountry: this.state.shareCountry
+                })
+            }).then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response.json();
+            }).then((response) => {
+                this.setState({shareImg:response.link});
+                window.location.href = `callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&lp_title=${this.state.shareLpTitle}&lp_description=${this.state.shareLpDescription}&func=appShare`;
+            }).catch(() => {
+                this.switchPage('error')
+            });
         } else {
-            console.log('share-share');
+            console.log(window.location.href = `callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&lp_title=${this.state.shareLpTitle}&lp_description=${this.state.shareLpDescription}&func=appShare`);
         }
     }
 
     switchPage(page) {
         this.setState({page})
+    }
+    switchShareCountry(shareCountry) {
+        this.setState({shareCountry})
+    }
+    switchShareOrientation() {
+        console.log('shaaaaaaar');
+        this.setState({shareOrientation: !this.state.shareOrientation});
     }
 
     componentWillMount(){
@@ -186,6 +218,9 @@ class App extends Component {
                     shareCountry={this.state.shareCountry}
                     switchPage={(page) => this.switchPage(page)}
                     shareThroughApi={() => this.shareThroughApi()}
+                    shareOrientation={this.state.shareOrientation}
+                    switchShareOrientation={() => this.switchShareOrientation()}
+                    switchShareCountry={(shareCountry) => this.switchShareCountry(shareCountry)}
                 />;
             case 'loading':
                 return <PageLoading

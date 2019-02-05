@@ -23,6 +23,10 @@
     line-height: .9;
     font-size: 1.5em;
     letter-spacing: -0.05em;
+    &:after {
+      content: '%';
+      font-size: .6em;
+    }
   }
 
   &__name {
@@ -30,6 +34,19 @@
     font-size: .7em;
     letter-spacing: 0.02em;
     color: #787878;
+  }
+
+  .st0 {
+    fill:none;
+    stroke:#C3B4B4;
+    stroke-width:5%;
+    stroke-miterlimit:10;
+  }
+
+  .st1{
+    fill:none;
+    stroke-width:5%;
+    stroke-linecap:round;
   }
 
 }

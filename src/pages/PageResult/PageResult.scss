@@ -34,11 +34,62 @@
 
   &__chart {
     width: calc(100%/3);
+    padding: 0 .25em;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: .55em;
+      height: .55em;
+      border: .05em solid #C3B4B4;
+      border-radius: 50%;
+    }
+    &_active {
+      &:before {
+        border-color: #BA85CE;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: .15em;
+        left: .15em;
+        width: .25em;
+        height: .25em;
+        background: #BA85CE;
+        border-radius: 50%;
+      }
+    }
   }
 
   .chart {
-    max-width: 77%;
+    width: 100%;
+    max-width: 87px;
     margin: 0 auto;
+  }
+
+  &__orientation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1em;
+    padding-left: 1.9em;
+    position: relative;
+
+    .switcher {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &-text {
+      display: block;
+      font-size: .7em;
+      font-weight: 300;
+      color: #8A8A8A;
+    }
+
   }
 
 }

@@ -54,10 +54,10 @@ import flagVietnamese from './img/vietnamese.png'
 import flagWelsh from './img/welsh.png'
 
 
-
+// TODO: fix flag initing
 class Flag extends Component {
     render() {
-        const {
+        let {
             className = 'countryFlag',
             shareCountry,
         } = this.props;
