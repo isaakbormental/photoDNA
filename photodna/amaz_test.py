@@ -1,5 +1,5 @@
 import boto3
-
+from io import StringIO
 s3 = boto3.client('s3')
 
 with open('imaga.jpg', 'rb') as data:

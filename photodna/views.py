@@ -5,7 +5,6 @@ from django.views.decorators.csrf import csrf_exempt
 from photodna.pricessing_photo import process
 from django.views.generic import View
 from django.conf import settings
-import logging
 import os
 import json
 from photodna.post_fb import do_post_shit

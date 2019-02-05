@@ -6,10 +6,13 @@ from PIL import ImageFont
 from PIL import ImageDraw
 import boto3
 import logging
+from io import StringIO
+import base64
+import numpy as np
 
 def do_post_shit(jason):
     podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
-    
+
     logging.error('DoOING POSTING SHITTING')
     # json_data = open('data.json').read()
 
@@ -70,7 +73,8 @@ def do_post_shit(jason):
         sex = cv2.imread(root + '/for_posting/orientation_gender_age/venus.png', 1)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
 
-    image = cv2.imread(root + "/irish.jpg", 0)
+    # image = cv2.imread(root + "/irish.jpg", 0)
+    image = readb64(characteristics['img'])
 
     '''
     618/630-коэффициент
@@ -223,3 +227,9 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][2]
             podlozhka[position_h + i, position_w + j][3] = 255-image[i,j]
     return podlozhka
+
+def readb64(base64_string):
+    sbuf = StringIO()
+    sbuf.write(base64.b64decode(base64_string))
+    pimg = Image.open(sbuf)
+    return cv2.cvtColor(np.array(pimg), cv2.COLOR_RGB2BGR)
