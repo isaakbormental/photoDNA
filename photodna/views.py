@@ -20,7 +20,9 @@ def photoload(request):
 
 def generate_amazon_post(request):
     jsonka = json.loads(request.body.decode('utf-8'))
+    print('________________________')
     print(jsonka)
+    print('________________________')
     url = do_post_shit(jsonka)
     return HttpResponse(json.dumps('{' + '"img":' + '"' + url + '"' + '}'), content_type="application/json")
 
