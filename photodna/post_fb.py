@@ -147,7 +147,7 @@ def do_post_shit(jason):
             # true_flag = cv2.imread(root + "/for_posting/flags/" + file, 1)
             # true_flag_im = Image.open(os.path.join(root, 'for_posting', 'flags', file))
             # true_flag = pil_image_to_cv(true_flag_im)
-            true_flag = cv2.imread(root + "/var/www/html/backend/photoDNA/photodna/for_posting/flags/" + file, 1)
+            true_flag = cv2.imread("/var/www/html/backend/photoDNA/photodna/for_posting/flags/" + file, 1)
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
