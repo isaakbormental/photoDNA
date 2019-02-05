@@ -10,6 +10,8 @@ from io import BytesIO
 import base64
 import numpy as np
 from photodna.configigi import IDIOTSKII_KEY,SUCHII_KEY
+import string
+from random import *
 
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
@@ -235,12 +237,14 @@ def do_post_shit(jason):
         aws_secret_access_key=IDIOTSKII_KEY,
     )
     s3 = session.client('s3')
+    allchar = string.ascii_letters + string.digits
+    rand_file_name = "".join(choice(allchar) for x in range(68))
 
     #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
-        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-10.png')
+        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/' + rand_file_name + '.png')
     # potim v amazon + return url
-    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-10.png'
+    return 'http://storage.ws.pho.to/photohack/stckrs/' + rand_file_name + '.png'
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
@@ -280,7 +284,7 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
             podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][0]
-            podlozhka[position_h + i, position_w + j][3] = 255 - int((0.299*image[i,j][0] + 0.587*image[i,j][1] + 0.114* image[i,j][2])/3)
+            podlozhka[position_h + i, position_w + j][3] = 255 - int((0.299*image[i,j][2] + 0.587*image[i,j][1] + 0.114* image[i,j][0])/3)
     return podlozhka
 
 
