@@ -232,6 +232,6 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
 
 def readb64(base64_string):
     sbuf = StringIO()
-    sbuf.write(base64.b64decode(base64_string))
+    sbuf.write(base64.b64decode(base64_string.decode("utf-8")))
     pimg = Image.open(sbuf)
     return cv2.cvtColor(np.array(pimg), cv2.COLOR_RGB2BGR)
