@@ -19,7 +19,9 @@ def photoload(request):
 
 
 def generate_amazon_post(request):
-    url = do_post_shit(json.loads(request.body.decode('utf-8')))
+    jsonka = json.loads(request.body.decode('utf-8'))
+    print(jsonka)
+    url = do_post_shit(jsonka)
     return HttpResponse(json.dumps('{' + '"img":' + '"' + url + '"' + '}'), content_type="application/json")
 
 @csrf_exempt
