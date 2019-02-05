@@ -238,9 +238,9 @@ def do_post_shit(jason):
 
     #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
-        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-6.png')
+        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-7.png')
     # potim v amazon + return url
-    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-6.png'
+    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-7.png'
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
