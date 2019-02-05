@@ -12,7 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: !'production',
+            appEnv: 'production',
             page: 'default',
             img: false,
             shareCountry: '',
@@ -130,6 +130,10 @@ class App extends Component {
                 }
                 return response.json();
             }).then((data) => {
+                if (typeof data.faces !== "undefined" && data.faces === 0){
+                    console.log('error');
+                    this.switchPage('error');
+                }
                 this.setState({
                     data,
                     shareCountry: data.nationality[0]
@@ -140,44 +144,7 @@ class App extends Component {
             });
         } else {
             const fakeResponse = {
-                "nationality": [
-                    {
-                        "name": "Russian",
-                        "confidence": 76
-                    },
-                    {
-                        "name": "Latvian",
-                        "confidence": 57
-                    },
-                    {
-                        "name": "Uzbek",
-                        "confidence": 41
-                    }
-                ],
-                "facial features": [
-                    {
-                        "lips": {
-                            "confidence": 100.0,
-                            "nation": "Israeli"
-                        }
-                    },
-                    {
-                        "nose": {
-                            "confidence": 100.0,
-                            "nation": "Japanese"
-                        }
-                    },
-                    {
-                        "eyes": {
-                            "confidence": 100.0,
-                            "nation": "Iranian"
-                        }
-                    }
-                ],
-                "gay": 13,
-                "age": 12,
-                "straight": 87,
-                "gender": "female"
+                "faces": 0
             };
             fetch('http://www.betafaceapi.com/api/v2/media',{
                 method: 'POST',
@@ -200,6 +167,9 @@ class App extends Component {
                 }
                 return response.json();
             }).then((data) => {
+                if (typeof fakeResponse.faces !== "undefined" && fakeResponse.faces === 0){
+                    this.switchPage('error');
+                }
                 this.setState({
                     data:fakeResponse,
                     shareCountry: fakeResponse.nationality[0]
