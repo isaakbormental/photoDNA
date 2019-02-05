@@ -1,16 +1,24 @@
 .page_readme {
-  padding: .75em .75em 5.5em;
+  padding: 1.5em 2em;
   background: linear-gradient(153.87deg, #6C23C8 -2.21%, #0D40C5 -2.2%, #EF59B3 106.38%);
 
   &__inner {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    max-width: 270px;
+    max-width: 260px;
+    min-height: 100%;
     margin: 0 auto;
   }
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 1;
+  }
+
   &__heading {
-    margin-top: 1em;
     text-align: left;
     font-weight: 500;
     line-height: 1.19;
@@ -25,7 +33,7 @@
   }
 
   &__text {
-    margin: .4em 0 3em;
+    margin: .4em 0 1em;
     font-weight: 300;
     line-height: 1.27;
     font-size: .9em;
@@ -40,7 +48,7 @@
   }
 
   &__button {
-    margin: 6.45em auto 0;
+    margin: 1em auto 0;
   }
 
 }
