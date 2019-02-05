@@ -118,7 +118,9 @@ def do_post_shit(jason):
 
     new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
 
-    the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
+    # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
+    the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
+    the_filter = pil_image_to_cv(the_filter_im)
 
     podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
                                        podlozhka)
@@ -128,21 +130,27 @@ def do_post_shit(jason):
     index_list = []
     for file in glob.glob("*.png"):
         if (file[:-4] == the_flag):
-            true_flag = cv2.imread(root + "/for_posting/flags/" + file, 1)
+            # true_flag = cv2.imread(root + "/for_posting/flags/" + file, 1)
+            true_flag_im = Image.open(os.path.join(root, 'for_posting', 'flags', file))
+            true_flag = pil_image_to_cv(true_flag_im)
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
-    c_png = cv2.imread(root + "/circle.png", 1)
+    # c_png = cv2.imread(root + "/circle.png", 1)
+    os.chdir('/var/www/html/backend/photoDNA/photodna')
+    c_png_im = Image.open('circle.png')
+    c_png = pil_image_to_cv(c_png_im)
 
     podlozhka = put_element_overlay(36, 804, c_png, podlozhka)
 
-    cv2.imwrite(root + '/for_posting/post.png', podlozhka)
-
-    img = Image.open(root + '/for_posting/post.png')
+    # cv2.imwrite(root + '/for_posting/post.png', podlozhka)
+    img = Image.fromarray(podlozhka)
+    logging.error('imgigig')
+    # img = Image.open(root + '/for_posting/post.png')
     # os.remove(root + '/for_posting/post.png')
     draw = ImageDraw.Draw(img)
 
-    os.chdir(root)
+    # os.chdir(root)
 
     font1 = ImageFont.truetype("Roboto-Medium.ttf", 70)
 
@@ -151,6 +159,7 @@ def do_post_shit(jason):
     font7 = ImageFont.truetype("Roboto-Medium.ttf", 25)
 
     font8 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+    logging.error('Ya prochital fonts')
 
     draw.text((843, 70), str(d_n[the_flag]), (154, 154, 160), font=font1)
 
