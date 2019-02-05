@@ -61,7 +61,7 @@ class PageResult extends Component {
                 <div className="page_result__bottom">
                     <div className="page_result__text">To get a full report</div>
                     <Button
-                        className="button button_bottom page_result__button"
+                        className="button page_result__button"
                         onClick={() => this.props.shareThroughApi()}
                     >Share</Button>
                 </div>
