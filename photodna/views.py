@@ -9,7 +9,7 @@ import logging
 import os
 import json
 from photodna.post_fb import do_post_shit
-
+import logging
 
 def photoload(request):
     # index = urllib.request.urlopen('file:../djangoback\static\index.html').read()
@@ -20,9 +20,9 @@ def photoload(request):
 
 def generate_amazon_post(request):
     jsonka = json.loads(request.body.decode('utf-8'))
-    print('________________________')
-    print(jsonka)
-    print('________________________')
+    logging.error('_______________________')
+    logging.error(jsonka)
+    logging.error('_______________________')
     url = do_post_shit(jsonka)
     return HttpResponse(json.dumps('{' + '"img":' + '"' + url + '"' + '}'), content_type="application/json")
 

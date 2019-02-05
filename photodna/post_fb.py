@@ -5,11 +5,12 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 import boto3
-
+import logging
 
 def do_post_shit(jason):
     podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
-    print('DoOING POSTING SHITTING')
+    
+    logging.error('DoOING POSTING SHITTING')
     # json_data = open('data.json').read()
 
     characteristics = jason
