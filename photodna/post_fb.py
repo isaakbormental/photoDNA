@@ -179,8 +179,8 @@ def do_post_shit(jason):
 
     draw.text((1058, 321), str(d_n[flag2]) + '%', '#C0C0C0', font=font8)
     draw.text((1058, 358), str(d_n[flag3]) + '%', '#C0C0C0', font=font8)
-    font2 = ImageFont.truetype("Roboto-Medium.ttf", 50)
-    draw.text((927, 81), "%", (154, 154, 160), font=font2)
+    # font2 = ImageFont.truetype("Roboto-Medium.ttf", 50)
+    # draw.text((927, 81), "%", (154, 154, 160), font=font2)
 
     text1_x = 898
     text1_y = 150
@@ -228,9 +228,9 @@ def do_post_shit(jason):
 
     #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
-        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
+        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-dva.png')
     # potim v amazon + return url
-    return 'http://storage.ws.pho.to/photohack/stckrs/final-test.png'
+    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-dva.png'
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
@@ -239,10 +239,10 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
         for j in range(elelment.shape[1]):
             # if(i<2 and j<2):
             #     logging.error(podlozhka[i][j])
-            if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
-                podlozhka[position_h + i, position_w + j][0] = 255
-                podlozhka[position_h + i, position_w + j][1] = 255
-                podlozhka[position_h + i, position_w + j][2] = 255
+            if ((elelment[i, j][0]==255) and(elelment[i, j][1]==255)and (elelment[i, j][2] == 255)):
+                podlozhka[position_h + i, position_w + j][0] = 0
+                podlozhka[position_h + i, position_w + j][1] = 0
+                podlozhka[position_h + i, position_w + j][2] = 0
             else:
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][0]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
@@ -253,10 +253,10 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
 def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
-            if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
-                podlozhka[position_h + i, position_w + j][0] = 255
-                podlozhka[position_h + i, position_w + j][1] = 255
-                podlozhka[position_h + i, position_w + j][2] = 255
+            if ((elelment[i, j][0]==255) and(elelment[i, j][1]==255)and (elelment[i, j][2] == 255)):
+                podlozhka[position_h + i, position_w + j][0] = 0
+                podlozhka[position_h + i, position_w + j][1] = 0
+                podlozhka[position_h + i, position_w + j][2] = 0
             else:
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][0]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
