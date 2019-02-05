@@ -220,7 +220,11 @@ def do_post_shit(jason):
     # img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', format='PNG')
     # img.tobytes()
     logging.error('I saved!')
-    s3 = boto3.client('s3')
+    session = boto3.Session(
+        aws_access_key_id='',
+        aws_secret_access_key='',
+    )
+    s3 = session.client('s3')
 
     #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
