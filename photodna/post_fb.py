@@ -18,6 +18,11 @@ def do_post_shit(jason):
     logging.error(os.getcwd())
     logging.error(str(os.listdir(os.getcwd())))
     podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
+    for i in range(podlozhka.shape[0]):
+        for j in range(podlozhka.shape[1]):
+            temp = podlozhka[i, j][0]
+            podlozhka[i, j][0] = podlozhka[i, j][2]
+            podlozhka[i, j][2] = temp
     # im = Image.open('gay_krug.png')
     # podlozhka = np.array(im)
     # podlozhka = podlozhka[:, :, ::-1].copy()
@@ -280,7 +285,7 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
             podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][0]
-            podlozhka[position_h + i, position_w + j][3] = 255 - int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3)
+            podlozhka[position_h + i, position_w + j][3] = int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3)
     return podlozhka
 
 
