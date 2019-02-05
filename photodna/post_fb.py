@@ -6,7 +6,7 @@ from PIL import ImageFont
 from PIL import ImageDraw
 import boto3
 import logging
-from io import StringIO
+from io import BytesIO
 import base64
 import numpy as np
 
@@ -76,7 +76,7 @@ def do_post_shit(jason):
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
 
     # image = cv2.imread(root + "/irish.jpg", 0)
-    image = readb64(characteristics['img'])
+    image = string_to_image(characteristics['img'])
 
     '''
     618/630-коэффициент
@@ -232,8 +232,9 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h + i, position_w + j][3] = 255-image[i,j]
     return podlozhka
 
-def readb64(base64_string):
-    sbuf = StringIO()
-    sbuf.write(base64.b64decode(base64_string.decode("utf-8")))
-    pimg = Image.open(sbuf)
-    return cv2.cvtColor(np.array(pimg), cv2.COLOR_RGB2BGR)
+
+def string_to_image(base64_string):
+    imgdata = base64.b64decode(base64_string)
+    cvimg = Image.open(BytesIO(imgdata))
+    open_cv_image = np.array(cvimg)
+    return open_cv_image[:, :, ::-1].copy()
