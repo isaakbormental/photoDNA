@@ -5,6 +5,7 @@ from collections import defaultdict
 import statistics
 from collections import OrderedDict
 import os
+from random import randint
 
 # os.chdir('D:\Education\Hackathones\photohack\pravoslavnaya_papka\photoDNA\photodna')
 os.chdir('/var/www/html/backend/photoDNA/photodna')
@@ -191,5 +192,8 @@ def get_cost_dictionary(the_64,df_males,df_females,the_mask, do):
                     i_n+=1
 
             l+=1
+    facial_fetures['lips'][0] = facial_fetures['lips'][0] - randint(0, 20)
+    facial_fetures['nose'][0] = facial_fetures['nose'][0] - randint(0, 20)
+    facial_fetures['eyes'][0] = facial_fetures['eyes'][0] - randint(0, 20)
     return the_dict,the_gender,the_age,facial_fetures
 

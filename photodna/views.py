@@ -8,6 +8,7 @@ from django.conf import settings
 import logging
 import os
 import json
+from photodna.post_fb import do_post_shit
 
 
 def photoload(request):
@@ -16,6 +17,10 @@ def photoload(request):
     # return HttpResponse(index)
     return render(request, 'photodna\index.html')
 
+
+def generate_amazon_post(request):
+    url = do_post_shit(json.loads(request.body.decode('utf-8')))
+    return HttpResponse(json.dumps('{' + '"img":' + '"' + url + '"' + '}'), content_type="application/json")
 
 @csrf_exempt
 def process_image(request):
