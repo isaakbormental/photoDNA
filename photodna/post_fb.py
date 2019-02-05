@@ -214,7 +214,7 @@ def do_post_shit(jason):
     x = text3_x - (text_size[0] / 2)
     draw.text((x, text3_y), flag3, font=font5, fill='#969696')
     #root + '/for_posting/final.png'
-    img.save(os.path.join('for_posting', 'final.png'))
+    img.save(os.path.join(os.getcwd(), 'for_posting', 'final.png'), 'PNG')
 
     s3 = boto3.client('s3')
     #'/for_posting/final.png'
