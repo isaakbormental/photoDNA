@@ -214,12 +214,13 @@ def do_post_shit(jason):
     x = text3_x - (text_size[0] / 2)
     draw.text((x, text3_y), flag3, font=font5, fill='#969696')
     #root + '/for_posting/final.png'
-    img.save(os.path.join(os.getcwd(), 'for_posting', 'final.png'), 'PNG')
+    # img.save(os.path.join(os.getcwd(), 'for_posting', 'final.png'), 'PNG')
 
     s3 = boto3.client('s3')
+    s3.upload_fileobj(img, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
     #'/for_posting/final.png'
-    with open(os.path.join('for_posting', 'final.png'), 'r') as data:
-        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
+    # with open(os.path.join('for_posting', 'final.png'), 'r') as data:
+    #     s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test.png')
     # potim v amazon + return url
     return 'http://storage.ws.pho.to/photohack/stckrs/final-test.png'
 
@@ -228,8 +229,8 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
     logging.error('Put_elemet_overlay')
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
-            if(i<2 and j<2):
-                logging.error(podlozhka[i][j])
+            # if(i<2 and j<2):
+            #     logging.error(podlozhka[i][j])
             if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
                 podlozhka[position_h + i, position_w + j][0] = 255
                 podlozhka[position_h + i, position_w + j][1] = 255
@@ -259,10 +260,10 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
     logging.error(type(image.shape[0]))
     for i in range (image.shape[0]):
         for j in range (image.shape[1]):
-            if(i<2):
-                logging.error(image[i,j])
-                logging.error(int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3.0))
-                logging.error(podlozhka[position_h, position_w])
+            # if(i<2):
+            #     logging.error(image[i,j])
+            #     logging.error(int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3.0))
+            #     logging.error(podlozhka[position_h, position_w])
             podlozhka[position_h+i, position_w+ j][0] = filter[i,j][0]
             podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][2]
