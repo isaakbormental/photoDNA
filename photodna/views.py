@@ -16,7 +16,7 @@ def photoload(request):
     # return HttpResponse(index)
     return render(request, 'photodna\index.html')
 
-
+@csrf_exempt
 def generate_amazon_post(request):
     jsonka = json.loads(request.body.decode('utf-8'))
     logging.error('_______________________')
