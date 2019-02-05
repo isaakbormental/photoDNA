@@ -12,19 +12,7 @@ import LineBar from "../../components/LineBar/LineBar";
 class PageResult extends Component {
     render() {
 
-        let linebars;
-        if (this.props.shareOrientation) {
-            linebars = <div className="page_result__linebars">
-                <LineBar
-                    progress={this.props.data.gay}
-                    caption="Gay"
-                />
-                <LineBar
-                    progress={this.props.data.straight}
-                    caption="Straight"
-                />
-            </div>;
-        }
+        let linebars = this.props.shareOrientation ? "page_result__linebars" : "page_result__linebars page_result__linebars_hidden";
         return (
             <div className="page page_result">
                 <Preview
@@ -58,7 +46,16 @@ class PageResult extends Component {
                             onClick={() => this.props.switchShareOrientation()}
                             className="page_result__orientation-text"
                         >Show sexual orientation</span>
-                        {linebars}
+                        <div className={linebars}>
+                            <LineBar
+                                progress={this.props.data.gay}
+                                caption="Gay"
+                            />
+                            <LineBar
+                                progress={this.props.data.straight}
+                                caption="Straight"
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="page_result__bottom">
