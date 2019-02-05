@@ -103,20 +103,20 @@ def do_post_shit(jason):
         # образаем высоту (то кесть ширину)
         # ЗДЕСЬ ШИРИНА ЭТО ВЫСОТА И НАОБОРОТ
         the_chop = int((image.shape[0] - image.shape[1] * 630 / 618) / 2)
-        crop_img = image[the_chop:image.shape[0] - the_chop, :]
+        # crop_img = image[the_chop:image.shape[0] - the_chop, :]
         # 0 428 флаг; 190 111 - размеры его 428+190=618
 
 
     else:
         the_chop = int((image.shape[1] - image.shape[0] * 618 / 630) / 2)
-        crop_img = image[:, the_chop:image.shape[1] - the_chop]
+        # crop_img = image[:, the_chop:image.shape[1] - the_chop]
 
     res_shir = 618
     res_vis = 630
     flg1 = 0
     flg2 = 428
-
-    new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
+    logging.error('Before resize')
+    new = cv2.resize(image, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
     logging.error('Resize ready')
     # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
     the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
