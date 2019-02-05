@@ -73,6 +73,9 @@ print(type(json.loads(resp)))
 # cv2.waitKey(0)
 # cv2.destroyAllWindows()
 import string
-# from random import choices
-# N = 15
-# ''.join(choices(string.ascii_uppercase + string.digits, k=N))
+from random import *
+min_char = 8
+max_char = 12
+allchar = string.ascii_letters + string.digits
+password = "".join(choice(allchar) for x in range(randint(min_char, max_char)))
+print (password)
