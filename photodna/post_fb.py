@@ -197,7 +197,7 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
             if(i<2 and j<2):
-                logging.error('PIX' + podlozhka[i][j])
+                logging.error(podlozhka[i][j])
             if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
                 podlozhka[position_h + i, position_w + j][0] = 255
                 podlozhka[position_h + i, position_w + j][1] = 255
