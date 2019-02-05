@@ -15,6 +15,7 @@ class App extends Component {
             appEnv: 'production',
             page: 'default',
             img: false,
+            loadingStatus: '',
             shareCountry: '',
             shareOrientation: false,
             shareImg: 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg',
@@ -36,7 +37,8 @@ class App extends Component {
     shareThroughApi() {
         // TODO: pick right method (see callback API)
         if (this.state.appEnv === 'production') {
-
+            this.setState({loadingStatus:'sharing'});
+            this.switchPage("loading");
             fetch('/amazgen',{
                 method: 'POST',
                 headers: {
@@ -111,6 +113,7 @@ class App extends Component {
     }
 
     sendImg() {
+        this.setState({loadingStatus:'betaface'});
         this.switchPage("loading");
 
         // TODO: delete fake json and pick true request
@@ -235,6 +238,7 @@ class App extends Component {
             case 'loading':
                 return <PageLoading
                     img={this.state.img}
+                    status={this.state.loadingStatus}
                 />;
             case 'error':
                 return <PageError
