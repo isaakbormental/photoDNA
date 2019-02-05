@@ -254,9 +254,10 @@ def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
     return podlozhka
 
 def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
+    logging.error(type(image.shape[0]))
     for i in range (image.shape[0]):
         for j in range (image.shape[1]):
-            if(i<2 and j<2):
+            if(i<2):
                 logging.error(image[i,j])
                 logging.error(int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3.0))
                 logging.error(podlozhka[position_h, position_w])
