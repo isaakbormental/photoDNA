@@ -116,16 +116,18 @@ def do_post_shit(jason):
     flg1 = 0
     flg2 = 428
     logging.error('Before resize')
-    # new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
-    new = Image.fromarray(crop_img)
-    new = new.resize((res_shir, res_vis))
+    new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
+    # new = Image.fromarray(crop_img)
+    # new = new.resize((res_shir, res_vis))
+    # new = pil_image_to_cv(new)
+
 
     logging.error('Resize ready')
     # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
     the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
     the_filter = pil_image_to_cv(the_filter_im)
     logging.error('Filter read')
-    new = pil_image_to_cv(new)
+
     # logging.error(the_filter.shape, podlozhka.shape, new.shape)
     logging.error(str(the_filter.shape) + ' - filter')
     logging.error(str(podlozhka.shape) + ' - podlozhka')
