@@ -249,7 +249,7 @@ def do_post_shit(jason):
         os.remove('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
     else:
         print("The file does not exist")
-    return 'http://storage.ws.pho.to/photohack/stckrs/' + rand_file_name + '.png'
+    return 'https://storage.ws.pho.to/photohack/stckrs/' + rand_file_name + '.png'
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
