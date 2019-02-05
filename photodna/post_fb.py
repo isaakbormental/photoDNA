@@ -149,7 +149,7 @@ def do_post_shit(jason):
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
-    c_png = cv2.imread("/circle.png", 1)
+    c_png = cv2.imread("circle.png", 1)
     os.chdir('/var/www/html/backend/photoDNA/photodna')
     # c_png_im = Image.open('circle.png')
     # c_png = pil_image_to_cv(c_png_im)
