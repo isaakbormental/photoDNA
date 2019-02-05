@@ -126,6 +126,7 @@ def do_post_shit(jason):
     the_filter = pil_image_to_cv(the_filter_im)
     logging.error('Filter read')
     new = pil_image_to_cv(new)
+    logging.error(the_filter.shape, podlozhka.shape, new.shape)
     podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
                                        podlozhka)
 
