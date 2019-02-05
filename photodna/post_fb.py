@@ -238,9 +238,9 @@ def do_post_shit(jason):
 
     #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
-        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-8.png')
+        s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/final-test-9.png')
     # potim v amazon + return url
-    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-8.png'
+    return 'http://storage.ws.pho.to/photohack/stckrs/final-test-9.png'
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
@@ -277,9 +277,9 @@ def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
 def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
     for i in range (image.shape[0]):
         for j in range (image.shape[1]):
-            podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
-            podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
-            podlozhka[position_h+i, position_w+ j][2] = filter[i,j][0]
+            podlozhka[position_h+i, position_w+ j][0] = 255 - filter[i,j][2]
+            podlozhka[position_h+i, position_w+ j][1] = 255 - filter[i,j][1]
+            podlozhka[position_h+i, position_w+ j][2] = 255 - filter[i,j][0]
             podlozhka[position_h + i, position_w + j][3] = 255 - int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3)
     return podlozhka
 
