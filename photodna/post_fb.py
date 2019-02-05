@@ -76,6 +76,7 @@ def do_post_shit(jason):
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
 
     # image = cv2.imread(root + "/irish.jpg", 0)
+    logging.error(len(characteristics['img']))
     image = string_to_image(characteristics['img'])
 
     '''
@@ -86,7 +87,7 @@ def do_post_shit(jason):
     '''
 
     vis_shir = float(image.shape[0] / image.shape[1])
-
+    logging.error(vis_shir)
     if (vis_shir > 630 / 618):
         # образаем высоту (то кесть ширину)
         # ЗДЕСЬ ШИРИНА ЭТО ВЫСОТА И НАОБОРОТ
