@@ -144,7 +144,44 @@ class App extends Component {
             });
         } else {
             const fakeResponse = {
-                "faces": 0
+                "nationality": [
+                    {
+                        "name": "Russian",
+                        "confidence": 76
+                    },
+                    {
+                        "name": "Latvian",
+                        "confidence": 57
+                    },
+                    {
+                        "name": "Uzbek",
+                        "confidence": 41
+                    }
+                ],
+                "facial features": [
+                    {
+                        "lips": {
+                            "confidence": 100.0,
+                            "nation": "Israeli"
+                        }
+                    },
+                    {
+                        "nose": {
+                            "confidence": 100.0,
+                            "nation": "Japanese"
+                        }
+                    },
+                    {
+                        "eyes": {
+                            "confidence": 100.0,
+                            "nation": "Iranian"
+                        }
+                    }
+                ],
+                "gay": 13,
+                "age": 12,
+                "straight": 87,
+                "gender": "female"
             };
             fetch('http://www.betafaceapi.com/api/v2/media',{
                 method: 'POST',
