@@ -33,24 +33,22 @@ class PageIndex extends Component {
     render() {
         return (
             <div className="page page_index">
-                <div className="page_index__inner">
-                    <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
-                    <h2 className="page_index__subheading">Send a&nbsp;selfie and get result:</h2>
-                    <ul className="page_index__list">
-                        {this.state.list.map((item, index) => {
-                            return(
-                                <li className="page_index__list-item" key={index}>
-                                    <span className="page_index__list-icon">{item.icon ? <img src={item.icon} alt=""/> : ''}</span>
-                                    <span className="page_index__list-text">{item.text}</span>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                    <Button
-                        className="button button_bottom page_index__button"
-                        onClick={() => this.props.chooseImgFromApi()}
-                    >Try now</Button>
-                </div>
+                <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
+                <h2 className="page_index__subheading">Send a&nbsp;selfie and get result:</h2>
+                <ul className="page_index__list">
+                    {this.state.list.map((item, index) => {
+                        return(
+                            <li className="page_index__list-item" key={index}>
+                                <span className="page_index__list-icon">{item.icon ? <img src={item.icon} alt=""/> : ''}</span>
+                                <span className="page_index__list-text">{item.text}</span>
+                            </li>
+                        )
+                    })}
+                </ul>
+                <Button
+                    className="button page_index__button"
+                    onClick={() => this.props.chooseImgFromApi()}
+                >Try now</Button>
             </div>
         );
 
