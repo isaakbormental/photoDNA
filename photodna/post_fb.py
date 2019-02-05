@@ -14,6 +14,8 @@ os.chdir('/var/www/html/backend/photoDNA/photodna')
 
 def do_post_shit(jason):
     logging.error('DoOING POSTING SHITTING')
+    logging.error(os.getcwd())
+    logging.error(str(os.listdir(os.getcwd())))
     podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
 
     # json_data = open('data.json').read()
