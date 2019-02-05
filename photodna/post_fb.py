@@ -189,8 +189,8 @@ def do_post_shit(jason):
 
     draw.text((1058, 321), str(d_n[flag2]) + '%', '#C0C0C0', font=font8)
     draw.text((1058, 358), str(d_n[flag3]) + '%', '#C0C0C0', font=font8)
-    # font2 = ImageFont.truetype("Roboto-Medium.ttf", 50)
-    # draw.text((927, 81), "%", (154, 154, 160), font=font2)
+    font2 = ImageFont.truetype("Roboto-Medium.ttf", 50)
+    draw.text((927, 81), "%", (154, 154, 160), font=font2)
 
     text1_x = 898
     text1_y = 150
@@ -275,24 +275,16 @@ def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
     return podlozhka
 
 def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
-    logging.error(type(image.shape[0]))
     for i in range (image.shape[0]):
         for j in range (image.shape[1]):
-            # if(i<2):
-            #     logging.error(image[i,j])
-            #     logging.error(int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3.0))
-            #     logging.error(podlozhka[position_h, position_w])
             podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
             podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][0]
-            podlozhka[position_h + i, position_w + j][3] = int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3)
+            podlozhka[position_h + i, position_w + j][3] = 255 - int((image[i,j][0] + image[i,j][1] + image[i,j][2])/3)
     return podlozhka
 
 
 def string_to_image(base64_string):
-    logging.error('()()()()()')
-    logging.error(type(base64_string))
-    logging.error('()()()()()')
     imgdata = base64.b64decode(base64_string)
     cvimg = Image.open(BytesIO(imgdata))
     open_cv_image = np.array(cvimg)

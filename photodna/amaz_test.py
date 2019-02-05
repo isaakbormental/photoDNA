@@ -72,4 +72,7 @@ print(type(json.loads(resp)))
 # cv2.imshow('image',pdlozhka)
 # cv2.waitKey(0)
 # cv2.destroyAllWindows()
-
+import string
+# from random import choices
+# N = 15
+# ''.join(choices(string.ascii_uppercase + string.digits, k=N))
