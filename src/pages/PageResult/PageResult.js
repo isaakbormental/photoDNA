@@ -6,10 +6,25 @@ import Preview from "../../components/Preview/Preview";
 import BackArrow from "../../components/BackArrow/BackArrow";
 import Chart from "../../components/Chart/Chart";
 import Switcher from "../../components/Switcher/Switcher";
+import LineBar from "../../components/LineBar/LineBar";
 
 
 class PageResult extends Component {
     render() {
+
+        let linebars;
+        if (this.props.shareOrientation) {
+            linebars = <div className="page_result__linebars">
+                <LineBar
+                    progress={this.props.data.gay}
+                    caption="Gay"
+                />
+                <LineBar
+                    progress={this.props.data.straight}
+                    caption="Straight"
+                />
+            </div>;
+        }
         return (
             <div className="page page_result">
                 <Preview
@@ -43,6 +58,7 @@ class PageResult extends Component {
                             onClick={() => this.props.switchShareOrientation()}
                             className="page_result__orientation-text"
                         >Show sexual orientation</span>
+                        {linebars}
                     </div>
                 </div>
                 <div className="page_result__bottom">

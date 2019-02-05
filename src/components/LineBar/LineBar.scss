@@ -1,0 +1,15 @@
+.linebar {
+  width: 100%;
+
+  &__caption {
+    font-size: .8em;
+  }
+
+  &__line {
+    height: .25em;
+    margin-top: .15em;
+    border-radius: .7em/.5em;
+    background: #694ABE;
+  }
+
+}

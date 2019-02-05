@@ -21,9 +21,9 @@ class Chart extends Component {
                             <stop  offset="1" stopColor="#92278F"/>
                         </linearGradient>
                     </defs>
-                    <circle className="st0" cx="63.8" cy="63.8" r="61.3"/>
+                    <circle className="chart__bg-circle" cx="63.8" cy="63.8" r="61.3"/>
                     <circle
-                        className="st1"
+                        className="chart__color-circle"
                         cx="63.8"
                         cy="63.8"
                         r="61.3"

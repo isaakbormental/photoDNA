@@ -1,6 +1,6 @@
 .preview {
+  flex-grow: 10;
   max-height: 11.7em;
-  min-height: 11.7em;
   position: relative;
   background: url("./img/cat-bg.jpg") no-repeat center center / cover;
   &:before {

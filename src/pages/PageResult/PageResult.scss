@@ -24,7 +24,7 @@
   }
 
   &__body {
-    padding: .5em .9em .2em;
+    padding: .8em .9em .5em;
     color: #9A9AA0;
   }
 
@@ -73,6 +73,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 81%;
     margin-top: 1em;
     padding-left: 1.9em;
     position: relative;
@@ -85,11 +86,20 @@
 
     &-text {
       display: block;
+      margin-bottom: .2em;
       font-size: .7em;
       font-weight: 300;
       color: #8A8A8A;
     }
 
+    .linebar {
+      margin: .3em 0;
+    }
+
+  }
+
+  &__linebars {
+    width: 100%;
   }
 
 }
