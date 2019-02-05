@@ -226,7 +226,9 @@ def do_post_shit(jason):
     x = text3_x - (text_size[0] / 2)
     draw.text((x, text3_y), flag3, font=font5, fill='#969696')
     #root + '/for_posting/final.png'
-    img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png')
+    allchar = string.ascii_letters + string.digits
+    rand_file_name = "".join(choice(allchar) for x in range(68))
+    img.save('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
     # with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'w') as fi:
     #     img.save(fi)
     # img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', format='PNG')
@@ -237,13 +239,16 @@ def do_post_shit(jason):
         aws_secret_access_key=IDIOTSKII_KEY,
     )
     s3 = session.client('s3')
-    allchar = string.ascii_letters + string.digits
-    rand_file_name = "".join(choice(allchar) for x in range(68))
+
 
     #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
         s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/' + rand_file_name + '.png')
     # potim v amazon + return url
+    if os.path.exists('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png'):
+        os.remove('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
+    else:
+        print("The file does not exist")
     return 'http://storage.ws.pho.to/photohack/stckrs/' + rand_file_name + '.png'
 
 
@@ -284,7 +289,7 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
             podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][0]
-            podlozhka[position_h + i, position_w + j][3] = int((0.299*image[i,j][2] + 0.587*image[i,j][1] + 0.114* image[i,j][0]))
+            podlozhka[position_h + i, position_w + j][3] = 255 - int((0.299*image[i,j][2] + 0.587*image[i,j][1] + 0.114* image[i,j][0]))
     return podlozhka
 
 
