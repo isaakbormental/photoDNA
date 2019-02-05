@@ -16,11 +16,11 @@ def do_post_shit(jason):
     logging.error('DoOING POSTING SHITTING')
     logging.error(os.getcwd())
     logging.error(str(os.listdir(os.getcwd())))
-    # podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
-    im = Image.open('gay_krug.png')
+    podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
+    # im = Image.open('gay_krug.png')
     # podlozhka = np.array(im)
     # podlozhka = podlozhka[:, :, ::-1].copy()
-    podlozhka = pil_image_to_cv(im)
+    # podlozhka = pil_image_to_cv(im)
     logging.error('PROCHITAL')
     # json_data = open('data.json').read()
 
@@ -76,14 +76,16 @@ def do_post_shit(jason):
     logging.error(root)
     # os.path.join(root, 'for')
     if (characteristics['data']['gender'] == 'male'):
-        sexim = Image.open(os.path.join('for_posting','orientation_gender_age','mars.png'))
-        sex = pil_image_to_cv(sexim)
+        # sexim = Image.open(os.path.join('for_posting','orientation_gender_age','mars.png'))
+        # sex = pil_image_to_cv(sexim)
         # sex = cv2.imread(root + '/for_posting/orientation_gender_age/mars.png', 1)
+        sex = cv2.imread(os.path.join('for_posting','orientation_gender_age','mars.png'), 1)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
     else:
         # sex = cv2.imread(root + '/for_posting/orientation_gender_age/venus.png', 1)
-        sexim = Image.open(os.path.join('for_posting', 'orientation_gender_age', 'venus.png'))
-        sex = pil_image_to_cv(sexim)
+        sex = cv2.imread(os.path.join('for_posting', 'orientation_gender_age', 'venus.png'), 1)
+        # sexim = Image.open(os.path.join('for_posting', 'orientation_gender_age', 'venus.png'))
+        # sex = pil_image_to_cv(sexim)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
 
     # image = cv2.imread(root + "/irish.jpg", 0)
@@ -124,8 +126,9 @@ def do_post_shit(jason):
 
     logging.error('Resize ready')
     # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
-    the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
-    the_filter = pil_image_to_cv(the_filter_im)
+    # the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
+    # the_filter = pil_image_to_cv(the_filter_im)
+    the_filter = cv2.imread(os.path.join('for_posting', 'picture', 'filter.png'), cv2.IMREAD_UNCHANGED)
     logging.error('Filter read')
 
     # logging.error(the_filter.shape, podlozhka.shape, new.shape)
@@ -146,10 +149,10 @@ def do_post_shit(jason):
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
-    # c_png = cv2.imread(root + "/circle.png", 1)
+    c_png = cv2.imread("/circle.png", 1)
     os.chdir('/var/www/html/backend/photoDNA/photodna')
-    c_png_im = Image.open('circle.png')
-    c_png = pil_image_to_cv(c_png_im)
+    # c_png_im = Image.open('circle.png')
+    # c_png = pil_image_to_cv(c_png_im)
     logging.error('Circle read')
     podlozhka = put_element_overlay(36, 804, c_png, podlozhka)
 
@@ -239,10 +242,10 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
         for j in range(elelment.shape[1]):
             # if(i<2 and j<2):
             #     logging.error(podlozhka[i][j])
-            if ((elelment[i, j][0]==255) and(elelment[i, j][1]==255)and (elelment[i, j][2] == 255)):
-                podlozhka[position_h + i, position_w + j][0] = 0
-                podlozhka[position_h + i, position_w + j][1] = 0
-                podlozhka[position_h + i, position_w + j][2] = 0
+            if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
+                podlozhka[position_h + i, position_w + j][0] = 255
+                podlozhka[position_h + i, position_w + j][1] = 255
+                podlozhka[position_h + i, position_w + j][2] = 255
             else:
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][0]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
@@ -253,10 +256,10 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
 def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
-            if ((elelment[i, j][0]==255) and(elelment[i, j][1]==255)and (elelment[i, j][2] == 255)):
-                podlozhka[position_h + i, position_w + j][0] = 0
-                podlozhka[position_h + i, position_w + j][1] = 0
-                podlozhka[position_h + i, position_w + j][2] = 0
+            if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
+                podlozhka[position_h + i, position_w + j][0] = 255
+                podlozhka[position_h + i, position_w + j][1] = 255
+                podlozhka[position_h + i, position_w + j][2] = 255
             else:
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][0]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
