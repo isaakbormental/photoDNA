@@ -9,6 +9,7 @@ import logging
 from io import BytesIO
 import base64
 import numpy as np
+from photodna.configigi import IDIOTSKII_KEY,SUCHII_KEY
 
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
@@ -149,7 +150,7 @@ def do_post_shit(jason):
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
-    c_png = cv2.imread("circle.png", 1)
+    c_png = cv2.imread("/var/www/html/backend/photoDNA/photodna/circle.png", 1)
     os.chdir('/var/www/html/backend/photoDNA/photodna')
     # c_png_im = Image.open('circle.png')
     # c_png = pil_image_to_cv(c_png_im)
@@ -224,8 +225,8 @@ def do_post_shit(jason):
     # img.tobytes()
     logging.error('I saved!')
     session = boto3.Session(
-        aws_access_key_id='',
-        aws_secret_access_key='',
+        aws_access_key_id=SUCHII_KEY,
+        aws_secret_access_key=IDIOTSKII_KEY,
     )
     s3 = session.client('s3')
 
