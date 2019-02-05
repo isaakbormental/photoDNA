@@ -242,7 +242,7 @@ def do_post_shit(jason):
 
 
     #'/for_posting/final.png'
-    with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'rb') as data:
+    with open('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png', 'rb') as data:
         s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/' + rand_file_name + '.png')
     # potim v amazon + return url
     if os.path.exists('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png'):
