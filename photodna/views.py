@@ -23,7 +23,12 @@ def generate_amazon_post(request):
     logging.error(jsonka)
     logging.error('_______________________')
     url = do_post_shit(jsonka)
-    return HttpResponse(json.dumps('{' + '"link":' + '"' + url + '"' + '}'), content_type="application/json")
+    resp = json.dumps('{' + '"link":' + '"' + url + '"' + '}')
+    logging.error('_____________________')
+    logging.error(resp)
+    logging.error(type(resp))
+    logging.error('_____________________')
+    return HttpResponse(resp, content_type="application/json")
 
 @csrf_exempt
 def process_image(request):
