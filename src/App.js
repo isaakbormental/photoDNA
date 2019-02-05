@@ -12,7 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: !'production',
+            appEnv: 'production',
             page: 'default',
             img: false,
             shareCountry: '',
@@ -72,7 +72,6 @@ class App extends Component {
         this.setState({shareCountry})
     }
     switchShareOrientation() {
-        console.log('shaaaaaaar');
         this.setState({shareOrientation: !this.state.shareOrientation});
     }
 
