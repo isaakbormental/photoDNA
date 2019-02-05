@@ -12,7 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: 'production',
+            appEnv: !'production',
             page: 'default',
             img: false,
             shareCountry: '',
@@ -131,7 +131,10 @@ class App extends Component {
                 }
                 return response.json();
             }).then((data) => {
-                this.setState({data});
+                this.setState({
+                    data,
+                    shareCountry: data.nationality[0]
+                });
                 this.switchPage('results')
             }).catch(() => {
                 this.switchPage('error')
@@ -216,9 +219,10 @@ class App extends Component {
                     img={this.state.img}
                     data={this.state.data}
                     shareCountry={this.state.shareCountry}
+                    shareOrientation={this.state.shareOrientation}
+
                     switchPage={(page) => this.switchPage(page)}
                     shareThroughApi={() => this.shareThroughApi()}
-                    shareOrientation={this.state.shareOrientation}
                     switchShareOrientation={() => this.switchShareOrientation()}
                     switchShareCountry={(shareCountry) => this.switchShareCountry(shareCountry)}
                 />;

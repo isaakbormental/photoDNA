@@ -3,14 +3,6 @@ import './Chart.scss';
 
 
 class Chart extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            color: this.props.color ? this.props.color : '#fff'
-        };
-    }
-
-
     render() {
         let dashArray = 385*(this.props.data.confidence/100) + ", 385";
         return (
