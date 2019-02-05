@@ -239,6 +239,9 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
 
 
 def string_to_image(base64_string):
+    logging.error('()()()()()')
+    logging.error(type(base64_string))
+    logging.error('()()()()()')
     imgdata = base64.b64decode(base64_string)
     cvimg = Image.open(BytesIO(imgdata))
     open_cv_image = np.array(cvimg)
