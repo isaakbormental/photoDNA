@@ -19,7 +19,7 @@ def do_post_shit(jason):
     # json_data = open('data.json').read()
 
     characteristics = jason
-
+    logging.error(characteristics['data']['nationality'][0]['confidence'])
     the_list_v = (characteristics['data']['nationality'][0]['confidence'], characteristics['data']['nationality'][1]['confidence'],
                   characteristics['data']['nationality'][2]['confidence'])
 
@@ -67,7 +67,8 @@ def do_post_shit(jason):
                 d_n[flag3] = characteristics['data']['nationality'][0]['confidence']
 
     root = os.getcwd()
-
+    logging.error(root)
+    # os.path.join(root, 'for')
     if (characteristics['data']['gender'] == 'male'):
         sex = cv2.imread(root + '/for_posting/orientation_gender_age/mars.png', 1)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
@@ -195,6 +196,7 @@ def do_post_shit(jason):
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
+    logging.error('Put_elemet_overlay')
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
             if(i<2 and j<2):
