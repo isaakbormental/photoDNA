@@ -117,16 +117,16 @@ def do_post_shit(jason):
     flg2 = 428
 
     new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
-
+    logging.error('Resize ready')
     # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
     the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
     the_filter = pil_image_to_cv(the_filter_im)
-
+    logging.error('Filter read')
     podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
                                        podlozhka)
 
     os.chdir(os.getcwd() + "/for_posting/flags/")
-
+    logging.error(os.getcwd())
     index_list = []
     for file in glob.glob("*.png"):
         if (file[:-4] == the_flag):
@@ -140,7 +140,7 @@ def do_post_shit(jason):
     os.chdir('/var/www/html/backend/photoDNA/photodna')
     c_png_im = Image.open('circle.png')
     c_png = pil_image_to_cv(c_png_im)
-
+    logging.error('Circle read')
     podlozhka = put_element_overlay(36, 804, c_png, podlozhka)
 
     # cv2.imwrite(root + '/for_posting/post.png', podlozhka)
