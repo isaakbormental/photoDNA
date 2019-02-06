@@ -1,26 +1,16 @@
 .page_index {
   align-items: center;
-  justify-content: center;
   min-height: 100%;
-  padding: 1.5em .75em;
+  height: initial;
+  padding-top: 2.55em;
   background: linear-gradient(153.87deg, #6C23C8 -2.21%, #0D40C5 -2.2%, #EF59B3 106.38%);
-
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 260px;
-    min-height: 100%;
-    margin: 0 auto;
-  }
 
   &__heading {
     max-width: 290px;
     text-align: center;
     font-weight: 500;
     line-height: 1.19;
-    font-size: 2.1em;
+    font-size: 1.5em;
   }
 
   &__subheading {
@@ -34,22 +24,23 @@
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-grow: 1;
     max-width: 230px;
-    max-height: 350px;
-    margin: 0 auto 0;
+    max-height: 255px;
+    margin: 1.1em auto 0;
     padding: 0;
     list-style: none;
 
     &-item {
       display: flex;
       align-items: center;
-      margin-top: .5em;
+      margin-top: .4em;
+      font-weight: 300;
     }
     &-icon {
-      min-width: 50px;
-      max-width: 50px;
+      min-width: 46px;
+      max-width: 46px;
       margin-right: 1em;
       img {
         display: block;

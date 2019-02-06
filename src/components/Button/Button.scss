@@ -1,25 +1,23 @@
 .button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 8.4em;
-  min-height: 2em;
-  padding: .3em 2em;
-  background: #FFFFFF;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  min-height: 3.35em;
+  padding: .4em 2em;
+  background: #00C6AE;
+  box-shadow: 0px -.1em .1em rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 1.5em;
+  border-radius: 0;
   text-align: center;
   font-size: 1em;
   font-weight: 500;
-  color: #9A50BA;
-
-  &_bottom {
-    position: absolute;
-    bottom: 3em;
-    left: 50%;
-    transform: translate(-50%);
-  }
+  color: #fff;
+  text-transform: uppercase;
 
   &:focus {
     outline: none;
