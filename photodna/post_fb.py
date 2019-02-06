@@ -299,7 +299,7 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h + i, position_w + j][0] = int(
                 255 * ((1 - norm_transparency) * norm_red + int(norm_transparency * image[i, j][0] / 255)))
             podlozhka[position_h + i, position_w + j][1] = int(
-                255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * image[i, j][1] / 255))
+                255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * image[i, j][1] / 255)))
             podlozhka[position_h + i, position_w + j][2] = int(
                 255 * ((1 - norm_transparency) * norm_blue + int(norm_transparency * image[i, j][0]) / 255))
 
