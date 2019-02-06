@@ -95,7 +95,10 @@ class App extends Component {
             }
             let imgUrl = obj.photos[0].image_url;
 
-            this.setState({loadingStatus:'betaface'});
+            this.setState({
+                img: '',
+                loadingStatus:'betaface'
+            });
             this.switchPage("loading");
             window.getDataUri(imgUrl)
                 .then(result => {
