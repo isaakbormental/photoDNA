@@ -12,7 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: !'production',
+            appEnv: 'production',
             page: 'default',
             img: false,
             loadingStatus: '',
@@ -95,6 +95,8 @@ class App extends Component {
             }
             let imgUrl = obj.photos[0].image_url;
 
+            this.setState({loadingStatus:'betaface'});
+            this.switchPage("loading");
             window.getDataUri(imgUrl)
                 .then(result => {
                     this.setState({img: result});
@@ -106,16 +108,16 @@ class App extends Component {
         window.appShare = (boolean) => {
             if (boolean) {
                 this.switchPage('report');
+                console.log('appShare - report');
             } else {
                 this.switchPage('default');
+                console.log('appShare - default');
             }
         };
 
     }
 
     sendImg() {
-        this.setState({loadingStatus:'betaface'});
-        this.switchPage("loading");
 
         // TODO: delete fake json and pick true request
         if (this.state.appEnv === 'production') {
