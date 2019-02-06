@@ -12,7 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: 'production',
+            appEnv: !'production',
             page: 'default',
             img: false,
             loadingStatus: '',
@@ -57,6 +57,7 @@ class App extends Component {
                 }
                 return response.json();
             }).then((response) => {
+                this.switchPage('results');
                 this.setState({shareImg:response.link});
                 window.location.href = `callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&lp_title=${this.state.shareLpTitle}&lp_description=${this.state.shareLpDescription}&func=appShare`;
             }).catch(() => {
