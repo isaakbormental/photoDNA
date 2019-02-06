@@ -104,7 +104,7 @@ def get_cost_dictionary(the_64,df_males,df_females,the_mask, do):
     #     encoded_string = image_file.read()
 
     parameters_post = {
-        "api_key": "b3160fbb-2866-11e9-99c4-0cc47a6c4dbd",
+        "api_key": "d45fd466-51e2-4701-8da8-04351c872236",
         "file_base64":the_64,
         "detection_flags": "basicpoints,propoints,classifiers,content",
         "recognize_targets": [
