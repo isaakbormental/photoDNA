@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Flag.scss';
 
 import flagAfghan from './img/afghan.png'
 import flagAfrican_american from './img/african_american.png'
