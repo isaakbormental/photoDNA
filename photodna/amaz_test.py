@@ -304,27 +304,48 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
     for i in range (image.shape[0]):
         for j in range (image.shape[1]):
 
-            # norm_red = filter[i, j][0] / 255
-            # norm_green = filter[i, j][1] / 255
-            # norm_blue = filter[i, j][2] / 255
-            # norm_transparency = 1 - int(
-            #     (0.299 * image[i, j][2] + 0.587 * image[i, j][1] + 0.114 * image[i, j][0])) / 255
-            #
-            # podlozhka[position_h + i, position_w + j][0] = int(
-            #     255 * ((1 - norm_transparency) * norm_blue + int(norm_transparency * image[i, j][0] / 255)))
-            # podlozhka[position_h + i, position_w + j][1] = int(
-            #     255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * image[i, j][1] / 255)))
-            # podlozhka[position_h + i, position_w + j][2] = int(
-            #     255 * ((1 - norm_transparency) * norm_red + int(norm_transparency * image[i, j][2]) / 255))
+            norm_red = filter[i, j][0] / 255
+            norm_green = filter[i, j][1] / 255
+            norm_blue = filter[i, j][2] / 255
+            norm_img_red = image[i, j][0] / 255
+            norm_img_greed = image[i, j][1] / 255
+            norm_transparency = 1 - int(
+                (0.299 * image[i, j][2] + 0.587 * image[i, j][1] + 0.114 * image[i, j][0])) / 255
+
+            podlozhka[position_h + i, position_w + j][0] = int(
+                255 * ((1 - norm_transparency) * norm_blue + int(norm_transparency * norm_img_red)))
+            podlozhka[position_h + i, position_w + j][1] = int(
+                255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * norm_img_greed)))
+            podlozhka[position_h + i, position_w + j][2] = int(
+                255 * ((1 - norm_transparency) * norm_red + int(norm_transparency * image[i, j][2] / 255)))
 
             # Target.R = ((1 - Source.A) * BGColor.R) + (Source.A * Source.R)
             # Target.G = ((1 - Source.A) * BGColor.G) + (Source.A * Source.G)
             # Target.B = ((1 - Source.A) * BGColor.B) + (Source.A * Source.B)
             # print(image.shape)
-            norm_transparency = 1 - int((0.299 * image[i, j][2] + 0.587 * image[i, j][1] + 0.114 * image[i, j][0])) / 255
-            podlozhka[position_h + i, position_w + j][0] = int(((1 - norm_transparency) * filter[i, j][2]) + int(norm_transparency * image[i, j][2]))
-            podlozhka[position_h + i, position_w + j][1] = int(((1 - norm_transparency) * filter[i, j][1]) + int(norm_transparency * image[i, j][1]))
-            podlozhka[position_h + i, position_w + j][2] = int(((1 - norm_transparency) * filter[i, j][0]) + int(norm_transparency * image[i, j][0]))
+
+
+            # norm_transparency = 1 - int((0.299 * image[i, j][2] + 0.587 * image[i, j][1] + 0.114 * image[i, j][0])) / 255
+            # podlozhka[position_h + i, position_w + j][0] = int(((1 - norm_transparency) * filter[i, j][0]) + int(norm_transparency * image[i, j][0]))
+            # podlozhka[position_h + i, position_w + j][1] = int(((1 - norm_transparency) * filter[i, j][1]) + int(norm_transparency * image[i, j][1]))
+            # podlozhka[position_h + i, position_w + j][2] = int(((1 - norm_transparency) * filter[i, j][2]) + int(norm_transparency * image[i, j][2]))
+
+            norm_red = filter[i, j][0] / 255
+            norm_green = filter[i, j][1] / 255
+            norm_blue = filter[i, j][2] / 255
+            norm_transparency = 1 - int(
+                (0.299 * image[i, j][0] + 0.587 * image[i, j][1] + 0.114 * image[i, j][2])) / 255
+            # 0.299 0.587 0.114
+            # 0.2126 0.7152 0.0722
+            # 0.2627 0.6780 0.0593
+            podlozhka[position_h + i, position_w + j][0] = int(
+                255 * ((1 - norm_transparency) * norm_red + int(norm_transparency * image[i, j][0] / 255)))
+            podlozhka[position_h + i, position_w + j][1] = int(
+                255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * image[i, j][1] / 255)))
+            podlozhka[position_h + i, position_w + j][2] = int(
+                255 * ((1 - norm_transparency) * norm_blue + int(norm_transparency * image[i, j][2] / 255)))
+
+
     return podlozhka
 
 
@@ -342,3 +363,5 @@ def pil_image_to_cv(pil_image):
 
 imag = do_post_shit(base_img)
 imag.show()
+
+
