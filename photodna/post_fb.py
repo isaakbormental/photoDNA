@@ -72,13 +72,13 @@ def do_post_shit(jason):
             if (characteristics['data']['nationality'][1]['confidence'] > characteristics['data']['nationality'][0]['confidence']):
                 flag2 = characteristics['data']['nationality'][1]['name']
                 flag3 = characteristics['data']['nationality'][0]['name']
-                d_n[flag2] = characteristics['data']['nationality'][0]['confidence']
-                d_n[flag3] = characteristics['data']['nationality'][1]['confidence']
-            else:
-                flag2 = characteristics['data']['nationality'][1]['name']
-                flag3 = characteristics['data']['nationality'][0]['name']
                 d_n[flag2] = characteristics['data']['nationality'][1]['confidence']
                 d_n[flag3] = characteristics['data']['nationality'][0]['confidence']
+            else:
+                flag2 = characteristics['data']['nationality'][0]['name']
+                flag3 = characteristics['data']['nationality'][1]['name']
+                d_n[flag2] = characteristics['data']['nationality'][0]['confidence']
+                d_n[flag3] = characteristics['data']['nationality'][1]['confidence']
 
     root = os.getcwd()
     logging.error(root)
@@ -228,11 +228,11 @@ def do_post_shit(jason):
     #root + '/for_posting/final.png'
     allchar = string.ascii_letters + string.digits
     rand_file_name = "".join(choice(allchar) for x in range(68))
-    img.save('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
+    img_save = img.convert('RGB')
+    img_save.save('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
     # with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'w') as fi:
     #     img.save(fi)
     # img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', format='PNG')
-    # img.tobytes()
     logging.error('I saved!')
     session = boto3.Session(
         aws_access_key_id=SUCHII_KEY,
@@ -240,8 +240,6 @@ def do_post_shit(jason):
     )
     s3 = session.client('s3')
 
-
-    #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png', 'rb') as data:
         s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/' + rand_file_name + '.png', ExtraArgs={'ContentType': 'image/png'})
     # potim v amazon + return url
