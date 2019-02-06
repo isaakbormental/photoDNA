@@ -120,6 +120,8 @@ def get_cost_dictionary(the_64,df_males,df_females,the_mask, do):
 
 
     data = zapros.json()
+    logging.error(data)
+
     if (data['media']['faces'] is None):
         return '{"faces":0}', None, None, None
     # with open('request.json', 'w') as outfile:
