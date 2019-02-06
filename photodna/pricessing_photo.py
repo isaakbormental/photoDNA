@@ -6,7 +6,7 @@ import statistics
 from collections import OrderedDict
 import os
 from random import randint
-
+import logging
 # os.chdir('D:\Education\Hackathones\photohack\pravoslavnaya_papka\photoDNA\photodna')
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
@@ -34,6 +34,7 @@ def process(encoded_image):
     sorted_arr = [(k, our_dict[k]) for k in sorted(our_dict, key=our_dict.get, reverse=True)]
     final_result = get_nationality(sorted_arr)
     the_data = write_json(final_result, age, gender, facial)
+    logging.error(the_data)
     return json.dumps(the_data, indent=4)
     # with open('data.json', 'w') as outfile:
     #     json.dump(the_data, outfile, indent=4)
@@ -103,7 +104,9 @@ def get_cost_dictionary(the_64,df_males,df_females,the_mask, do):
     #     encoded_string = image_file.read()
 
     parameters_post = {
-        "api_key": "d45fd466-51e2-4701-8da8-04351c872236",
+        "api_key": "b3160fbb-2866-11e9-99c4-0cc47a6c4dbd",
+        "api v1 secret":"b3218482-2866-11e9-99c4-0cc47a6c4dbd",
+        "api v2 secret":"b32cf366-2866-11e9-99c4-0cc47a6c4dbd",
         "file_base64":the_64,
         "detection_flags": "basicpoints,propoints,classifiers,content",
         "recognize_targets": [

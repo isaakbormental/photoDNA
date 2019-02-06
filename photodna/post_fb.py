@@ -16,9 +16,9 @@ from random import *
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
 def do_post_shit(jason):
-    logging.error('DoOING POSTING SHITTING')
-    logging.error(os.getcwd())
-    logging.error(str(os.listdir(os.getcwd())))
+    # logging.error('DoOING POSTING SHITTING')
+    # logging.error(os.getcwd())
+    # logging.error(str(os.listdir(os.getcwd())))
     podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
@@ -29,11 +29,11 @@ def do_post_shit(jason):
     # podlozhka = np.array(im)
     # podlozhka = podlozhka[:, :, ::-1].copy()
     # podlozhka = pil_image_to_cv(im)
-    logging.error('PROCHITAL')
+    # logging.error('PROCHITAL')
     # json_data = open('data.json').read()
 
     characteristics = jason
-    logging.error(characteristics['data']['nationality'][0]['confidence'])
+    # logging.error(characteristics['data']['nationality'][0]['confidence'])
     the_list_v = (characteristics['data']['nationality'][0]['confidence'], characteristics['data']['nationality'][1]['confidence'],
                   characteristics['data']['nationality'][2]['confidence'])
 
@@ -81,7 +81,7 @@ def do_post_shit(jason):
                 d_n[flag3] = characteristics['data']['nationality'][1]['confidence']
 
     root = os.getcwd()
-    logging.error(root)
+    # logging.error(root)
     # os.path.join(root, 'for')
     if (characteristics['data']['gender'] == 'male'):
         # sexim = Image.open(os.path.join('for_posting','orientation_gender_age','mars.png'))
@@ -97,7 +97,7 @@ def do_post_shit(jason):
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
 
     # image = cv2.imread(root + "/irish.jpg", 0)
-    logging.error(len(characteristics['img']))
+    # logging.error(len(characteristics['img']))
     image = string_to_image(characteristics['img'].split(',', 1)[1])
 
     '''
@@ -108,7 +108,7 @@ def do_post_shit(jason):
     '''
 
     vis_shir = float(image.shape[0] / image.shape[1])
-    logging.error(vis_shir)
+    # logging.error(vis_shir)
     if (vis_shir > 630 / 618):
         # образаем высоту (то кесть ширину)
         # ЗДЕСЬ ШИРИНА ЭТО ВЫСОТА И НАОБОРОТ
@@ -125,29 +125,24 @@ def do_post_shit(jason):
     res_vis = 630
     flg1 = 0
     flg2 = 428
-    logging.error('Before resize')
+    # logging.error('Before resize')
     new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
     # new = Image.fromarray(crop_img)
     # new = new.resize((res_shir, res_vis))
     # new = pil_image_to_cv(new)
 
 
-    logging.error('Resize ready')
     # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
     # the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
     # the_filter = pil_image_to_cv(the_filter_im)
     the_filter = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
-    logging.error('Filter read')
 
     # logging.error(the_filter.shape, podlozhka.shape, new.shape)
-    logging.error(str(the_filter.shape) + ' - filter')
-    logging.error(str(podlozhka.shape) + ' - podlozhka')
-    logging.error(str(new.shape) + ' - new')
+
     podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
                                        podlozhka)
 
     os.chdir(os.getcwd() + "/for_posting/flags/")
-    logging.error(os.getcwd())
     index_list = []
     for file in glob.glob("*.png"):
         if (file[:-4] == the_flag):
@@ -162,12 +157,10 @@ def do_post_shit(jason):
     os.chdir('/var/www/html/backend/photoDNA/photodna')
     # c_png_im = Image.open('circle.png')
     # c_png = pil_image_to_cv(c_png_im)
-    logging.error('Circle read')
     podlozhka = put_element_overlay(36, 804, c_png, podlozhka)
 
     # cv2.imwrite(root + '/for_posting/post.png', podlozhka)
     img = Image.fromarray(podlozhka)
-    logging.error('imgigig')
     # img = Image.open(root + '/for_posting/post.png')
     # os.remove(root + '/for_posting/post.png')
     draw = ImageDraw.Draw(img)
@@ -181,7 +174,6 @@ def do_post_shit(jason):
     font7 = ImageFont.truetype("Roboto-Medium.ttf", 25)
 
     font8 = ImageFont.truetype("Roboto-Medium.ttf", 25)
-    logging.error('Ya prochital fonts')
 
     draw.text((843, 70), str(d_n[the_flag]), (154, 154, 160), font=font1)
 
@@ -233,7 +225,6 @@ def do_post_shit(jason):
     # with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'w') as fi:
     #     img.save(fi)
     # img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', format='PNG')
-    logging.error('I saved!')
     session = boto3.Session(
         aws_access_key_id=SUCHII_KEY,
         aws_secret_access_key=IDIOTSKII_KEY,
@@ -253,7 +244,6 @@ def do_post_shit(jason):
 
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
-    logging.error('Put_elemet_overlay')
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
             # if(i<2 and j<2):
