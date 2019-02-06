@@ -228,8 +228,8 @@ def do_post_shit(jason):
     #root + '/for_posting/final.png'
     allchar = string.ascii_letters + string.digits
     rand_file_name = "".join(choice(allchar) for x in range(68))
-    img_save = img.convert('RGB')
-    img_save.save('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
+    # img = img.convert('RGB')
+    img.save('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
     # with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'w') as fi:
     #     img.save(fi)
     # img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', format='PNG')
@@ -240,6 +240,8 @@ def do_post_shit(jason):
     )
     s3 = session.client('s3')
 
+
+    #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png', 'rb') as data:
         s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/' + rand_file_name + '.png', ExtraArgs={'ContentType': 'image/png'})
     # potim v amazon + return url
