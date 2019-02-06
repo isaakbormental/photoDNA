@@ -9,28 +9,65 @@ class PageLoading extends Component {
         this.state = {
             status: {
                 betaface: {
-                    heading: 'Defining your second and third dominant nationality',
+                    headings: [
+                        'Analyzing your photo',
+                        'Defining your features',
+                        'Comparing your features to nationaly database',
+                        'Defining your second and third dominant nationality',
+                        'Preparing a report...'
+                    ],
                     subheading: 'Doing science magic'
                 },
                 sharing: {
-                    heading: 'DNA is being processed',
+                    headings: [
+                        'Posting your genes'
+                    ],
                     subheading: 'please wait'
                 },
-            }
+            },
+            statusSlide: -1
         };
+    }
+
+    componentDidMount() {
+        this.tick();
+    }
+
+    tick() {
+        if(this.state.statusSlide+1 < this.state.status[this.props.status].headings.length) {
+            this.setState({
+                statusSlide: this.state.statusSlide+1
+            });
+            setTimeout(() => this.tick(), 2000)
+        }
+
     }
 
     render() {
         const bg = {
-            backgroundImage: `url(${this.props.img})`
-        };
+            backgroundImage: `url(${this.props.img}), linear-gradient(153.87deg, #6C23C8 -2.21%, #0D40C5 -2.2%, #EF59B3 106.38%)`
+        },
+            headings = this.state.status[this.props.status].headings;
         return (
             <div className="page page_loading" style={bg}>
-                <div className="page_loading__inner">
-                    <img className="page_loading__icon" src={iconLoading} alt=""/>
-                    <h1 className="page_loading__heading">{this.state.status[this.props.status].heading}</h1>
-                    <h2 className="page_loading__subheading">{this.state.status[this.props.status].subheading}</h2>
+                <img className="page_loading__icon" src={iconLoading} alt=""/>
+                <div className="page_loading__heading-wrapper">
+                    <h1
+                        className="page_loading__heading"
+                        style={{
+                            width:headings.length*100+'%',
+                            right:this.state.statusSlide*100+'vw'
+                        }}>
+                        {headings.map((item, index) => {
+                            return(
+                                <span className="page_loading__heading-item" key={index}>
+                                    <span className="page_loading__heading-inner">{item}</span>
+                                </span>
+                            )
+                        })}
+                    </h1>
                 </div>
+                <h2 className="page_loading__subheading">{this.state.status[this.props.status].subheading}</h2>
             </div>
         );
 

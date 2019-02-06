@@ -7,7 +7,6 @@ import PageLoading from "./pages/PageLoading/PageLoading";
 import PageResult from "./pages/PageResult/PageResult";
 
 
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -110,11 +109,8 @@ class App extends Component {
 
         window.appShare = (boolean) => {
             if (boolean) {
-                this.switchPage('report');
+                this.switchPage('results');
                 console.log('appShare - report');
-            } else {
-                this.switchPage('default');
-                console.log('appShare - default');
             }
         };
 
