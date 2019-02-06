@@ -1,5 +1,5 @@
 .page_readme {
-  padding: 1.5em 2em;
+  padding: .7em 2em 1.5em;
   background: linear-gradient(153.87deg, #6C23C8 -2.21%, #0D40C5 -2.2%, #EF59B3 106.38%);
 
   &__inner {
@@ -13,8 +13,8 @@
 
   &__body {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     flex-grow: 1;
   }
 
