@@ -266,7 +266,7 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][2]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
                 podlozhka[position_h+i, position_w+ j][2] = elelment[i, j][0]
-                podlozhka[position_h + i, position_w + j][3]=255
+                # podlozhka[position_h + i, position_w + j][3]=255
     return podlozhka
 
 def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
@@ -280,7 +280,7 @@ def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][2]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
                 podlozhka[position_h+i, position_w+ j][2] = elelment[i, j][0]
-                podlozhka[position_h + i, position_w + j][3] = elelment[i, j][3]
+                # podlozhka[position_h + i, position_w + j][3] = elelment[i, j][3]
     return podlozhka
 
 def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
@@ -289,7 +289,7 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
             podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
             podlozhka[position_h+i, position_w+ j][2] = filter[i,j][0]
-            podlozhka[position_h + i, position_w + j][3] = 255 - int((0.299*image[i,j][2] + 0.587*image[i,j][1] + 0.114* image[i,j][0]))
+            # podlozhka[position_h + i, position_w + j][3] = 255 - int((0.299*image[i,j][2] + 0.587*image[i,j][1] + 0.114* image[i,j][0]))
     return podlozhka
 
 
