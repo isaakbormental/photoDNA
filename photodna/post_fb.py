@@ -19,7 +19,7 @@ def do_post_shit(jason):
     logging.error('DoOING POSTING SHITTING')
     logging.error(os.getcwd())
     logging.error(str(os.listdir(os.getcwd())))
-    podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
+    podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
             temp = podlozhka[i, j][0]
