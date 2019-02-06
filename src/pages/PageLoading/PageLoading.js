@@ -33,12 +33,16 @@ class PageLoading extends Component {
         this.tick();
     }
 
+    componentWillUnmount() {
+        clearTimeout(this.timer);
+    }
+
     tick() {
         if(this.state.statusSlide+1 < this.state.status[this.props.status].headings.length) {
             this.setState({
                 statusSlide: this.state.statusSlide+1
             });
-            setTimeout(() => this.tick(), 2000)
+            this.timer = setTimeout(() => this.tick(), 2000)
         }
 
     }
