@@ -97,7 +97,7 @@ from random import *
 
 def do_post_shit(baseimg):
 
-    podlozhka = cv2.imread('gay_krug.png', cv2.IMREAD_UNCHANGED)
+    podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
             temp = podlozhka[i, j][0]
@@ -183,7 +183,7 @@ def do_post_shit(baseimg):
     flg1 = 0
     flg2 = 428
     new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
-
+    # new = cv2.cvtColor(new, cv2.COLOR_BGR2GRAY)
     the_filter = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\picture\\filter.png', cv2.IMREAD_UNCHANGED)
 
     podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
@@ -281,7 +281,7 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][2]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
                 podlozhka[position_h+i, position_w+ j][2] = elelment[i, j][0]
-                podlozhka[position_h + i, position_w + j][3]=255
+                # podlozhka[position_h + i, position_w + j][3]=255
     return podlozhka
 
 
@@ -296,17 +296,35 @@ def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][2]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
                 podlozhka[position_h+i, position_w+ j][2] = elelment[i, j][0]
-                podlozhka[position_h + i, position_w + j][3] = elelment[i, j][3]
+                # podlozhka[position_h + i, position_w + j][3] = elelment[i, j][3]
     return podlozhka
 
 
 def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
     for i in range (image.shape[0]):
         for j in range (image.shape[1]):
-            podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
-            podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
-            podlozhka[position_h+i, position_w+ j][2] = filter[i,j][0]
-            podlozhka[position_h + i, position_w + j][3] = 255 - int((0.299*image[i,j][2] + 0.587*image[i,j][1] + 0.114* image[i,j][0]))
+
+            # norm_red = filter[i, j][0] / 255
+            # norm_green = filter[i, j][1] / 255
+            # norm_blue = filter[i, j][2] / 255
+            # norm_transparency = 1 - int(
+            #     (0.299 * image[i, j][2] + 0.587 * image[i, j][1] + 0.114 * image[i, j][0])) / 255
+            #
+            # podlozhka[position_h + i, position_w + j][0] = int(
+            #     255 * ((1 - norm_transparency) * norm_blue + int(norm_transparency * image[i, j][0] / 255)))
+            # podlozhka[position_h + i, position_w + j][1] = int(
+            #     255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * image[i, j][1] / 255)))
+            # podlozhka[position_h + i, position_w + j][2] = int(
+            #     255 * ((1 - norm_transparency) * norm_red + int(norm_transparency * image[i, j][2]) / 255))
+
+            # Target.R = ((1 - Source.A) * BGColor.R) + (Source.A * Source.R)
+            # Target.G = ((1 - Source.A) * BGColor.G) + (Source.A * Source.G)
+            # Target.B = ((1 - Source.A) * BGColor.B) + (Source.A * Source.B)
+            # print(image.shape)
+            norm_transparency = 1 - int((0.299 * image[i, j][2] + 0.587 * image[i, j][1] + 0.114 * image[i, j][0])) / 255
+            podlozhka[position_h + i, position_w + j][0] = int(((1 - norm_transparency) * filter[i, j][2]) + int(norm_transparency * image[i, j][2]))
+            podlozhka[position_h + i, position_w + j][1] = int(((1 - norm_transparency) * filter[i, j][1]) + int(norm_transparency * image[i, j][1]))
+            podlozhka[position_h + i, position_w + j][2] = int(((1 - norm_transparency) * filter[i, j][0]) + int(norm_transparency * image[i, j][0]))
     return podlozhka
 
 
