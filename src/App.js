@@ -14,10 +14,11 @@ class App extends Component {
             appEnv: 'production',
             page: 'default',
             img: false,
+            imgUrl: '',
             loadingStatus: '',
             shareCountry: '',
             shareOrientation: false,
-            shareImg: 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg',
+            shareImg: '',
             shareTitle: 'Learn more about yourself',
             shareDescription: 'Machine leaning will tell your origin',
             shareLpTitle: 'One more step to learn about yourself',
@@ -46,6 +47,7 @@ class App extends Component {
                 },
                 body: JSON.stringify({
                     img: this.state.img,
+                    imgUrl: this.state.imgUrl,
                     data: this.state.data,
                     shareOrientation: this.state.shareOrientation,
                     shareCountry: this.state.shareCountry
@@ -92,14 +94,15 @@ class App extends Component {
                     ]
                 };
             }
-            let imgUrl = obj.photos[0].image_url;
 
             this.setState({
                 img: '',
+                imgUrl:obj.photos[0].image_url,
                 loadingStatus:'betaface'
             });
+            console.log('photo - ' + obj.photos[0].image_url);
             this.switchPage("loading");
-            window.getDataUri(imgUrl)
+            window.getDataUri(obj.photos[0].image_url)
                 .then(result => {
                     this.setState({img: result});
                     this.sendImg();
@@ -127,7 +130,8 @@ class App extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    img: this.state.img
+                    img: this.state.img,
+                    imgUrl: this.state.imgUrl
                 })
             }).then((response) => {
                 if (!response.ok) {
@@ -239,7 +243,7 @@ class App extends Component {
                 />;
             case 'loading':
                 return <PageLoading
-                    img={this.state.img}
+                    img={this.state.imgUrl}
                     status={this.state.loadingStatus}
                 />;
             case 'error':
