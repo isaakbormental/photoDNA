@@ -16,15 +16,19 @@ from random import *
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
 def do_post_shit(jason):
+    characteristics = jason
+    if characteristics['shareOrientation']:
+        podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
+    else:
+        podlozhka = cv2.imread('gay_krug_no_homo.jpg', cv2.IMREAD_UNCHANGED)
 
-    podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
             temp = podlozhka[i, j][0]
             podlozhka[i, j][0] = podlozhka[i, j][2]
             podlozhka[i, j][2] = temp
 
-    characteristics = jason
+
 
     # the_list_v = (characteristics['data']['nationality'][0]['confidence'], characteristics['data']['nationality'][1]['confidence'],
     #               characteristics['data']['nationality'][2]['confidence'])
@@ -135,9 +139,9 @@ def do_post_shit(jason):
     font8 = ImageFont.truetype("Roboto-Medium.ttf", 25)
 
     draw.text((843, 70), str(d_n[the_flag]), (154, 154, 160), font=font1)
-
-    draw.text((865, 427), str(characteristics['data']['straight']) + '%', '#D63796', font=font6)
-    draw.text((865, 463), str(characteristics['data']['gay']) + '%', '#D63796', font=font6)
+    if characteristics['shareOrientation']:
+        draw.text((865, 427), str(characteristics['data']['straight']) + '%', '#D63796', font=font6)
+        draw.text((865, 463), str(characteristics['data']['gay']) + '%', '#D63796', font=font6)
     draw.text((1016, 421), str(characteristics['data']['age']), '#D63796', font=font7)
 
     draw.text((1058, 321), str(d_n[flag2]) + '%', '#C0C0C0', font=font8)
