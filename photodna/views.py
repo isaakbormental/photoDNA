@@ -40,7 +40,8 @@ def process_image(request):
     content = json.loads(content.decode('utf-8'))
 
     # print(content['img'].split(',', 1)[1])
-    encoded_image = content['img'].split(',', 1)[1]
+    # encoded_image = content['img'].split(',', 1)[1]
+    encoded_image = content['imgUrl']
     # results = json.dumps(get_analysis(encoded_image))
     # results = get_analysis(encoded_image)
     results = process(encoded_image)
