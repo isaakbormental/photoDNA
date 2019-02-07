@@ -6,13 +6,13 @@ import Flag from "../Flag/Flag";
 class Preview extends Component {
     render() {
         let {
-            img,
+            imgUrl,
             gender,
             age,
             shareCountry,
             children
         } = this.props;
-        let bg = img ? {backgroundImage: `url(${img})`} : {};
+        let bg = imgUrl ? {backgroundImage: `url(${imgUrl})`} : {};
         let ageEl = age ? <span className="preview__age">Age <span className="preview__age-num">{age}</span></span> : '';
         let genderEl = gender ? <span className={"preview__gender preview__gender_"+gender}>Sex</span> : '';
         let flag = shareCountry ? <Flag className="preview__flag" shareCountry={shareCountry}/> : '';

@@ -16,7 +16,7 @@ class PageResult extends Component {
         return (
             <div className="page page_result">
                 <Preview
-                    img={this.props.img}
+                    imgUrl={this.props.imgUrl}
                     gender={this.props.data.gender}
                     age={this.props.data.age}
                     shareCountry={this.props.shareCountry}
@@ -61,7 +61,7 @@ class PageResult extends Component {
                 <Button
                     className="button button_with-gradient page_result__button"
                     onClick={() => this.props.shareThroughApi()}
-                    // notice="to get a full report"
+                    notice="to get a full report"
                 >Share</Button>
             </div>
         );

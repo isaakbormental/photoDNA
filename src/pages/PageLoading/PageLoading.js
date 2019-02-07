@@ -50,7 +50,7 @@ class PageLoading extends Component {
 
     render() {
         const bg = {
-            backgroundImage: `url(${this.props.img}), linear-gradient(153.87deg, #6C23C8 -2.21%, #0D40C5 -2.2%, #EF59B3 106.38%)`
+            backgroundImage: `url(${this.props.imgUrl}), linear-gradient(153.87deg, #6C23C8 -2.21%, #0D40C5 -2.2%, #EF59B3 106.38%)`
         },
             headings = this.state.status[this.props.status].headings;
         return (

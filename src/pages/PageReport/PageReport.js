@@ -67,7 +67,7 @@ class PageReport extends Component {
                 <Button
                     className="button button_with-gradient page_report__button"
                     onClick={() => this.props.chooseImgFromApi()}
-                >Share</Button>
+                >Try again</Button>
             </div>
         );
 

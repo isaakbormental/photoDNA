@@ -9,7 +9,7 @@ class PageError extends Component {
     render() {
         return (
             <div className="page page_error">
-                <Preview/>
+                <Preview imgUrl={this.props.imgUrl}/>
                 <div className="page_error__inner">
                     <div className="page_error__emotion">:-(</div>
                     <div className="page_error__text">We&nbsp;didn&rsquo;t find a&nbsp;face on&nbsp;this photo</div>

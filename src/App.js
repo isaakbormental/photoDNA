@@ -201,7 +201,7 @@ class App extends Component {
                 },
                 body: JSON.stringify({
                     "api_key": "d45fd466-51e2-4701-8da8-04351c872236",
-                    "file_base64": this.state.img.split(',')[1],
+                    "file_uri": this.state.imgUrl,
                     "detection_flags": "basicpoints,propoints,classifiers,content",
                     "recognize_targets": [
                         "all@mynamespace"
@@ -239,7 +239,7 @@ class App extends Component {
                 />;
             case 'results':
                 return <PageResult
-                    img={this.state.img}
+                    imgUrl={this.state.imgUrl}
                     data={this.state.data}
                     shareCountry={this.state.shareCountry}
                     shareOrientation={this.state.shareOrientation}
@@ -251,11 +251,12 @@ class App extends Component {
                 />;
             case 'loading':
                 return <PageLoading
-                    img={this.state.imgUrl}
+                    imgUrl={this.state.imgUrl}
                     status={this.state.loadingStatus}
                 />;
             case 'error':
                 return <PageError
+                    imgUrl={this.state.imgUrl}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
                 />;
             case 'readme':
