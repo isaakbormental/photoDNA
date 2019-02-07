@@ -20,7 +20,8 @@ class PageLoading extends Component {
                 },
                 sharing: {
                     headings: [
-                        'Posting your genes'
+                        // 'Posting your genes'
+                        'Preparing your genes'
                     ],
                     subheading: 'please wait'
                 },
