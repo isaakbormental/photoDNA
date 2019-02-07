@@ -97,7 +97,7 @@ from random import *
 
 def do_post_shit(baseimg):
 
-    podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
+    podlozhka = cv2.imread('prosto_krug.jpg', cv2.IMREAD_UNCHANGED)
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
             temp = podlozhka[i, j][0]
@@ -159,10 +159,10 @@ def do_post_shit(baseimg):
     root = os.getcwd()
     if (pol == 'male'):
         sex = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\orientation_gender_age\\mars.png', 1)
-        podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+        podlozhka = put_element_overlay(422, 860, sex, podlozhka) #865, 427
     else:
         sex = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\orientation_gender_age\\venus.png', 1)
-        podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+        podlozhka = put_element_overlay(422, 860, sex, podlozhka)
 
     image = string_to_image(baseimg)
 
@@ -225,7 +225,7 @@ def do_post_shit(baseimg):
     age = 44
     draw.text((865, 427), str(straight) + '%', '#D63796', font=font6)
     draw.text((865, 463), str(gay) + '%', '#D63796', font=font6)
-    draw.text((1016, 421), str(age), '#D63796', font=font7)
+    draw.text((1011, 425), str(age), '#D63796', font=font7)
 
     draw.text((1058, 321), str(d_n[flag2]) + '%', '#C0C0C0', font=font8)
     draw.text((1058, 358), str(d_n[flag3]) + '%', '#C0C0C0', font=font8)

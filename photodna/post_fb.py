@@ -20,7 +20,7 @@ def do_post_shit(jason):
     if characteristics['shareOrientation']:
         podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
     else:
-        podlozhka = cv2.imread('gay_krug_no_homo.jpg', cv2.IMREAD_UNCHANGED)
+        podlozhka = cv2.imread('prosto_krug.jpg', cv2.IMREAD_UNCHANGED)
 
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
@@ -81,10 +81,16 @@ def do_post_shit(jason):
 
     if (characteristics['data']['gender'] == 'male'):
         sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/mars.png', 1)
-        podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+        if characteristics['shareOrientation']:
+            podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+        else:
+            podlozhka = put_element_overlay(422, 860, sex, podlozhka)
     else:
         sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/venus.png', 1)
-        podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+        if characteristics['shareOrientation']:
+            podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+        else:
+            podlozhka = put_element_overlay(422, 860, sex, podlozhka)
 
     image = string_to_image(characteristics['img'].split(',', 1)[1])
 
@@ -142,7 +148,12 @@ def do_post_shit(jason):
     if characteristics['shareOrientation']:
         draw.text((865, 427), str(characteristics['data']['straight']) + '%', '#D63796', font=font6)
         draw.text((865, 463), str(characteristics['data']['gay']) + '%', '#D63796', font=font6)
-    draw.text((1016, 421), str(characteristics['data']['age']), '#D63796', font=font7)
+
+    if characteristics['shareOrientation']:
+        draw.text((1016, 421), str(characteristics['data']['age']), '#D63796', font=font7)
+    else:
+        draw.text((1011, 425), str(characteristics['data']['age']), '#D63796', font=font7)
+
 
     draw.text((1058, 321), str(d_n[flag2]) + '%', '#C0C0C0', font=font8)
     draw.text((1058, 358), str(d_n[flag3]) + '%', '#C0C0C0', font=font8)
