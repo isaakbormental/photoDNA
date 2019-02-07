@@ -12,7 +12,7 @@ class PageLoading extends Component {
                     headings: [
                         'Analyzing your photo',
                         'Defining your features',
-                        'Comparing your features to nationaly database',
+                        'Comparing your features to nationalities database',
                         'Defining your second and third dominant nationality',
                         'Preparing a report...'
                     ],

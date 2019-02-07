@@ -18,11 +18,11 @@ class PageIndex extends Component {
                 },
                 {
                     icon: iconChart,
-                    text: <span>44&nbsp;facial features, it&rsquo;s national origin</span>
+                    text: <span>44&nbsp;facial features</span>
                 },
                 {
                     icon: iconPeople,
-                    text: <span>Sex, age and sexual orientation</span>
+                    text: <span>Sex, age, and sexual orientation</span>
                 },
                 {
                     text: <span className="page_index__link" onClick={() => this.props.switchPage('readme')} >Read more</span>

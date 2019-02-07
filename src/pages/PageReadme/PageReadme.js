@@ -13,10 +13,10 @@ class PageReadme extends Component {
                     switchPage={(page) => this.props.switchPage(page)}
                 />
                 <div className="page_readme__inner">
-                    <h1  className="page_readme__heading">How we do it</h1>
-                    <h2 className="page_readme__subheading">Machine learning will help to&nbsp;find more about yourself.</h2>
-                    <p className="page_readme__text">Our technology will compare your features with a&nbsp;database of&nbsp;43&nbsp; nationalities. Then it&rsquo;ll identify similarities and show which 3&nbsp;nationality you remind the most.</p>
-                    <p className="page_readme__bold-text">Unlike a&nbsp;DNA-test it&rsquo;s free</p>
+                    <h1  className="page_readme__heading">How we do it?</h1>
+                    <h2 className="page_readme__subheading">Machine learning and neural networks!</h2>
+                    <p className="page_readme__text">Our technology will compare your features with database of&nbsp;43&nbsp; nationalities. Then it will identify similarities and show 3&nbsp;nationality you fit the most.</p>
+                    <p className="page_readme__bold-text">Unlike a&nbsp;DNA-test it&nbsp;is&nbsp;free</p>
                     <p className="page_readme__bold-text">Which nationalities do&nbsp;you look like?</p>
                 </div>
                 <Button
