@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/icon-chart.764004df.svg"
   },
   {
-    "revision": "6439462159badfc397ae",
+    "revision": "a009a4ac164bd148f75c",
     "url": "/static/css/main.c11f787f.chunk.css"
   },
   {
@@ -20,27 +20,27 @@ self.__precacheManifest = [
     "url": "/static/media/icon-nations.05c7b666.svg"
   },
   {
-    "revision": "6439462159badfc397ae",
-    "url": "/static/js/main.64394621.chunk.js"
+    "revision": "a009a4ac164bd148f75c",
+    "url": "/static/js/main.a009a4ac.chunk.js"
   },
   {
     "revision": "23ca16a88131bbfd38f2af30f76bcc0f",
     "url": "/static/media/loading.23ca16a8.svg"
   },
   {
-    "revision": "e8ce2dbad788f0b5239c4a1d82f8cd1e",
-    "url": "/static/media/cat-bg.e8ce2dba.jpg"
-  },
-  {
     "revision": "d81fa03c35e818b01fe34d6e368a8e10",
     "url": "/static/media/male.d81fa03c.svg"
+  },
+  {
+    "revision": "e8ce2dbad788f0b5239c4a1d82f8cd1e",
+    "url": "/static/media/cat-bg.e8ce2dba.jpg"
   },
   {
     "revision": "e9a040b67dc3bf74a017af75a1d8b16d",
     "url": "/static/media/female.e9a040b6.svg"
   },
   {
-    "revision": "7f9981310e3d93abbe6a251da85ddf85",
+    "revision": "48cf5a130beccc56ce8edfea11412210",
     "url": "/index.html"
   }
 ];
