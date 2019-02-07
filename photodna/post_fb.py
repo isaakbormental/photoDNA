@@ -16,32 +16,27 @@ from random import *
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
 def do_post_shit(jason):
-    # logging.error('DoOING POSTING SHITTING')
-    # logging.error(os.getcwd())
-    # logging.error(str(os.listdir(os.getcwd())))
+
     podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
             temp = podlozhka[i, j][0]
             podlozhka[i, j][0] = podlozhka[i, j][2]
             podlozhka[i, j][2] = temp
-    # im = Image.open('gay_krug.png')
-    # podlozhka = np.array(im)
-    # podlozhka = podlozhka[:, :, ::-1].copy()
-    # podlozhka = pil_image_to_cv(im)
-    # logging.error('PROCHITAL')
-    # json_data = open('data.json').read()
 
     characteristics = jason
-    # logging.error(characteristics['data']['nationality'][0]['confidence'])
-    the_list_v = (characteristics['data']['nationality'][0]['confidence'], characteristics['data']['nationality'][1]['confidence'],
-                  characteristics['data']['nationality'][2]['confidence'])
+
+    # the_list_v = (characteristics['data']['nationality'][0]['confidence'], characteristics['data']['nationality'][1]['confidence'],
+    #               characteristics['data']['nationality'][2]['confidence'])
 
     d_n = defaultdict(int)
-    if (characteristics['data']['nationality'][0]['confidence'] == max(the_list_v)):
-        the_flag = characteristics['data']['nationality'][0]['name']
-        d_n[the_flag] = characteristics['data']['nationality'][0]['confidence']
-        if (characteristics['data']['nationality'][1]['confidence'] > characteristics['data']['nationality'][2]['confidence']):
+
+    the_flag = characteristics['shareCountry']['name']
+    d_n[the_flag] = characteristics['shareCountry']['confidence']
+
+    if (characteristics['data']['nationality'][0]['confidence'] == d_n[the_flag]):
+        if (characteristics['data']['nationality'][1]['confidence'] > characteristics['data']['nationality'][2][
+            'confidence']):
             flag2 = characteristics['data']['nationality'][1]['name']
             flag3 = characteristics['data']['nationality'][2]['name']
             d_n[flag2] = characteristics['data']['nationality'][1]['confidence']
@@ -53,10 +48,9 @@ def do_post_shit(jason):
             d_n[flag3] = characteristics['data']['nationality'][1]['confidence']
 
     else:
-        if (characteristics['data']['nationality'][1]['confidence'] == max(the_list_v)):
-            the_flag = characteristics['data']['nationality'][1]['name']
-            d_n[the_flag] = characteristics['data']['nationality'][1]['confidence']
-            if (characteristics['data']['nationality'][0]['confidence'] > characteristics['data']['nationality'][2]['confidence']):
+        if (characteristics['data']['nationality'][1]['confidence'] == d_n[the_flag]):
+            if (characteristics['data']['nationality'][0]['confidence'] > characteristics['data']['nationality'][2][
+                'confidence']):
                 flag2 = characteristics['data']['nationality'][0]['name']
                 flag3 = characteristics['data']['nationality'][2]['name']
                 d_n[flag2] = characteristics['data']['nationality'][0]['confidence']
@@ -67,9 +61,8 @@ def do_post_shit(jason):
                 d_n[flag2] = characteristics['data']['nationality'][2]['confidence']
                 d_n[flag3] = characteristics['data']['nationality'][0]['confidence']
         else:
-            the_flag = characteristics['data']['nationality'][2]['name']
-            d_n[the_flag] = characteristics['data']['nationality'][2]['confidence']
-            if (characteristics['data']['nationality'][1]['confidence'] > characteristics['data']['nationality'][0]['confidence']):
+            if (characteristics['data']['nationality'][1]['confidence'] > characteristics['data']['nationality'][0][
+                'confidence']):
                 flag2 = characteristics['data']['nationality'][1]['name']
                 flag3 = characteristics['data']['nationality'][0]['name']
                 d_n[flag2] = characteristics['data']['nationality'][1]['confidence']
@@ -80,43 +73,26 @@ def do_post_shit(jason):
                 d_n[flag2] = characteristics['data']['nationality'][0]['confidence']
                 d_n[flag3] = characteristics['data']['nationality'][1]['confidence']
 
-    root = os.getcwd()
-    # logging.error(root)
-    # os.path.join(root, 'for')
+    # root = os.getcwd()
+
     if (characteristics['data']['gender'] == 'male'):
-        # sexim = Image.open(os.path.join('for_posting','orientation_gender_age','mars.png'))
-        # sex = pil_image_to_cv(sexim)
-        # sex = cv2.imread(root + '/for_posting/orientation_gender_age/mars.png', 1)
         sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/mars.png', 1)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
     else:
-        # sex = cv2.imread(root + '/for_posting/orientation_gender_age/venus.png', 1)
         sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/venus.png', 1)
-        # sexim = Image.open(os.path.join('for_posting', 'orientation_gender_age', 'venus.png'))
-        # sex = pil_image_to_cv(sexim)
         podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
 
-    # image = cv2.imread(root + "/irish.jpg", 0)
-    # logging.error(len(characteristics['img']))
     image = string_to_image(characteristics['img'].split(',', 1)[1])
 
-    '''
-    618/630-коэффициент
-
-
-
-    '''
+    # 618/630-коэффициент
 
     vis_shir = float(image.shape[0] / image.shape[1])
-    # logging.error(vis_shir)
     if (vis_shir > 630 / 618):
         # образаем высоту (то кесть ширину)
         # ЗДЕСЬ ШИРИНА ЭТО ВЫСОТА И НАОБОРОТ
         the_chop = int((image.shape[0] - image.shape[1] * 630 / 618) / 2)
         crop_img = image[the_chop:image.shape[0] - the_chop, :]
         # 0 428 флаг; 190 111 - размеры его 428+190=618
-
-
     else:
         the_chop = int((image.shape[1] - image.shape[0] * 618 / 630) / 2)
         crop_img = image[:, the_chop:image.shape[1] - the_chop]
@@ -125,47 +101,30 @@ def do_post_shit(jason):
     res_vis = 630
     flg1 = 0
     flg2 = 428
-    # logging.error('Before resize')
     new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
-    # new = Image.fromarray(crop_img)
-    # new = new.resize((res_shir, res_vis))
-    # new = pil_image_to_cv(new)
 
+    # the_filter = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
 
-    # the_filter = cv2.imread(root + '/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
-    # the_filter_im = Image.open(os.path.join('for_posting', 'picture', 'filter.png'))
-    # the_filter = pil_image_to_cv(the_filter_im)
-    the_filter = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/picture/filter.png', cv2.IMREAD_UNCHANGED)
+    # podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
+    #                                    podlozhka)
 
-    # logging.error(the_filter.shape, podlozhka.shape, new.shape)
-
-    podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
-                                       podlozhka)
-
+    podlozhka = put_element_overlay(0, 0, new, podlozhka)
     os.chdir(os.getcwd() + "/for_posting/flags/")
-    index_list = []
+    #index_list = []
     for file in glob.glob("*.png"):
         if (file[:-4] == the_flag):
-            # true_flag = cv2.imread(root + "/for_posting/flags/" + file, 1)
-            # true_flag_im = Image.open(os.path.join(root, 'for_posting', 'flags', file))
-            # true_flag = pil_image_to_cv(true_flag_im)
             true_flag = cv2.imread("/var/www/html/backend/photoDNA/photodna/for_posting/flags/" + file, 1)
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
     c_png = cv2.imread("/var/www/html/backend/photoDNA/photodna/circle.png", 1)
     os.chdir('/var/www/html/backend/photoDNA/photodna')
-    # c_png_im = Image.open('circle.png')
-    # c_png = pil_image_to_cv(c_png_im)
+
     podlozhka = put_element_overlay(36, 804, c_png, podlozhka)
 
-    # cv2.imwrite(root + '/for_posting/post.png', podlozhka)
     img = Image.fromarray(podlozhka)
-    # img = Image.open(root + '/for_posting/post.png')
-    # os.remove(root + '/for_posting/post.png')
-    draw = ImageDraw.Draw(img)
 
-    # os.chdir(root)
+    draw = ImageDraw.Draw(img)
 
     font1 = ImageFont.truetype("Roboto-Medium.ttf", 70)
 
@@ -217,25 +176,21 @@ def do_post_shit(jason):
     text_size = draw.textsize(flag3, font=font5)
     x = text3_x - (text_size[0] / 2)
     draw.text((x, text3_y), flag3, font=font5, fill='#969696')
-    #root + '/for_posting/final.png'
+
     allchar = string.ascii_letters + string.digits
     rand_file_name = "".join(choice(allchar) for x in range(68))
-    # img = img.convert('RGB')
+
     img.save('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
-    # with open('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', 'w') as fi:
-    #     img.save(fi)
-    # img.save('/var/www/html/backend/photoDNA/photodna/for_posting/final.png', format='PNG')
+
     session = boto3.Session(
         aws_access_key_id=SUCHII_KEY,
         aws_secret_access_key=IDIOTSKII_KEY,
     )
     s3 = session.client('s3')
 
-
-    #'/for_posting/final.png'
     with open('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png', 'rb') as data:
         s3.upload_fileobj(data, 'storage.ws.pho.to', 'photohack/stckrs/' + rand_file_name + '.png', ExtraArgs={'ContentType': 'image/png'})
-    # potim v amazon + return url
+
     if os.path.exists('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png'):
         os.remove('/var/www/html/backend/photoDNA/photodna/for_posting/' + rand_file_name + '.png')
     else:
@@ -246,8 +201,6 @@ def do_post_shit(jason):
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
-            # if(i<2 and j<2):
-            #     logging.error(podlozhka[i][j])
             if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
                 podlozhka[position_h + i, position_w + j][0] = 255
                 podlozhka[position_h + i, position_w + j][1] = 255
@@ -273,19 +226,10 @@ def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
                 # podlozhka[position_h + i, position_w + j][3] = elelment[i, j][3]
     return podlozhka
 
+
 def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
     for i in range (image.shape[0]):
         for j in range (image.shape[1]):
-            # norm_transparency = 1 - int(
-            #     (0.299 * image[i, j][2] + 0.587 * image[i, j][1] + 0.114 * image[i, j][0])) / 255
-            # podlozhka[position_h + i, position_w + j][0] = int(
-            #     ((1 - norm_transparency) * filter[i, j][0]) + int(norm_transparency * image[i, j][0]))
-            # podlozhka[position_h + i, position_w + j][1] = int(
-            #     ((1 - norm_transparency) * filter[i, j][1]) + int(norm_transparency * image[i, j][1]))
-            # podlozhka[position_h + i, position_w + j][2] = int(
-            #     ((1 - norm_transparency) * filter[i, j][2]) + int(norm_transparency * image[i, j][2]))
-
-
             ########### Remove later ######################
             # podlozhka[position_h+i, position_w+ j][0] = filter[i,j][2]
             # podlozhka[position_h+i, position_w+ j][1] = filter[i,j][1]
@@ -306,7 +250,6 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
                 255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * image[i, j][1] / 255)))
             podlozhka[position_h + i, position_w + j][2] = int(
                 255 * ((1 - norm_transparency) * norm_blue + int(norm_transparency * image[i, j][2] / 255)))
-
 
     return podlozhka
 

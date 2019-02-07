@@ -184,10 +184,12 @@ def do_post_shit(baseimg):
     flg2 = 428
     new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
     # new = cv2.cvtColor(new, cv2.COLOR_BGR2GRAY)
-    the_filter = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\picture\\filter.png', cv2.IMREAD_UNCHANGED)
+    # the_filter = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\picture\\filter.png', cv2.IMREAD_UNCHANGED)
+    #
+    # podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
+    #                                    podlozhka)
 
-    podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
-                                       podlozhka)
+    podlozhka = put_element_overlay(0, 0, new, podlozhka)
 
     os.chdir(os.getcwd() + "\\for_posting\\flags\\")
 
@@ -339,11 +341,11 @@ def put_picture_and_filter(position_h,position_w,filter,image,podlozhka):
             # 0.2126 0.7152 0.0722
             # 0.2627 0.6780 0.0593
             podlozhka[position_h + i, position_w + j][0] = int(
-                255 * ((1 - norm_transparency) * norm_red + int(norm_transparency * image[i, j][0] / 255)))
+                255 * ((1 - norm_transparency) + int(norm_transparency * image[i, j][0] / 255)))
             podlozhka[position_h + i, position_w + j][1] = int(
-                255 * ((1 - norm_transparency) * norm_green + int(norm_transparency * image[i, j][1] / 255)))
+                255 * ((1 - norm_transparency) + int(norm_transparency * image[i, j][1] / 255)))
             podlozhka[position_h + i, position_w + j][2] = int(
-                255 * ((1 - norm_transparency) * norm_blue + int(norm_transparency * image[i, j][2] / 255)))
+                255 * ((1 - norm_transparency) + int(norm_transparency * image[i, j][2] / 255)))
 
 
     return podlozhka
