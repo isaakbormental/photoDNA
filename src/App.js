@@ -65,6 +65,8 @@ class App extends Component {
             }).catch(() => {
                 this.switchPage('error')
             });
+        } else {
+            console.log(`callback:nativeShare?og_image=${this.state.shareImg}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&func=appShare`)
         }
     }
 
