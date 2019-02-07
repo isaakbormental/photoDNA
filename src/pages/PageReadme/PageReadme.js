@@ -10,6 +10,7 @@ class PageReadme extends Component {
         return (
             <div className="page page_readme">
                 <BackArrow
+                    backPage={this.props.backPage}
                     switchPage={(page) => this.props.switchPage(page)}
                 />
                 <div className="page_readme__inner">

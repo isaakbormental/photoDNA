@@ -5,7 +5,7 @@ import PageReadme from "./pages/PageReadme/PageReadme";
 import PageError from "./pages/PageError/PageError";
 import PageLoading from "./pages/PageLoading/PageLoading";
 import PageResult from "./pages/PageResult/PageResult";
-
+import PageReport from "./pages/PageReport/PageReport";
 
 class App extends Component {
     constructor(props) {
@@ -13,11 +13,12 @@ class App extends Component {
         this.state = {
             appEnv: 'production',
             page: 'default',
+            backPage: '',
             img: false,
             imgUrl: '',
             loadingStatus: '',
             shareCountry: '',
-            shareOrientation: false,
+            shareOrientation: true,
             shareImg: '',
             shareTitle: 'Learn more about yourself',
             shareDescription: 'Machine leaning will tell your origin',
@@ -69,8 +70,9 @@ class App extends Component {
         }
     }
 
-    switchPage(page) {
-        this.setState({page})
+    switchPage(page, backPage) {
+        backPage = backPage ? backPage : false;
+        this.setState({page,backPage})
     }
     switchShareCountry(shareCountry) {
         this.setState({shareCountry})
@@ -112,8 +114,7 @@ class App extends Component {
 
         window.appShare = (boolean) => {
             if (boolean) {
-                this.switchPage('results');
-                console.log('appShare - report');
+                this.switchPage('report');
             }
         };
 
@@ -229,6 +230,13 @@ class App extends Component {
 
     render() {
         switch (this.state.page) {
+            case 'report':
+                return <PageReport
+                    data={this.state.data}
+
+                    switchPage={(page, backPage) => this.switchPage(page, backPage)}
+                    chooseImgFromApi={() => this.chooseImgFromApi()}
+                />;
             case 'results':
                 return <PageResult
                     img={this.state.img}
@@ -252,6 +260,7 @@ class App extends Component {
                 />;
             case 'readme':
                 return <PageReadme
+                    backPage={this.state.backPage}
                     switchPage={(page) => this.switchPage(page)}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
                 />;

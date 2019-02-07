@@ -1,0 +1,129 @@
+.page_report {
+  min-height: 100%;
+  height: initial;
+  padding: 1.1em 2.2em 3.7em;
+  color: #828282;
+
+  &__heading {
+    margin: 0;
+    font-size: 1.3em;
+  }
+
+  &__demography {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  &__gender {
+    display: flex;
+    align-items: center;
+    margin-right: 1.3em;
+    font-weight: 300;
+    line-height: .8;
+    font-size: .8em;
+    &:after {
+      content: '';
+      margin-left: .5em;
+      background-size: contain;
+    }
+    &_male:after {
+      width: 1.6875em;
+      height: 1.75em;
+      top: -.94em;
+      background-image: url("./img/male.svg");
+    }
+    &_female:after {
+      width: 1.1875em;
+      height: 2em;
+      background-image: url("./img/female.svg");
+    }
+  }
+
+  &__age {
+    display: flex;
+    align-items: center;
+    margin-right: 1.2em;
+    font-weight: 300;
+    line-height: .8;
+    font-size: .8em;
+    &-num {
+      position: relative;
+      top: -.12em;
+      margin-left: .3em;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+
+  &__charts {
+    display: flex;
+    align-items: center;
+    flex-grow: 3;
+    margin: .35em -1.75em;
+  }
+
+  &__chart {
+    width: calc(100%/3);
+    padding: 0 .25em;
+    position: relative;
+  }
+
+  .chart {
+    width: 100%;
+    max-width: 4.35em;
+    margin: 0 auto;
+  }
+
+  &__orientation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: .1em;
+    position: relative;
+
+    .linebar {
+      margin-top: .8em;
+    }
+
+  }
+
+  &__linebars {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    transition: 1s max-height;
+    &_hidden {
+      max-height: 0;
+      transition-duration: .5s;
+    }
+  }
+
+  &__read-more {
+    text-align: center;
+    font-size: .9em;
+    text-decoration-line: underline;
+    color: #737373;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 5;
+  }
+
+  .feature {
+    margin-top: .7em;
+  }
+
+  @media (max-height: 530px) {
+    font-size: .9em;
+  }
+  @media (max-height: 485px) {
+    font-size: .8em;
+  }
+
+}

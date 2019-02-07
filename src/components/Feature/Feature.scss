@@ -1,0 +1,27 @@
+.feature {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    width: 2.3em;
+    margin-right: .45em;
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    font-size: .6em;
+  }
+
+  &__colored-text {
+    display: inline-block;
+    margin-left: .2em;
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+
+}
