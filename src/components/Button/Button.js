@@ -5,6 +5,7 @@ class Button extends Component {
     render() {
         const {
             onClick,
+            notice,
             className = 'button',
             children,
         } = this.props;
@@ -16,6 +17,7 @@ class Button extends Component {
                 type="button"
             >
                 {children}
+                <span className="button__notice">{notice}</span>
             </button>
         );
 
