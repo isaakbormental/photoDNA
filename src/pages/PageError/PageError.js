@@ -3,12 +3,14 @@ import './PageError.scss';
 
 import Button from "../../components/Button/Button";
 import Preview from "../../components/Preview/Preview";
+import BackArrow from "../../components/BackArrow/BackArrow";
 
 
 class PageError extends Component {
     render() {
         return (
             <div className="page page_error">
+                <BackArrow switchPage={() => this.props.switchPage('default')}/>
                 <Preview imgUrl={this.props.imgUrl}/>
                 <div className="page_error__inner">
                     <div className="page_error__emotion">:-(</div>

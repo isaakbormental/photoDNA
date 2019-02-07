@@ -257,6 +257,7 @@ class App extends Component {
             case 'error':
                 return <PageError
                     imgUrl={this.state.imgUrl}
+                    switchPage={(page) => this.switchPage(page)}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
                 />;
             case 'readme':
