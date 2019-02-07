@@ -30,7 +30,7 @@ class App extends Component {
     chooseImgFromApi() {
         // TODO: pick right method (see callback API)
         if (this.state.appEnv === 'production') {
-            window.location.href = "callback:nativePhotoSelect?func=appUploaded";
+            window.location.href = encodeURIComponent("callback:nativePhotoSelect?func=appUploaded");
         } else {
             window.appUploaded(false);
         }
@@ -61,12 +61,10 @@ class App extends Component {
             }).then((response) => {
                 this.switchPage('results');
                 this.setState({shareImg:response.link});
-                window.location.href = `callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&lp_title=${this.state.shareLpTitle}&lp_description=${this.state.shareLpDescription}&func=appShare`;
+                window.location.href = encodeURIComponent(`callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&lp_title=${this.state.shareLpTitle}&lp_description=${this.state.shareLpDescription}&func=appShare`);
             }).catch(() => {
                 this.switchPage('error')
             });
-        } else {
-            console.log(window.location.href = `callback:nativeShare?og_image=${this.state.shareImg}&og_title=${this.state.shareTitle}&og_description=${this.state.shareDescription}&lp_title=${this.state.shareLpTitle}&lp_description=${this.state.shareLpDescription}&func=appShare`);
         }
     }
 
