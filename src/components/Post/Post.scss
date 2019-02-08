@@ -1,0 +1,194 @@
+.post {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+
+  &__inner {
+    width: 1200px;
+    height: 630px;
+    background: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #5E5E5E;
+  }
+
+  &__left {
+    width: 618px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: no-repeat center center / cover;
+  }
+  &__right {
+    width: 582px;
+    height: 100%;
+    padding: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+    text-align: center;
+  }
+
+  &__flag {
+    width: 190px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__photolab-icon {
+    position: absolute;
+    top: 23px;
+    right: 26px;
+    width: 70px;
+  }
+
+  .chart {
+    max-width: 192px;
+
+    &__percent {
+      font-size: 70px;
+    }
+
+    &__name {
+      font-weight: 500;
+      font-size: 25px;
+    }
+
+  }
+
+  &__heading {
+    margin-top: 30px;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 40px;
+    text-align: center;
+    color: #5E5E5E;
+  }
+
+  &__linebars {
+    display: inline-block;
+    width: 100%;
+    max-width: 197px;
+    margin: 27px 0 0 18px;
+  }
+
+  &__line {
+    width: 100%;
+    height: 8px;
+    margin-top: 29px;
+    position: relative;
+    border-radius: 30px;
+    background: #C1C1C1;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &__nationality {
+    position: absolute;
+    right: calc(100% + 7px);
+    top: 50%;
+    transform: translateY(-55%);
+    white-space: nowrap;
+  }
+
+  &__percent {
+    position: absolute;
+    left: calc(100% + 7px);
+    top: 50%;
+    transform: translateY(-55%);
+    color: #909090;
+  }
+
+  &__databox {
+    width: 100%;
+    height: 80px;
+    margin-top: 35px;
+    position: relative;
+    font-size: 20px;
+    color: #5E5E5E;
+
+    &-accent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      text-align: center;
+      width: 32px;
+      height: 32px;
+      font-weight: 500;
+      color: #D63796;
+    }
+
+    &-caption {
+      position: absolute;
+      right: calc(100% + 8px);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      font-weight: 500;
+      color: #5E5E5E;
+    }
+
+
+  }
+
+  &__straight, &__gay {
+    left: 208px;
+    font-size: 20px;
+  }
+
+  &__straight, &__age {
+    top: 0;
+  }
+
+  &__gay, &__sex {
+    top: 40px;
+  }
+
+  &__age, &__sex {
+    left: 350px;
+  }
+
+  &__age {
+    font-size: 25px;
+  }
+
+  &__sex {
+    background: no-repeat center center;
+
+    &_male {
+      background-image: url("./img/male.svg");
+    }
+
+    &_female {
+      background-image: url("./img/female.svg");
+    }
+
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 234px;
+    height: 50px;
+    margin: 15px auto 0;
+    background: linear-gradient(108.81deg, #CD56B6 -25.27%, #7E4DBD 117.24%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    line-height: 1;
+    font-size: 25px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+}

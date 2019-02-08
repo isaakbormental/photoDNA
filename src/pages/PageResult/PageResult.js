@@ -8,13 +8,23 @@ import Chart from "../../components/Chart/Chart";
 import Switcher from "../../components/Switcher/Switcher";
 import LineBar from "../../components/LineBar/LineBar";
 
+import Post from "../../components/Post/Post";
+
 
 class PageResult extends Component {
+
     render() {
+
 
         let linebars = this.props.shareOrientation ? "page_result__linebars" : "page_result__linebars page_result__linebars_hidden";
         return (
             <div className="page page_result">
+                <Post
+                    imgUrl={this.props.imgUrl}
+                    data={this.props.data}
+                    shareOrientation={this.props.shareOrientation}
+                    shareCountry={this.props.shareCountry}
+                />
                 <Preview
                     imgUrl={this.props.imgUrl}
                     gender={this.props.data.gender}

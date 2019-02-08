@@ -7,7 +7,7 @@ class Chart extends Component {
         let dashArray = 385*(this.props.data.confidence/100) + ", 385";
         return (
             <div className="chart">
-                <svg className="chart__img" version="1.1" x="0px" y="0px" viewBox="0 0 127.6 127.6">
+                <svg className="chart__img" version="1.1" x="0px" y="0px" viewBox="0 0 130 130">
                     <defs>
                         <linearGradient
                             id="gradient"
@@ -21,11 +21,11 @@ class Chart extends Component {
                             <stop  offset="1" stopColor="#92278F"/>
                         </linearGradient>
                     </defs>
-                    <circle className="chart__bg-circle" cx="63.8" cy="63.8" r="61.3"/>
+                    <circle className="chart__bg-circle" cx="65" cy="65" r="61.3"/>
                     <circle
                         className="chart__color-circle"
-                        cx="63.8"
-                        cy="63.8"
+                        cx="65"
+                        cy="65"
                         r="61.3"
                         stroke="url(#gradient)"
                         strokeDasharray={dashArray}
