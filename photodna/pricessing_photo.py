@@ -34,7 +34,7 @@ def process(encoded_image):
     sorted_arr = [(k, our_dict[k]) for k in sorted(our_dict, key=our_dict.get, reverse=True)]
     final_result = get_nationality(sorted_arr)
     the_data = write_json(final_result, age, gender, facial)
-    logging.error(the_data)
+    # logging.error(the_data)
     return json.dumps(the_data, indent=4)
     # with open('data.json', 'w') as outfile:
     #     json.dump(the_data, outfile, indent=4)
@@ -115,7 +115,7 @@ def get_cost_dictionary(the_64,df_males,df_females,the_mask, do):
 
 
     data = zapros.json()
-    logging.error(data)
+    # logging.error(data)
 
     if (data['media']['faces'] is None):
         return '{"faces":0}', None, None, None

@@ -19,18 +19,13 @@ def photoload(request):
 @csrf_exempt
 def generate_amazon_post(request):
     jsonka = json.loads(request.body.decode('utf-8'))
-    logging.error('_______________________')
-    logging.error(jsonka)
-    logging.error('_______________________')
+    # logging.error(jsonka)
     url = do_post_shit(jsonka)
     didi = dict()
     didi['link'] = url
     resp = json.dumps(didi)
     # resp = json.dumps('{' + '"link":' + '"' + url + '"' + '}')
-    logging.error('_____________________')
-    logging.error(resp)
-    logging.error(type(resp))
-    logging.error('_____________________')
+    # logging.error(resp)
     return HttpResponse(resp, content_type="application/json")
 
 @csrf_exempt
@@ -45,8 +40,7 @@ def process_image(request):
     # results = json.dumps(get_analysis(encoded_image))
     # results = get_analysis(encoded_image)
     results = process(encoded_image)
-    print(results)
-    print(type(results))
+    # print(results)
     return HttpResponse(results, content_type="application/json")
 
 
