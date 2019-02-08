@@ -16,6 +16,11 @@
     left: 0;
     font-family: 'Roboto', sans-serif;
     color: #5E5E5E;
+
+    * {
+      transition: none !important;
+    }
+
   }
 
   &__left {
@@ -189,6 +194,22 @@
     font-size: 25px;
     text-align: center;
     color: #FFFFFF;
+  }
+
+  .no-orientation & {
+
+    &__straight, &__gay {
+      display: none;
+    }
+
+    &__age {
+      left: 208px;
+    }
+
+    &__sex {
+      top: 0;
+    }
+
   }
 
 }

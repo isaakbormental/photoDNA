@@ -24,6 +24,7 @@ class PageResult extends Component {
                     data={this.props.data}
                     shareOrientation={this.props.shareOrientation}
                     shareCountry={this.props.shareCountry}
+                    switchTestImg={(testImg) => this.props.switchTestImg(testImg)}
                 />
                 <Preview
                     imgUrl={this.props.imgUrl}

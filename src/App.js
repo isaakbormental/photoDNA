@@ -19,6 +19,7 @@ class App extends Component {
             loadingStatus: '',
             shareCountry: '',
             shareOrientation: true,
+            testImg: '',
             shareImg: '',
             shareTitle: 'Learn more about yourself',
             shareDescription: 'Machine leaning will tell your origin',
@@ -79,6 +80,9 @@ class App extends Component {
     }
     switchShareOrientation() {
         this.setState({shareOrientation: !this.state.shareOrientation});
+    }
+    switchTestImg(testImg) {
+        this.setState({testImg})
     }
 
     componentWillMount(){
@@ -244,6 +248,7 @@ class App extends Component {
                     shareCountry={this.state.shareCountry}
                     shareOrientation={this.state.shareOrientation}
 
+                    switchTestImg={(testImg) => this.switchTestImg(testImg)}
                     switchPage={(page) => this.switchPage(page)}
                     shareThroughApi={() => this.shareThroughApi()}
                     switchShareOrientation={() => this.switchShareOrientation()}

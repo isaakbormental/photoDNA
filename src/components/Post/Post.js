@@ -15,8 +15,9 @@ class Post extends Component {
         const node = document.querySelector('.post__inner');
 
         domtoimage.toJpeg(node)
-            .then(function (dataUrl) {
-                console.log(dataUrl);
+            .then((dataUrl) => {
+                this.props.switchTestImg(dataUrl);
+                // console.log(dataUrl);
             })
             .catch(function (error) {
                 console.error('oops, something went wrong!', error);
