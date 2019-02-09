@@ -17,14 +17,13 @@ const getVersion = () => {
     return versions[random];
 };
 
-// TODO: remove data, null shareCo
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             appEnv: 'production',
             version: getVersion(),
-            page: 'report',
+            page: 'default',
             backPage: '',
             imgUrl: '',
             loadingStatus: '',
@@ -86,6 +85,7 @@ class App extends Component {
 
     switchPage(page, backPage) {
         let pageGA = page === 'loading' ? `${page}_${this.state.loadingStatus}` : page;
+        pageGA = this.state.version ? `${this.state.version}_${pageGA}` : pageGA;
         window.history.pushState(
             {
                 url: `${window.location.hostname}/${pageGA}`
