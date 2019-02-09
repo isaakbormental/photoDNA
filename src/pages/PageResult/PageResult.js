@@ -24,16 +24,15 @@ class PageResult extends Component {
         let linebars = this.props.shareOrientation ? "page_result__linebars" : "page_result__linebars page_result__linebars_hidden";
         return (
             <div className="page page_result">
-                <Post
+                {/*<Post
                     ref={ref => (this.child = ref)}
-                    generateImg={this.state.generateImg}
                     imgUrl={this.props.imgUrl}
                     data={this.props.data}
                     shareOrientation={this.props.shareOrientation}
                     shareCountry={this.props.shareCountry}
                     switchTestImg={(testImg) => this.props.switchTestImg(testImg)}
                     shareThroughApi={() => this.props.shareThroughApi()}
-                />
+                />*/}
                 <Preview
                     imgUrl={this.props.imgUrl}
                     gender={this.props.data.gender}
@@ -79,7 +78,8 @@ class PageResult extends Component {
                 </div>
                 <Button
                     className="button button_with-gradient page_result__button"
-                    onClick={() => this.child.makeImg()}
+                    // onClick={() => this.child.makeImg()}
+                    onClick={() => this.props.shareThroughApi()}
                     notice="to get a full report"
                 >Share</Button>
             </div>
