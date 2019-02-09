@@ -55,7 +55,7 @@ class FrontendAppView(View):
         try:
             ran = random.randint(0, 1)
             # if ran == 0:
-            with open(os.path.join(settings.REACT_APP_DIR, 'index.html')) as f:
+            with open(os.path.join(settings.REACT_APP_DIR, 'v1', 'index.html')) as f:
                 return HttpResponse(f.read())
             # elif ran == 1:
             #     with open(os.path.join(settings.SECOND_REACT_APP_DIR, 'index.html')) as f:

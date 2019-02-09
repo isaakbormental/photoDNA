@@ -121,7 +121,7 @@ USE_TZ = True
 # REACT_APP_DIR = os.path.join(BASE_DIR, 'photodna','build')
 
 REACT_APP_DIR = os.path.join(BASE_DIR, 'photodna', 'build', 'v1')
-SECOND_REACT_APP_DIR = os.path.join(BASE_DIR, 'photodna', 'build', 'v2')
+# SECOND_REACT_APP_DIR = os.path.join(BASE_DIR, 'photodna', 'build', 'v2')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
