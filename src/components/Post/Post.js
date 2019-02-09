@@ -17,18 +17,21 @@ class Post extends Component {
         domtoimage.toJpeg(node)
             .then((dataUrl) => {
                 this.props.switchTestImg(dataUrl);
-                // console.log(dataUrl);
+                console.log(dataUrl);
+                this.props.shareThroughApi();
             })
             .catch(function (error) {
                 console.error('oops, something went wrong!', error);
             });
     }
 
-    componentDidMount() {
-        this.makeImg();
-    }
-    componentDidUpdate() {
-        this.makeImg();
+    componentDidUpdate(prevProps, prevState) {
+        /*if(this.props.generateImg) {
+            this.makeImg();
+        }*/
+        /*if (prevProps.shareCountry !== this.props.shareCountry || prevProps.shareOrientation !== this.props.shareOrientation) {
+            this.makeImg();
+        }*/
     }
 
     render() {

@@ -14,7 +14,6 @@ class App extends Component {
             appEnv: 'production',
             page: 'default',
             backPage: '',
-            img: false,
             imgUrl: '',
             loadingStatus: '',
             shareCountry: '',
@@ -48,8 +47,8 @@ class App extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    img: this.state.img,
                     imgUrl: this.state.imgUrl,
+                    testImg: this.state.testImg,
                     data: this.state.data,
                     shareOrientation: this.state.shareOrientation,
                     shareCountry: this.state.shareCountry
@@ -62,12 +61,13 @@ class App extends Component {
             }).then((response) => {
                 this.switchPage('results');
                 this.setState({shareImg:response.link});
-                window.location.href = `callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&func=appShare`;
+                window.location.href = "callback:nativeShare?og_image="+encodeURIComponent(this.state.shareImg)+"&og_title="+encodeURIComponent(this.state.shareTitle)+"&og_description="+encodeURIComponent(this.state.shareDescription)+"&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description="+encodeURIComponent(this.state.shareLpDescription)+"&func=appShare";
             }).catch(() => {
                 this.switchPage('error')
             });
         } else {
-            console.log(`callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&func=appShare`)
+            this.switchPage("loading");
+            console.log("callback:nativeShare?og_image="+encodeURIComponent(this.state.shareImg)+"&og_title="+encodeURIComponent(this.state.shareTitle)+"&og_description="+encodeURIComponent(this.state.shareDescription)+"&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description="+encodeURIComponent(this.state.shareLpDescription)+"&func=appShare")
         }
     }
 
@@ -102,18 +102,12 @@ class App extends Component {
             }
 
             this.setState({
-                img: '',
                 imgUrl:obj.photos[0].image_url,
                 loadingStatus:'betaface'
+            },() => {
+                this.sendImg();
             });
-            console.log('photo - ' + obj.photos[0].image_url);
-            this.switchPage("loading");
-            window.getDataUri(obj.photos[0].image_url)
-                .then(result => {
-                    this.setState({img: result});
-                    this.sendImg();
-                })
-                .catch(err => this.switchPage('error'));
+            this.switchPage('loading');
         };
 
         window.appShare = (boolean) => {
@@ -135,7 +129,6 @@ class App extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    img: this.state.img,
                     imgUrl: this.state.imgUrl
                 })
             }).then((response) => {
