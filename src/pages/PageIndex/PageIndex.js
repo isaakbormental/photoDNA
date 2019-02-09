@@ -31,6 +31,7 @@ class PageIndex extends Component {
         };
     }
     render() {
+        console.log(this.props.version);
         return (
             <div className="page page_index">
                 <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>

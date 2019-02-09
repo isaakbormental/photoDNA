@@ -7,11 +7,22 @@ import PageLoading from "./pages/PageLoading/PageLoading";
 import PageResult from "./pages/PageResult/PageResult";
 import PageReport from "./pages/PageReport/PageReport";
 
+
+const getVersion = () => {
+    const versions = [
+        'one',
+        'two'
+    ];
+    const random = Math.floor(Math.random() * versions.length);
+    return versions[random];
+};
+
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             appEnv: 'production',
+            version: getVersion(),
             page: 'default',
             backPage: '',
             img: false,
@@ -278,6 +289,7 @@ class App extends Component {
                 />;
             default:
                 return <PageIndex
+                    version={this.state.version}
                     switchPage={(page) => this.switchPage(page)}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
                 />;
