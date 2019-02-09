@@ -11,7 +11,7 @@ import PageReport from "./pages/PageReport/PageReport";
 const getVersion = () => {
     const versions = [
         'one',
-        'two'
+        'noOrientation'
     ];
     const random = Math.floor(Math.random() * versions.length);
     return versions[random];
@@ -62,7 +62,8 @@ class App extends Component {
                     testImg: this.state.testImg,
                     data: this.state.data,
                     shareOrientation: this.state.shareOrientation,
-                    shareCountry: this.state.shareCountry
+                    shareCountry: this.state.shareCountry,
+                    version: this.state.version
                 })
             }).then((response) => {
                 if (!response.ok) {
@@ -151,7 +152,8 @@ class App extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    imgUrl: this.state.imgUrl
+                    imgUrl: this.state.imgUrl,
+                    version: this.state.version
                 })
             }).then((response) => {
                 if (!response.ok) {
