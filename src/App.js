@@ -73,7 +73,11 @@ class App extends Component {
 
     switchPage(page, backPage) {
         backPage = backPage ? backPage : false;
-        this.setState({page,backPage})
+        this.setState({page,backPage});
+
+        let pageGA = page === 'loading' ? `${page} - ${this.state.loadingStatus}` : '';
+        window.ga('set', 'page', pageGA);
+        window.ga('send', 'pageview');
     }
     switchShareCountry(shareCountry) {
         this.setState({shareCountry})

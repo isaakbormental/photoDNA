@@ -8,7 +8,7 @@ import Chart from "../../components/Chart/Chart";
 import Switcher from "../../components/Switcher/Switcher";
 import LineBar from "../../components/LineBar/LineBar";
 
-import Post from "../../components/Post/Post";
+// import Post from "../../components/Post/Post";
 
 
 class PageResult extends Component {
