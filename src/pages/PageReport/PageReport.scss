@@ -2,7 +2,22 @@
   min-height: 100%;
   height: initial;
   padding: 1.1em 2.2em 3.7em;
-  color: #828282;
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__blur {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    & + .page_report {filter: blur(.6em)}
+  }
+
 
   &__heading {
     margin: 0;
@@ -99,13 +114,6 @@
       max-height: 0;
       transition-duration: .5s;
     }
-  }
-
-  &__read-more {
-    text-align: center;
-    font-size: .9em;
-    text-decoration-line: underline;
-    color: #737373;
   }
 
   &__features {

@@ -21,9 +21,10 @@
   }
 
   &_active {
-    background: #694ABE;
+    background: #40CFBE;
     &:after {
       left: calc(100% - .58em - 1px);
+      background: #fff;
     }
   }
 

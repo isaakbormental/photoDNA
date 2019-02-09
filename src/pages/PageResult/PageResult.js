@@ -77,10 +77,10 @@ class PageResult extends Component {
                     </div>
                 </div>
                 <Button
-                    className="button button_with-gradient page_result__button"
+                    className="button page_result__button"
                     // onClick={() => this.child.makeImg()}
                     onClick={() => this.props.shareThroughApi()}
-                    notice="to get a full report"
+                    notice="To get a full report"
                 >Share</Button>
             </div>
         );

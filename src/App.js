@@ -17,13 +17,14 @@ const getVersion = () => {
     return versions[random];
 };
 
+// TODO: remove data, null shareCo
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             appEnv: 'production',
             version: getVersion(),
-            page: 'default',
+            page: 'report',
             backPage: '',
             imgUrl: '',
             loadingStatus: '',

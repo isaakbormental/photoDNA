@@ -27,7 +27,7 @@ class Chart extends Component {
                         cx="65"
                         cy="65"
                         r="61.3"
-                        stroke="url(#gradient)"
+                        stroke="#00C6AE"
                         strokeDasharray={dashArray}
                     />
                 </svg>

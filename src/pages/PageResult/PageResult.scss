@@ -3,7 +3,7 @@
 
   &__body {
     padding: 1.05em .9em 0;
-    color: #9A9AA0;
+    color: #fff
   }
 
   &__charts {
@@ -27,6 +27,7 @@
     &_active {
       &:before {
         border-color: #BA85CE;
+        color: #fff;
       }
       &:after {
         content: '';
@@ -67,7 +68,7 @@
       margin-bottom: .2em;
       font-size: .7em;
       font-weight: 300;
-      color: #8A8A8A;
+      color: #fff;
     }
 
     .linebar {
