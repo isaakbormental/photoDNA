@@ -12,7 +12,7 @@ import numpy as np
 from photodna.configigi import IDIOTSKII_KEY,SUCHII_KEY
 import string
 from random import *
-
+import requests
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
 def do_post_shit(jason):
@@ -92,8 +92,11 @@ def do_post_shit(jason):
         else:
             podlozhka = put_element_overlay(422, 860, sex, podlozhka)
 
-    image = string_to_image(characteristics['img'].split(',', 1)[1])
-    # image = cv2.imread(characteristics['imgUrl'], 1)
+    # image = string_to_image(characteristics['img'].split(',', 1)[1])
+
+    response = requests.get(characteristics['imgUrl'], stream=True)
+    base = base64.b64encode(response.content)
+    image = string_to_image(base)
 
     # 618/630-коэффициент
 
