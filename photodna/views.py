@@ -9,7 +9,6 @@ import os
 import json
 from photodna.post_fb import do_post_shit
 import logging
-import random
 
 def photoload(request):
     # index = urllib.request.urlopen('file:../djangoback\static\index.html').read()
@@ -53,14 +52,8 @@ class FrontendAppView(View):
 
     def get(self, request):
         try:
-            ran = random.randint(0, 1)
-            # if ran == 0:
             with open(os.path.join(settings.REACT_APP_DIR, 'index.html')) as f:
                 return HttpResponse(f.read())
-            # elif ran == 1:
-            #     with open(os.path.join(settings.SECOND_REACT_APP_DIR, 'index.html')) as f:
-            #         return HttpResponse(f.read())
-
         except FileNotFoundError:
             logging.exception('Production build of app not found')
             return HttpResponse(
