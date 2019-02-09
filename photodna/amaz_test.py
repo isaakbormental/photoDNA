@@ -22,11 +22,11 @@ import numpy as np
 #     pimg = Image.open(sbuf)
 #     return cv2.cvtColor(np.array(pimg), cv2.COLOR_RGB2BGR)
 #
-# def stringToImage(base64_string):
-#     imgdata = base64.b64decode(base64_string)
-#     cvimg = Image.open(BytesIO(imgdata))
-#     open_cv_image = np.array(cvimg)
-#     return open_cv_image[:, :, ::-1].copy()
+def stringToImage(base64_string):
+    imgdata = base64.b64decode(base64_string)
+    cvimg = Image.open(BytesIO(imgdata))
+    open_cv_image = np.array(cvimg)
+    return open_cv_image[:, :, ::-1].copy()
 # #
 # #
 # cvimg = Image.fromarray(stringToImage(base_img))
@@ -363,7 +363,17 @@ def pil_image_to_cv(pil_image):
     return podlozhka[:, :, ::-1].copy()
 
 
-imag = do_post_shit(base_img)
-imag.show()
+##  imag = do_post_shit(base_img)
+# imag.show()
+import requests
 
+pic_url = 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg'
 
+response = requests.get(pic_url, stream=True)
+base = base64.b64encode(response.content)
+print(type(base64.b64encode(response.content)))
+
+cv2.imshow('image',stringToImage(base))
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+print(type(response.content))
