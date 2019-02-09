@@ -83,12 +83,19 @@ class App extends Component {
     }
 
     switchPage(page, backPage) {
-        backPage = backPage ? backPage : false;
-        this.setState({page,backPage});
-
-        let pageGA = page === 'loading' ? `${page} - ${this.state.loadingStatus}` : '';
+        let pageGA = page === 'loading' ? `${page}_${this.state.loadingStatus}` : page;
+        window.history.pushState(
+            {
+                url: `${window.location.hostname}/${pageGA}`
+            },
+            pageGA,
+            `/${pageGA}`
+        );
         window.ga('set', 'page', pageGA);
         window.ga('send', 'pageview');
+
+        backPage = backPage ? backPage : false;
+        this.setState({page,backPage});
     }
     switchShareCountry(shareCountry) {
         this.setState({shareCountry})
@@ -120,9 +127,9 @@ class App extends Component {
                 imgUrl:obj.photos[0].image_url,
                 loadingStatus:'betaface'
             },() => {
+                this.switchPage('loading');
                 this.sendImg();
             });
-            this.switchPage('loading');
         };
 
         window.appShare = (boolean) => {
