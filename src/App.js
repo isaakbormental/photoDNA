@@ -25,7 +25,6 @@ class App extends Component {
             version: getVersion(),
             page: 'default',
             backPage: '',
-            img: false,
             imgUrl: '',
             loadingStatus: '',
             shareCountry: '',
@@ -59,7 +58,6 @@ class App extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    img: this.state.img,
                     imgUrl: this.state.imgUrl,
                     testImg: this.state.testImg,
                     data: this.state.data,
@@ -119,18 +117,12 @@ class App extends Component {
             }
 
             this.setState({
-                img: '',
                 imgUrl:obj.photos[0].image_url,
                 loadingStatus:'betaface'
+            },() => {
+                this.sendImg();
             });
-            console.log('photo - ' + obj.photos[0].image_url);
-            this.switchPage("loading");
-            window.getDataUri(obj.photos[0].image_url)
-                .then(result => {
-                    this.setState({img: result});
-                    this.sendImg();
-                })
-                .catch(err => this.switchPage('error'));
+            this.switchPage('loading');
         };
 
         window.appShare = (boolean) => {
