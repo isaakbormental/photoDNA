@@ -95,6 +95,11 @@ class App extends Component {
         window.ga('set', 'page', pageGA);
         window.ga('send', 'pageview');
 
+        window.ym(52305490, 'hit', pageGA, {
+            title: '',
+            referer: 'test'
+        });
+
         backPage = backPage ? backPage : false;
         this.setState({page,backPage});
     }
