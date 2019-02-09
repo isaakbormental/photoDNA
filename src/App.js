@@ -72,15 +72,15 @@ class App extends Component {
                 }
                 return response.json();
             }).then((response) => {
-                this.switchPage('results');
+                this.switchPage('report');
                 this.setState({shareImg:response.link});
-                window.location.href = "callback:nativeShare?og_image="+encodeURIComponent(this.state.shareImg)+"&og_title="+encodeURIComponent(this.state.shareTitle)+"&og_description="+encodeURIComponent(this.state.shareDescription)+"&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description="+encodeURIComponent(this.state.shareLpDescription)+"&func=appShare";
+                window.location.href = `callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&func=appShare`;
             }).catch(() => {
                 this.switchPage('error')
             });
         } else {
             this.switchPage("loading");
-            console.log("callback:nativeShare?og_image="+encodeURIComponent(this.state.shareImg)+"&og_title="+encodeURIComponent(this.state.shareTitle)+"&og_description="+encodeURIComponent(this.state.shareDescription)+"&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description="+encodeURIComponent(this.state.shareLpDescription)+"&func=appShare")
+            console.log(`callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&func=appShare`)
         }
     }
 
@@ -135,7 +135,7 @@ class App extends Component {
 
         window.appShare = (boolean) => {
             if (boolean) {
-                this.switchPage('report');
+                // this.switchPage('report');
             }
         };
 
