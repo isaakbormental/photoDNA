@@ -93,7 +93,7 @@ def do_post_shit(jason):
             podlozhka = put_element_overlay(422, 860, sex, podlozhka)
 
     # image = string_to_image(characteristics['img'].split(',', 1)[1])
-    image = cv2.imread(characteristics['imgURL'], 1)
+    image = cv2.imread(characteristics['imgUrl'], 1)
 
     # 618/630-коэффициент
 
