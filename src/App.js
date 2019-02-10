@@ -25,7 +25,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: 'production',
+            appEnv: !'production',
             version: getVersion(),
             page: 'default',
             backPage: '',
@@ -77,9 +77,7 @@ class App extends Component {
                 }
                 return response.json();
             }).then((response) => {
-                if(!window.isAndroid) {
-                    this.switchPage('report');
-                }
+                this.switchPage('report');
                 this.setState({shareImg:response.link});
                 window.location.href = `callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&lp_button_cta=${this.state.shareLpBtn}&func=appShare`;
             }).catch(() => {
@@ -149,9 +147,9 @@ class App extends Component {
         };
 
         window.appShare = (boolean) => {
+            console.log('appshare: ' + boolean);
             if (boolean) {
                 this.changeLocked(false);
-                this.switchPage('report');
             }
         };
 

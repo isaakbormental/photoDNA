@@ -24,26 +24,12 @@ class PageReport extends Component {
             return colors[i];
         };
 
-        let blur;
-        if (this.props.locked) {
-
-            if(window.isAndroid) {
-                blur = <div className="page_report__blur">
-                    <Button
-                        className="button  page_report__button"
-                        onClick={() => this.props.shareThroughApi()}
-                    >SHARE</Button>
-                </div>
-            } else {
-                blur = <div className="page_report__blur">
-                    <Button
-                        className="button  page_report__button"
-                        onClick={() => this.props.changeLocked(false)}
-                    >SHOW FULL REPORT</Button>
-                </div>
-            }
-        } else {blur = ''}
-
+        let blur = !this.props.locked ? '' : <div className="page_report__blur">
+            <Button
+                className="button  page_report__button"
+                onClick={() => this.props.changeLocked(false)}
+            >SHOW FULL REPORT</Button>
+        </div>;
 
         return (
             <div className="page_report__wrapper">
