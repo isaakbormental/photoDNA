@@ -10,8 +10,8 @@ import PageReport from "./pages/PageReport/PageReport";
 
 const getVersion = () => {
     const versions = [
-        'with_charts'
-        // 'noOrientation'
+        'with_charts',
+        'noOrientation'
         // 'woman'
     ];
     const random = Math.floor(Math.random() * versions.length);
@@ -27,13 +27,12 @@ class App extends Component {
         this.state = {
             appEnv: 'production',
             version: getVersion(),
-            page: 'default',
+            page: 'report',
             backPage: '',
             imgUrl: '',
             loadingStatus: '',
             shareCountry: '',
             shareOrientation: true,
-            lockedReport: true,
             testImg: '',
             shareImg: '',
             shareTitle: 'Learn more about yourself',
@@ -89,14 +88,10 @@ class App extends Component {
         }
     }
 
-    changeLocked(boolean) {
-        this.setState({lockedReport:boolean})
-    }
-
     switchPage(page, backPage) {
         backPage = backPage ? backPage : false;
 
-        this.setState({page,backPage, lockedReport:true},() => {
+        this.setState({page,backPage},() => {
             let pageGA = page === 'loading' ? `${page}_${this.state.loadingStatus}` : page;
             pageGA = this.state.version ? `${this.state.version}_${pageGA}` : pageGA;
             window.history.pushState(
@@ -150,7 +145,6 @@ class App extends Component {
         window.appShare = (boolean) => {
             console.log('appshare: ' + boolean);
             if (boolean) {
-                // this.changeLocked(false);
             }
         };
 
@@ -269,9 +263,7 @@ class App extends Component {
             case 'report':
                 return <PageReport
                     data={this.state.data}
-                    locked={this.state.lockedReport}
 
-                    changeLocked={(boolean) => this.changeLocked(boolean)}
                     switchPage={(page, backPage) => this.switchPage(page, backPage)}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
                     shareThroughApi={() => this.shareThroughApi()}
