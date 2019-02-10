@@ -215,7 +215,7 @@ def do_post_shit(jason):
 
         font8 = ImageFont.truetype("Roboto-Medium.ttf", 25)
 
-        draw.text((843, 70), str(d_n[the_flag]), (154, 154, 160), font=font1)
+        draw.text((843, 70), str(d_n[the_flag]), '#ffffff', font=font1)
         if characteristics['shareOrientation']:
             draw.text((869, 426), str(characteristics['data']['straight']) + '%', '#ffffff', font=font6)
             draw.text((869, 463), str(characteristics['data']['gay']) + '%', '#ffffff', font=font6)
