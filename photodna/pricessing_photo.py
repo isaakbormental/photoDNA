@@ -105,21 +105,21 @@ def get_nationality(something):
         if new_arr[0][1] > 99:
             arr.append((new_arr[0][0], 99))
         elif new_arr[0][1] < 0:
-            arr.append((new_arr[0][0], 33))
+            arr.append((new_arr[0][0], 85))
         else:
             arr.append((new_arr[0][0], new_arr[0][1]))
 
         if new_arr[1][1] > 99:
-            arr.append((new_arr[1][0], 99))
+            arr.append((new_arr[1][0], 80))
         elif new_arr[1][1] < 0:
-            arr.append((new_arr[1][0], 33))
+            arr.append((new_arr[1][0], 70))
         else:
             arr.append((new_arr[1][0], new_arr[1][1]))
         # arr.append((new_arr[1][0], 99))
         if new_arr[2][1] > 99:
-            arr.append((new_arr[2][0], 99))
+            arr.append((new_arr[2][0], 70))
         elif new_arr[2][1] < 0:
-            arr.append((new_arr[2][0], 33))
+            arr.append((new_arr[2][0], 58))
         else:
             arr.append((new_arr[2][0], new_arr[2][1]))
         # arr.append((new_arr[2][0], 99))
