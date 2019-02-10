@@ -25,7 +25,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appEnv: 'production',
+            appEnv: !'production',
             version: getVersion(),
             page: 'default',
             backPage: '',
@@ -122,16 +122,6 @@ class App extends Component {
     }
 
     componentWillMount(){
-
-        window.history.pushState(
-            {
-                url: `${window.location.hostname}/${this.props.version}`
-            },
-            this.props.version,
-            `/${this.props.version}`
-        );
-        window.ga('set', 'page', this.props.version);
-        window.ga('send', 'pageview');
 
         window.appUploaded = (obj) => {
             // TODO: remove obj test declaration
