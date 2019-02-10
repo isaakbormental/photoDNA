@@ -10,8 +10,8 @@ import PageReport from "./pages/PageReport/PageReport";
 
 const getVersion = () => {
     const versions = [
-        'one',
-        'noOrientation'
+        'with_charts'
+        // 'noOrientation'
     ];
     const random = Math.floor(Math.random() * versions.length);
     return versions[random];
@@ -89,25 +89,22 @@ class App extends Component {
     }
 
     switchPage(page, backPage) {
-        let pageGA = page === 'loading' ? `${page}_${this.state.loadingStatus}` : page;
-        pageGA = this.state.version ? `${this.state.version}_${pageGA}` : pageGA;
-        window.history.pushState(
-            {
-                url: `${window.location.hostname}/${pageGA}`
-            },
-            pageGA,
-            `/${pageGA}`
-        );
-        window.ga('set', 'page', pageGA);
-        window.ga('send', 'pageview');
+        backPage = backPage ? backPage : false;
 
-        window.ym(52305490, 'hit', pageGA, {
-            title: '',
-            referer: 'test'
+        this.setState({page,backPage},() => {
+            let pageGA = page === 'loading' ? `${page}_${this.state.loadingStatus}` : page;
+            pageGA = this.state.version ? `${this.state.version}_${pageGA}` : pageGA;
+            window.history.pushState(
+                {
+                    url: `${window.location.hostname}/${pageGA}`
+                },
+                pageGA,
+                `/${pageGA}`
+            );
+            window.ga('set', 'page', pageGA);
+            window.ga('send', 'pageview');
         });
 
-        backPage = backPage ? backPage : false;
-        this.setState({page,backPage});
     }
     switchShareCountry(shareCountry) {
         this.setState({shareCountry})

@@ -60,4 +60,37 @@
     margin-top: 1em;
   }
 
+  &_with-charts {
+    justify-content: center;
+    padding-top: .5em;
+  }
+  &_with-charts & {
+
+    &__venice-photo {
+      margin: 0.8em -15px 0;
+      img {
+        display: block;
+      }
+    }
+
+    &__charts {
+      display: flex;
+      width: 100%;
+      margin-top: .8em;
+
+      .chart {
+        width: 100%;
+        max-width: 90px;
+        margin: 0 auto;
+
+        &__name {
+          font-size: .5em;
+        }
+
+      }
+
+    }
+
+  }
+
 }
