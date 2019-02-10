@@ -36,6 +36,16 @@ class PageIndex extends Component {
     render() {
         console.log(this.props.version);
 
+        window.history.pushState(
+            {
+                url: `${window.location.hostname}/${this.props.version}`
+            },
+            this.props.version,
+            `/${this.props.version}`
+        );
+        window.ga('set', 'page', this.props.version);
+        window.ga('send', 'pageview');
+
         switch (this.props.version) {
             case 'backup':
                 return (
