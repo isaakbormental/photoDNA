@@ -28,7 +28,7 @@ class PageIndex extends Component {
                     text: <span>Sex, age, and sexual orientation</span>
                 },
                 {
-                    text: <span className="page_index__link" onClick={() => this.props.switchPage('readme')} >Read more</span>
+                    text: <span className="page_index__link" onClick={() => this.props.switchPage('readme')}>Read more</span>
                 }
             ]
         };
@@ -40,6 +40,7 @@ class PageIndex extends Component {
             case "with_charts":
                 return (
                     <div className="page page_index page_index_with-charts">
+                        <div className="page_index__readme" onClick={() => this.props.switchPage('readme')}>Read more</div>
                         <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
                         <div className="page_index__venice-photo">
                             <img src={venicePhoto} alt=""/>

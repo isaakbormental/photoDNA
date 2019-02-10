@@ -66,6 +66,16 @@
   }
   &_with-charts & {
 
+    &__readme {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      font-weight: 300;
+      font-size: .8em;
+      text-align: center;
+      text-decoration: underline;
+    }
+
     &__venice-photo {
       margin: 0.8em -15px 0;
       img {
