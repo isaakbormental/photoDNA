@@ -174,4 +174,62 @@
 
   }
 
+  &_woman-chart {
+    padding-top: 2.5em;
+    padding-bottom: 5.5em;
+    background: #000 url("img/woman-photo.jpg") no-repeat right bottom / auto 88%;
+
+    .chart {
+      width: 4.5em;
+      height: 4.5em;
+    }
+
+    .button__notice {
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    @media (max-height: 500px) {
+      padding-top: 2em;
+
+      .chart {
+        font-size: .8em;
+      }
+
+    }
+
+  }
+  &_woman-chart & {
+
+    &__charts {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-self: flex-start;
+      flex-grow: 1;
+      max-height: 318px;
+      margin-top: 1em;
+      padding-left: .75em;
+    }
+
+    &__readme {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      font-weight: 300;
+      font-size: .8em;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    &__heading {
+      align-self: flex-start;
+      text-align: left;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 1.5em;
+      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+  }
+
 }

@@ -10,8 +10,9 @@ import PageReport from "./pages/PageReport/PageReport";
 
 const getVersion = () => {
     const versions = [
-        'with_charts',
-        'noOrientation'
+        // 'with_charts',
+        // 'noOrientation',
+        'womanChart'
         // 'woman'
     ];
     const random = Math.floor(Math.random() * versions.length);

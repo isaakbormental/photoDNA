@@ -87,11 +87,25 @@ class PageIndex extends Component {
                         >Try now</Button>
                     </div>
                 );
-            case "woman":
+            case "womanChart":
                 return (
-                    <div className="page page_index page_index_woman">
-                        <h1 className="page_index__heading">Find your true nationality</h1>
+                    <div className="page page_index page_index_woman-chart">
+                        <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
                         <div className="page_index__readme" onClick={() => this.props.switchPage('readme')}>Read more</div>
+                        <div className="page_index__charts">
+                            <Chart data={{
+                                name: "Nigerian",
+                                confidence: 65
+                            }}/>
+                            <Chart data={{
+                                name: "Indian",
+                                confidence: 43
+                            }}/>
+                            <Chart data={{
+                                name: "Swedish",
+                                confidence: 21
+                            }}/>
+                        </div>
                         <Button
                             className="button page_index__button"
                             notice="Select your best selfie and find out! Free!"
