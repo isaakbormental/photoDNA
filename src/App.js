@@ -72,7 +72,11 @@ class App extends Component {
                 }
                 return response.json();
             }).then((response) => {
-                this.switchPage('report');
+                const ua = navigator.userAgent.toLowerCase();
+                const isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+                if(!isAndroid) {
+                    this.switchPage('report');
+                }
                 this.setState({shareImg:response.link});
                 window.location.href = `callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&lp_button_cta=${this.state.shareLpBtn}&func=appShare`;
             }).catch(() => {
@@ -142,7 +146,7 @@ class App extends Component {
 
         window.appShare = (boolean) => {
             if (boolean) {
-                // this.switchPage('report');
+                this.switchPage('report');
             }
         };
 
