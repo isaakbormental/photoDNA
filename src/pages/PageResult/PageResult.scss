@@ -88,7 +88,7 @@
     }
   }
 
-  &_noOrientation {
+  &_noOrientation, &_manNoOrientation, &_womanNoOrientation {
 
     .preview {
       max-height: 13.65em;
@@ -102,7 +102,7 @@
 
   }
 
-  &_noOrientation & {
+  &_noOrientation , &_manNoOrientation &, &_womanNoOrientation & {
 
     &__orientation {
       display: none;

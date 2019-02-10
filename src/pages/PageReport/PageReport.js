@@ -18,6 +18,7 @@ class PageReport extends Component {
         };
     }
     render() {
+        const pageClass = "page page_report page_report_" + this.props.version;
         let age = this.props.data.age;
         let gender = this.props.data.gender;
         let ageEl = age ? <span className="page_report__age">Age <span className="page_report__age-num">{age}</span></span> : '';
@@ -47,7 +48,7 @@ class PageReport extends Component {
                     onClick={() => this.props.shareThroughApi()}
                     alt=""/>
                 {blur}
-                <div className="page page_report">
+                <div className={pageClass}>
                     <h1 className="page_report__heading">Full report</h1>
                     <div className="page_report__demography">
                         {genderEl}

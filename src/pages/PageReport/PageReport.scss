@@ -165,4 +165,35 @@
     font-size: .8em;
   }
 
+  &_manNoOrientation, &_womanNoOrientation {
+    justify-content: center;
+
+    @media (max-height: 485px) {
+      font-size: .9em;
+    }
+
+  }
+  &_manNoOrientation &, &_womanNoOrientation & {
+
+    &__demography, &__orientation {
+      display: none;
+    }
+
+    &__heading {
+      position: absolute;
+      top: .83em;
+      left: 1.7em;
+    }
+
+    &__charts {
+      margin-top: .5em;
+      flex-grow: initial;
+    }
+
+    &__features {
+      max-height: 205px;
+    }
+
+  }
+
 }

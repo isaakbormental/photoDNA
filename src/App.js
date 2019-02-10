@@ -10,9 +10,10 @@ import PageReport from "./pages/PageReport/PageReport";
 
 const getVersion = () => {
     const versions = [
-        // 'with_charts',
-        // 'noOrientation',
-        'womanChart'
+        'manChart',
+        'manNoOrientation',
+        'womanChart',
+        'womanNoOrientation'
         // 'woman'
     ];
     const random = Math.floor(Math.random() * versions.length);
@@ -264,6 +265,7 @@ class App extends Component {
             case 'report':
                 return <PageReport
                     data={this.state.data}
+                    version={this.state.version}
 
                     switchPage={(page, backPage) => this.switchPage(page, backPage)}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
