@@ -145,7 +145,7 @@ class App extends Component {
 
         window.appShare = (boolean) => {
             if (boolean) {
-                this.switchPage('report');
+                this.reportPage.setState({locked:false});
             }
         };
 
@@ -263,6 +263,7 @@ class App extends Component {
         switch (this.state.page) {
             case 'report':
                 return <PageReport
+                    ref={ref => (this.reportPage = ref)}
                     data={this.state.data}
 
                     switchPage={(page, backPage) => this.switchPage(page, backPage)}
