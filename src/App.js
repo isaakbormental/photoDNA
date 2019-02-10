@@ -18,6 +18,9 @@ const getVersion = () => {
     return versions[random];
 };
 
+const ua = navigator.userAgent.toLowerCase();
+const isAndroid = ua.indexOf("android") > -1;
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -73,8 +76,6 @@ class App extends Component {
                 }
                 return response.json();
             }).then((response) => {
-                const ua = navigator.userAgent.toLowerCase();
-                const isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
                 if(!isAndroid) {
                     this.switchPage('report');
                 }
@@ -266,6 +267,7 @@ class App extends Component {
 
                     switchPage={(page, backPage) => this.switchPage(page, backPage)}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
+                    shareThroughApi={() => this.shareThroughApi()}
                 />;
             case 'results':
                 return <PageResult
