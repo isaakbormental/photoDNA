@@ -30,6 +30,8 @@
     width: 100%;
     position: absolute;
     bottom: calc(100% + .1em);
+    left: 50%;
+    transform: translate(-50%);
     margin-bottom: .6em;
     font-size: .8em;
     font-weight: 300;
