@@ -7,6 +7,8 @@ import Chart from "../../components/Chart/Chart";
 import LineBar from "../../components/LineBar/LineBar";
 import Feature from "../../components/Feature/Feature";
 
+import shareIcon from "./img/share.svg"
+
 
 class PageReport extends Component {
     constructor(props) {
@@ -32,13 +34,18 @@ class PageReport extends Component {
 
         let blur = !this.state.locked ? '' : <div className="page_report__blur">
             <Button
-                className="button  page_report__button"
+                className="button  page_report__blur-btn"
                 onClick={() => this.setState({locked:false})}
             >SHOW FULL REPORT</Button>
         </div>;
 
         return (
             <div className="page_report__wrapper">
+                <img
+                    className="page_report__share-icon"
+                    src={shareIcon}
+                    onClick={() => this.props.shareThroughApi()}
+                    alt=""/>
                 {blur}
                 <div className="page page_report">
                     <h1 className="page_report__heading">Full report</h1>

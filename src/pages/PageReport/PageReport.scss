@@ -18,6 +18,37 @@
     & + .page_report {filter: blur(.6em)}
   }
 
+  &__share-icon {
+    position: absolute;
+    z-index: 2;
+    top: .9em;
+    right: 1.25em;
+  }
+
+  &__blur-btn {
+    min-height: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+    background: transparent;
+    box-shadow: none;
+    font-weight: 500;
+    line-height: 1;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+    color: #FFFFFF;
+  }
+
+  &__blur + .page_report {
+    .button {
+      visibility: hidden;
+    }
+  }
+
 
   &__heading {
     margin: 0;
