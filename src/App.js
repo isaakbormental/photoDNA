@@ -58,6 +58,10 @@ class App extends Component {
         if (this.state.appEnv === 'production') {
             this.setState({loadingStatus:'sharing'});
             this.switchPage("loading");
+
+
+            const versionForBack = (this.state.version === 'manNoOrientation' || this.state.version === 'womanNoOrientation') ? 'noOrientation' : this.state.version;
+
             fetch('/amazgen',{
                 method: 'POST',
                 headers: {
@@ -70,7 +74,7 @@ class App extends Component {
                     data: this.state.data,
                     shareOrientation: this.state.shareOrientation,
                     shareCountry: this.state.shareCountry,
-                    version: this.state.version
+                    version: versionForBack
                 })
             }).then((response) => {
                 if (!response.ok) {
