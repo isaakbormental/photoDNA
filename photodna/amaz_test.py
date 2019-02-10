@@ -645,12 +645,26 @@ import requests
 
 pic_url = 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg'
 
-response = requests.get(pic_url, stream=True)
-base = base64.b64encode(response.content)
-print(type(base64.b64encode(response.content)))
-imag = do_post_shit_v2(base)
-imag.show()
-# cv2.imshow('image',stringToImage(base))
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
-print(type(response.content))
+# response = requests.get(pic_url, stream=True)
+# base = base64.b64encode(response.content)
+# print(type(base64.b64encode(response.content)))
+# imag = do_post_shit_v2(base)
+# imag.show()
+# # cv2.imshow('image',stringToImage(base))
+# # cv2.waitKey(0)
+# # cv2.destroyAllWindows()
+# print(type(response.content))
+something = [[5,15],[2, 26],[9, 89]]
+the_median = 0.6
+new_arr=[]
+
+new_arr.append([something[0][0], int(100*something[0][1]/(something[0][1]+0.5*the_median))])
+new_arr.append([something[1][0], int(100*something[1][1]/(something[0][1]+the_median))])
+new_arr.append([something[2][0], int(100*something[2][1]/(something[0][1]+2*the_median))])
+
+if new_arr[0][1] > 99:
+    new_arr[0][1] = 99
+if new_arr[1][1] > 99:
+    new_arr[1][1] = 99
+if new_arr[2][1] > 99:
+    new_arr[2][1] = 99
