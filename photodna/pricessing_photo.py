@@ -94,11 +94,11 @@ def get_nationality(something):
     new_arr.append((something[2][0],int(100*something[2][1]/(something[0][1]+2*the_median))))
 
     if (new_arr[0][1] > 99):
-        new_arr[0][1] == 99
+        new_arr[0][1] = 99
     if (new_arr[1][1] > 99):
-        new_arr[1][1] == 99
+        new_arr[1][1] = 99
     if (new_arr[2][1] > 99):
-        new_arr[2][1] == 99
+        new_arr[2][1] = 99
 
     return new_arr
 
