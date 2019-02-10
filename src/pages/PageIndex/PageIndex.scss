@@ -103,4 +103,75 @@
 
   }
 
+  &_no-orientation & {
+
+    &__readme {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      font-weight: 300;
+      font-size: .8em;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    &__venice-photo {
+      margin: 0.8em -15px 0;
+      img {
+        display: block;
+      }
+    }
+
+    &__charts {
+      display: flex;
+      width: 100%;
+      margin-top: .8em;
+
+      .chart {
+        width: 100%;
+        max-width: 90px;
+        margin: 0 auto;
+
+        &__name {
+          font-size: .5em;
+        }
+
+      }
+
+    }
+
+  }
+
+  &_woman {
+    padding-top: 1.3em;
+    background: #000 url("img/woman-photo.jpg") no-repeat right bottom / auto 96%;
+
+    @media (max-height: 500px) {
+      background-size: auto 92%;
+    }
+
+  }
+  &_woman & {
+
+    &__readme {
+      margin-top: .4em;
+      align-self: flex-start;
+      font-weight: 300;
+      font-size: .8em;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    &__heading {
+      align-self: flex-start;
+      max-width: 400px;
+      text-align: left;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: 2em;
+      text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+  }
+
 }

@@ -21,9 +21,10 @@ class PageResult extends Component {
 
     render() {
 
+        const pageClass = "page page_result page_result_" + this.props.version;
         let linebars = this.props.shareOrientation ? "page_result__linebars" : "page_result__linebars page_result__linebars_hidden";
         return (
-            <div className="page page_result">
+            <div className={pageClass}>
                 {/*<Post
                     ref={ref => (this.child = ref)}
                     imgUrl={this.props.imgUrl}

@@ -10,8 +10,9 @@ import PageReport from "./pages/PageReport/PageReport";
 
 const getVersion = () => {
     const versions = [
-        'with_charts'
-        // 'noOrientation'
+        'with_charts',
+        // 'noOrientation',
+        'woman'
     ];
     const random = Math.floor(Math.random() * versions.length);
     return versions[random];
@@ -268,6 +269,7 @@ class App extends Component {
                 />;
             case 'results':
                 return <PageResult
+                    version={this.state.version}
                     imgUrl={this.state.imgUrl}
                     data={this.state.data}
                     shareCountry={this.state.shareCountry}

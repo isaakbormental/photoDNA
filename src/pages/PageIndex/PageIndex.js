@@ -37,9 +37,30 @@ class PageIndex extends Component {
         console.log(this.props.version);
 
         switch (this.props.version) {
-            case "with_charts":
+            case 'backup':
                 return (
-                    <div className="page page_index page_index_with-charts">
+                    <div className="page page_index">
+                        <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
+                        <h2 className="page_index__subheading">Send a&nbsp;selfie and get result:</h2>
+                        <ul className="page_index__list">
+                            {this.state.list.map((item, index) => {
+                                return(
+                                    <li className="page_index__list-item" key={index}>
+                                        <span className="page_index__list-icon">{item.icon ? <img src={item.icon} alt=""/> : ''}</span>
+                                        <span className="page_index__list-text">{item.text}</span>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                        <Button
+                            className="button page_index__button"
+                            onClick={() => this.props.chooseImgFromApi()}
+                        >Try now</Button>
+                    </div>
+                );
+            case "noOrientation":
+                return (
+                    <div className="page page_index page_index_no-orientation">
                         <div className="page_index__readme" onClick={() => this.props.switchPage('readme')}>Read more</div>
                         <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
                         <div className="page_index__venice-photo">
@@ -66,23 +87,43 @@ class PageIndex extends Component {
                         >Try now</Button>
                     </div>
                 );
-            default:
+            case "woman":
                 return (
-                    <div className="page page_index">
-                        <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
-                        <h2 className="page_index__subheading">Send a&nbsp;selfie and get result:</h2>
-                        <ul className="page_index__list">
-                            {this.state.list.map((item, index) => {
-                                return(
-                                    <li className="page_index__list-item" key={index}>
-                                        <span className="page_index__list-icon">{item.icon ? <img src={item.icon} alt=""/> : ''}</span>
-                                        <span className="page_index__list-text">{item.text}</span>
-                                    </li>
-                                )
-                            })}
-                        </ul>
+                    <div className="page page_index page_index_woman">
+                        <h1 className="page_index__heading">Find your true nationality</h1>
+                        <div className="page_index__readme" onClick={() => this.props.switchPage('readme')}>Read more</div>
                         <Button
                             className="button page_index__button"
+                            notice="Select your best selfie and find out! Free!"
+                            onClick={() => this.props.chooseImgFromApi()}
+                        >Try now</Button>
+                    </div>
+                );
+            default:
+                return (
+                    <div className="page page_index page_index_with-charts">
+                        <div className="page_index__readme" onClick={() => this.props.switchPage('readme')}>Read more</div>
+                        <h1 className="page_index__heading">DNA test by&nbsp;selfie</h1>
+                        <div className="page_index__venice-photo">
+                            <img src={venicePhoto} alt=""/>
+                        </div>
+                        <div className="page_index__charts">
+                            <Chart data={{
+                                name: "British",
+                                confidence: 65
+                            }}/>
+                            <Chart data={{
+                                name: "Russian",
+                                confidence: 53
+                            }}/>
+                            <Chart data={{
+                                name: "Azerbaijanian",
+                                confidence: 21
+                            }}/>
+                        </div>
+                        <Button
+                            className="button page_index__button"
+                            notice="Just select your best selfie! Free!"
                             onClick={() => this.props.chooseImgFromApi()}
                         >Try now</Button>
                     </div>
