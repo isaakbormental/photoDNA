@@ -96,7 +96,7 @@ class App extends Component {
     switchPage(page, backPage) {
         backPage = backPage ? backPage : false;
 
-        this.setState({page,backPage, lockedReport:false},() => {
+        this.setState({page,backPage, lockedReport:true},() => {
             let pageGA = page === 'loading' ? `${page}_${this.state.loadingStatus}` : page;
             pageGA = this.state.version ? `${this.state.version}_${pageGA}` : pageGA;
             window.history.pushState(
