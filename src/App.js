@@ -33,6 +33,7 @@ class App extends Component {
             shareImg: '',
             shareTitle: 'Learn more about yourself',
             shareDescription: 'Machine leaning will tell your origin',
+            shareLpBtn: 'Try it',
             shareLpTitle: 'One more step to learn about yourself',
             shareLpDescription: 'Our technology is integrated into Photo Lab app. Download it to learn your dominant nationalities and try out numerous photo filters and effects'
         };
@@ -73,7 +74,7 @@ class App extends Component {
             }).then((response) => {
                 this.switchPage('report');
                 this.setState({shareImg:response.link});
-                window.location.href = `callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&func=appShare`;
+                window.location.href = `callback:nativeShare?og_image=${encodeURIComponent(this.state.shareImg)}&og_title=${encodeURIComponent(this.state.shareTitle)}&og_description=${encodeURIComponent(this.state.shareDescription)}&lp_title=${encodeURIComponent(this.state.shareLpTitle)}&lp_description=${encodeURIComponent(this.state.shareLpDescription)}&lp_button_cta=${this.state.shareLpBtn}&func=appShare`;
             }).catch(() => {
                 this.switchPage('error')
             });

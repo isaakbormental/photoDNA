@@ -21,12 +21,12 @@
       left: 0;
       width: .55em;
       height: .55em;
-      border: .05em solid #C3B4B4;
+      border: .05em solid #fff;
       border-radius: 50%;
     }
     &_active {
       &:before {
-        border-color: #BA85CE;
+        border-color: #fff;
         color: #fff;
       }
       &:after {
@@ -36,7 +36,7 @@
         left: .15em;
         width: .25em;
         height: .25em;
-        background: #BA85CE;
+        background: #fff;
         border-radius: 50%;
       }
     }
