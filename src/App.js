@@ -19,7 +19,7 @@ const getVersion = () => {
 };
 
 const ua = navigator.userAgent.toLowerCase();
-const isAndroid = ua.indexOf("android") > -1;
+window.isAndroid = ua.indexOf("android") > -1;
 
 class App extends Component {
     constructor(props) {
@@ -76,7 +76,7 @@ class App extends Component {
                 }
                 return response.json();
             }).then((response) => {
-                if(!isAndroid) {
+                if(!window.isAndroid) {
                     this.switchPage('report');
                 }
                 this.setState({shareImg:response.link});
