@@ -9,13 +9,6 @@ import Feature from "../../components/Feature/Feature";
 
 
 class PageReport extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            locked: true
-        };
-    }
-
     render() {
         let age = this.props.data.age;
         let gender = this.props.data.gender;
@@ -32,7 +25,7 @@ class PageReport extends Component {
         };
 
         let blur;
-        if (this.state.locked) {
+        if (this.props.locked) {
 
             if(window.isAndroid) {
                 blur = <div className="page_report__blur">
@@ -45,7 +38,7 @@ class PageReport extends Component {
                 blur = <div className="page_report__blur">
                     <Button
                         className="button  page_report__button"
-                        onClick={() => this.setState({locked:false})}
+                        onClick={() => this.props.changeLocked(false)}
                     >SHOW FULL REPORT</Button>
                 </div>
             }

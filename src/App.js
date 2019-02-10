@@ -33,6 +33,7 @@ class App extends Component {
             loadingStatus: '',
             shareCountry: '',
             shareOrientation: true,
+            lockedReport: true,
             testImg: '',
             shareImg: '',
             shareTitle: 'Learn more about yourself',
@@ -90,6 +91,10 @@ class App extends Component {
         }
     }
 
+    changeLocked(boolean) {
+        this.setState({lockedReport:boolean})
+    }
+
     switchPage(page, backPage) {
         backPage = backPage ? backPage : false;
 
@@ -145,7 +150,8 @@ class App extends Component {
 
         window.appShare = (boolean) => {
             if (boolean) {
-                this.reportPage.setState({locked:false});
+                this.changeLocked(false);
+                this.switchPage('report');
             }
         };
 
@@ -263,9 +269,10 @@ class App extends Component {
         switch (this.state.page) {
             case 'report':
                 return <PageReport
-                    ref={ref => (this.reportPage = ref)}
                     data={this.state.data}
+                    locked={this.state.lockedReport}
 
+                    changeLocked={(boolean) => this.changeLocked(boolean)}
                     switchPage={(page, backPage) => this.switchPage(page, backPage)}
                     chooseImgFromApi={() => this.chooseImgFromApi()}
                     shareThroughApi={() => this.shareThroughApi()}
