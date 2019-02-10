@@ -271,6 +271,271 @@ def do_post_shit(baseimg):
 
     return img
 
+def do_post_shit_v2(baseimg):
+
+    test = 'd'
+    # test = 'new'
+    share = False
+    if test == 'new':
+        podlozhka = cv2.imread('purple_2.jpg', cv2.IMREAD_UNCHANGED)
+    else:
+        if share:
+            podlozhka = cv2.imread('purple_1_orient.jpg', cv2.IMREAD_UNCHANGED)
+        else:
+            podlozhka = cv2.imread('purple_1_no_orient.jpg', cv2.IMREAD_UNCHANGED)
+
+    for i in range(podlozhka.shape[0]):
+        for j in range(podlozhka.shape[1]):
+            temp = podlozhka[i, j][0]
+            podlozhka[i, j][0] = podlozhka[i, j][2]
+            podlozhka[i, j][2] = temp
+
+    nat1 = 'Uzbek'
+    nat2 = 'Ru'
+    nat3 = 'Ukrop'
+    conf1 = 85
+    conf2 = 62
+    conf3 = 34
+
+    the_list_v = (conf2, conf3, conf1)
+
+    d_n = defaultdict(int)
+    if (conf1 == max(the_list_v)):
+        the_flag = nat1
+        d_n[the_flag] = conf1
+        if (conf2 > conf3):
+            flag2 = nat2
+            flag3 = nat3
+            d_n[flag2] = conf2
+            d_n[flag3] = conf3
+        else:
+            flag2 = nat3
+            flag3 = nat2
+            d_n[flag2] = conf3
+            d_n[flag3] = conf2
+
+    else:
+        if (conf2 == max(the_list_v)):
+            the_flag = nat2
+            d_n[the_flag] = conf2
+            if (conf1 > conf3):
+                flag2 = nat1
+                flag3 = nat3
+                d_n[flag2] = conf1
+                d_n[flag3] = conf3
+            else:
+                flag2 = nat3
+                flag3 = nat1
+                d_n[flag2] = conf3
+                d_n[flag3] = conf1
+        else:
+            the_flag = nat3
+            d_n[the_flag] = conf3
+            if (conf2 > conf1):
+                flag2 = nat2
+                flag3 = nat1
+                d_n[flag2] = conf2
+                d_n[flag3] = conf1
+            else:
+                flag2 = nat1
+                flag3 = nat2
+                d_n[flag2] = conf1
+                d_n[flag3] = conf2
+    pol = 'female'
+    root = os.getcwd()
+
+    if test == 'new':
+        pass
+    else:
+        if (pol == 'male'):
+            sex = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\orientation_gender_age\\purple_mars.jpg', 1)
+            if share:
+                podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+            else:
+                podlozhka = put_element_overlay(427, 860, sex, podlozhka)
+        else:
+            sex = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\orientation_gender_age\\purple_venus.jpg', 1)
+            if share:
+                podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+            else:
+                podlozhka = put_element_overlay(427, 860, sex, podlozhka)
+    # if (pol == 'male'):
+    #     sex = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\orientation_gender_age\\mars.png', 1)
+    #     podlozhka = put_element_overlay(422, 860, sex, podlozhka) #865, 427
+    # else:
+    #     sex = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\orientation_gender_age\\venus.png', 1)
+    #     podlozhka = put_element_overlay(422, 860, sex, podlozhka)
+
+    image = string_to_image(baseimg)
+
+    vis_shir = float(image.shape[0] / image.shape[1])
+
+    if vis_shir > 630 / 618:
+        # образаем высоту (то кесть ширину)
+        # ЗДЕСЬ ШИРИНА ЭТО ВЫСОТА И НАОБОРОТ
+        the_chop = int((image.shape[0] - image.shape[1] * 630 / 618) / 2)
+        crop_img = image[the_chop:image.shape[0] - the_chop, :]
+        # 0 428 флаг; 190 111 - размеры его 428+190=618
+    else:
+        the_chop = int((image.shape[1] - image.shape[0] * 618 / 630) / 2)
+        crop_img = image[:, the_chop:image.shape[1] - the_chop]
+
+    res_shir = 618
+    res_vis = 630
+    flg1 = 0
+    flg2 = 428
+    new = cv2.resize(crop_img, (res_shir, res_vis), interpolation=cv2.INTER_AREA)
+    # new = cv2.cvtColor(new, cv2.COLOR_BGR2GRAY)
+    # the_filter = cv2.imread('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\picture\\filter.png', cv2.IMREAD_UNCHANGED)
+    #
+    # podlozhka = put_picture_and_filter(int((630 - new.shape[0]) / 2), int((618 - new.shape[1]) / 2), the_filter, new,
+    #                                    podlozhka)
+
+    podlozhka = put_element_overlay(0, 0, new, podlozhka)
+
+    os.chdir(os.getcwd() + "\\for_posting\\flags\\")
+
+    for file in glob.glob("*.png"):
+        if (file[:-4] == the_flag):
+            # true_flag = cv2.imread(root + "/for_posting/flags/" + file, 1)
+            # true_flag_im = Image.open(os.path.join(root, 'for_posting', 'flags', file))
+            # true_flag = pil_image_to_cv(true_flag_im)
+            true_flag = cv2.imread("D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\for_posting\\flags\\" + file, 1)
+            resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
+            podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
+
+    # c_png = cv2.imread("D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\circle.png", 1)
+    os.chdir('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna')
+
+    #
+
+    # podlozhka = put_element_overlay(36, 804, c_png, podlozhka)
+
+    img = Image.fromarray(podlozhka)
+
+    draw = ImageDraw.Draw(img)
+
+    if test == 'new':
+        font1 = ImageFont.truetype("Roboto-Medium.ttf", 60)
+
+        draw.text((683, 254), str(d_n[the_flag]), '#ffffff', font=font1)
+        draw.text((860, 254), str(d_n[flag2]), '#ffffff', font=font1)
+        draw.text((1040, 254), str(d_n[flag3]), '#ffffff', font=font1)
+
+        text1_x = 736
+        text1_y = 319
+        text2_x = 913
+        text2_y = 319
+        text3_x = 1091
+        text3_y = 319
+
+        if (len(the_flag) < 9):
+            font3 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            text1_y += 2
+        else:
+            if (len(the_flag) < 12):
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+                text1_y += 5
+            else:
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 17)
+                text1_y += 10
+
+        if (len(flag2) < 9):
+            font4 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            text2_y += 2
+        else:
+            if (len(flag2) < 12):
+                font4 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+                text2_y += 5
+            else:
+                font4 = ImageFont.truetype("Roboto-Medium.ttf", 17)
+                text2_y += 10
+
+        if (len(flag3) < 9):
+            font5 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            text3_y += 2
+        else:
+            if (len(flag3) < 12):
+                font5 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+                text3_y += 5
+            else:
+                font5 = ImageFont.truetype("Roboto-Medium.ttf", 17)
+                text3_y += 10
+
+        text_size = draw.textsize(the_flag, font=font3)
+        x = text1_x - (text_size[0] / 2)
+        draw.text((x, text1_y), the_flag, font=font3, fill='#ffffff')
+
+        text_size = draw.textsize(flag2, font=font4)
+        x = text2_x - (text_size[0] / 2)
+        draw.text((x, text2_y), flag2, font=font4, fill='#ffffff')
+
+        text_size = draw.textsize(flag3, font=font5)
+        x = text3_x - (text_size[0] / 2)
+        draw.text((x, text3_y), flag3, font=font5, fill='#ffffff')
+    else:
+        font1 = ImageFont.truetype("Roboto-Medium.ttf", 70)
+
+        font6 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+
+        font7 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+
+        font8 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+
+        draw.text((843, 70), str(d_n[the_flag]), '#ffffff', font=font1)
+        if share:
+            draw.text((869, 426), str(10) + '%', '#ffffff', font=font6)
+            draw.text((869, 463), str(90) + '%', '#ffffff', font=font6)
+
+        if share:
+            draw.text((1016, 421), str(25), '#ffffff', font=font7)
+        else:
+            draw.text((1011, 425), str(25), '#ffffff', font=font7)
+
+        draw.text((1058, 321), str(d_n[flag2]) + '%', '#ffffff', font=font8)
+        draw.text((1058, 358), str(d_n[flag3]) + '%', '#ffffff', font=font8)
+        font2 = ImageFont.truetype("Roboto-Medium.ttf", 50)
+        # draw.text((927, 81), "%", (154, 154, 160), font=font2)
+
+        text1_x = 898
+        text1_y = 150
+        text2_x = 788
+        text2_y = 332
+        text3_x = 788
+        text3_y = 368
+
+        if (len(the_flag) < 9):
+            font3 = ImageFont.truetype("Roboto-Medium.ttf", 35)
+        else:
+            if (len(the_flag) < 12):
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            else:
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+
+        if (len(flag2) < 9) and (len(flag3) < 9):
+            font5 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+        else:
+            font5 = ImageFont.truetype("Roboto-Medium.ttf", 14)
+
+        text_size = draw.textsize(the_flag, font=font3)
+        x = text1_x - (text_size[0] / 2)
+        draw.text((x, text1_y), the_flag, font=font3, fill=(255, 255, 255))
+
+        text_size = draw.textsize(flag2, font=font5)
+        x = text2_x - (text_size[0] / 2)
+        draw.text((x, text2_y), flag2, font=font5, fill='#ffffff')
+
+        text_size = draw.textsize(flag3, font=font5)
+        x = text3_x - (text_size[0] / 2)
+        draw.text((x, text3_y), flag3, font=font5, fill='#ffffff')
+
+    allchar = string.ascii_letters + string.digits
+    rand_file_name = "".join(choice(allchar) for x in range(68))
+    # img = img.convert('RGB')
+    img.save('D:\\Education\\Hackathones\\photohack\\pravoslavnaya_papka\\photoDNA\\photodna\\png' + rand_file_name + '.png')
+
+    return img
+
 
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
     for i in range(elelment.shape[0]):
@@ -286,6 +551,18 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
                 # podlozhka[position_h + i, position_w + j][3]=255
     return podlozhka
 
+def put_element_overlay_circle(position_h,position_w,elelment,podlozhka):
+    for i in range(elelment.shape[0]):
+        for j in range(elelment.shape[1]):
+            if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
+                podlozhka[position_h + i, position_w + j][0] = 255
+                podlozhka[position_h + i, position_w + j][1] = 255
+                podlozhka[position_h + i, position_w + j][2] = 255
+            else:
+                podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][2]
+                podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
+                podlozhka[position_h+i, position_w+ j][2] = elelment[i, j][0]
+    return podlozhka
 
 def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
     for i in range(elelment.shape[0]):
@@ -363,8 +640,7 @@ def pil_image_to_cv(pil_image):
     return podlozhka[:, :, ::-1].copy()
 
 
-##  imag = do_post_shit(base_img)
-# imag.show()
+
 import requests
 
 pic_url = 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg'
@@ -372,8 +648,9 @@ pic_url = 'https://sun1-8.userapi.com/c852136/v852136706/857e6/p9Eg7bMKxhc.jpg'
 response = requests.get(pic_url, stream=True)
 base = base64.b64encode(response.content)
 print(type(base64.b64encode(response.content)))
-
-cv2.imshow('image',stringToImage(base))
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+imag = do_post_shit_v2(base)
+imag.show()
+# cv2.imshow('image',stringToImage(base))
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
 print(type(response.content))

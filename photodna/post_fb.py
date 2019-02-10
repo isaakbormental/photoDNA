@@ -15,20 +15,22 @@ from random import *
 import requests
 os.chdir('/var/www/html/backend/photoDNA/photodna')
 
+
 def do_post_shit(jason):
     characteristics = jason
-    if characteristics['shareOrientation']:
-        podlozhka = cv2.imread('gay_krug.jpg', cv2.IMREAD_UNCHANGED)
+    if characteristics['version'] == 'noOrientation':
+        podlozhka = cv2.imread('purple_2.jpg', cv2.IMREAD_UNCHANGED)
     else:
-        podlozhka = cv2.imread('prosto_krug.jpg', cv2.IMREAD_UNCHANGED)
+        if characteristics['shareOrientation']:
+            podlozhka = cv2.imread('purple_1_orient.jpg', cv2.IMREAD_UNCHANGED)
+        else:
+            podlozhka = cv2.imread('purple_1_no_orient.jpg', cv2.IMREAD_UNCHANGED)
 
     for i in range(podlozhka.shape[0]):
         for j in range(podlozhka.shape[1]):
             temp = podlozhka[i, j][0]
             podlozhka[i, j][0] = podlozhka[i, j][2]
             podlozhka[i, j][2] = temp
-
-
 
     # the_list_v = (characteristics['data']['nationality'][0]['confidence'], characteristics['data']['nationality'][1]['confidence'],
     #               characteristics['data']['nationality'][2]['confidence'])
@@ -79,18 +81,21 @@ def do_post_shit(jason):
 
     # root = os.getcwd()
 
-    if (characteristics['data']['gender'] == 'male'):
-        sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/mars.png', 1)
-        if characteristics['shareOrientation']:
-            podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
-        else:
-            podlozhka = put_element_overlay(422, 860, sex, podlozhka)
+    if characteristics['version'] == 'noOrientation':
+        pass
     else:
-        sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/venus.png', 1)
-        if characteristics['shareOrientation']:
-            podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+        if (characteristics['data']['gender'] == 'male'):
+            sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/purple_mars.jpg', 1)
+            if characteristics['shareOrientation']:
+                podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+            else:
+                podlozhka = put_element_overlay(427, 860, sex, podlozhka)
         else:
-            podlozhka = put_element_overlay(422, 860, sex, podlozhka)
+            sex = cv2.imread('/var/www/html/backend/photoDNA/photodna/for_posting/orientation_gender_age/purple_venus.jpg', 1)
+            if characteristics['shareOrientation']:
+                podlozhka = put_element_overlay(458, 1020, sex, podlozhka)
+            else:
+                podlozhka = put_element_overlay(427, 860, sex, podlozhka)
 
     # image = string_to_image(characteristics['img'].split(',', 1)[1])
 
@@ -131,70 +136,131 @@ def do_post_shit(jason):
             resized = cv2.resize(true_flag, (190, 111), interpolation=cv2.INTER_AREA)
             podlozhka = put_element_overlay(flg1, flg2, resized, podlozhka)
 
-    c_png = cv2.imread("/var/www/html/backend/photoDNA/photodna/circle.png", 1)
     os.chdir('/var/www/html/backend/photoDNA/photodna')
 
-    podlozhka = put_element_overlay(36, 804, c_png, podlozhka)
+    # if characteristics['version'] == 'noOrientation':
+    #     pass
+    # else:
+    #     c_png = cv2.imread("/var/www/html/backend/photoDNA/photodna/circle.png", 1)
+    #     podlozhka = put_element_overlay_circle(36, 804, c_png, podlozhka)
 
     img = Image.fromarray(podlozhka)
 
     draw = ImageDraw.Draw(img)
 
-    font1 = ImageFont.truetype("Roboto-Medium.ttf", 70)
+    if characteristics['version'] == 'noOrientation':
+        font1 = ImageFont.truetype("Roboto-Medium.ttf", 60)
 
-    font6 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+        draw.text((683, 254), str(d_n[the_flag]), '#ffffff', font=font1)
+        draw.text((860, 254), str(d_n[flag2]), '#ffffff', font=font1)
+        draw.text((1040, 254), str(d_n[flag3]), '#ffffff', font=font1)
 
-    font7 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+        text1_x = 736
+        text1_y = 319
+        text2_x = 913
+        text2_y = 319
+        text3_x = 1091
+        text3_y = 319
 
-    font8 = ImageFont.truetype("Roboto-Medium.ttf", 25)
-
-    draw.text((843, 70), str(d_n[the_flag]), (154, 154, 160), font=font1)
-    if characteristics['shareOrientation']:
-        draw.text((865, 427), str(characteristics['data']['straight']) + '%', '#D63796', font=font6)
-        draw.text((865, 463), str(characteristics['data']['gay']) + '%', '#D63796', font=font6)
-
-    if characteristics['shareOrientation']:
-        draw.text((1016, 421), str(characteristics['data']['age']), '#D63796', font=font7)
-    else:
-        draw.text((1011, 425), str(characteristics['data']['age']), '#D63796', font=font7)
-
-
-    draw.text((1058, 321), str(d_n[flag2]) + '%', '#C0C0C0', font=font8)
-    draw.text((1058, 358), str(d_n[flag3]) + '%', '#C0C0C0', font=font8)
-    font2 = ImageFont.truetype("Roboto-Medium.ttf", 50)
-    draw.text((927, 81), "%", (154, 154, 160), font=font2)
-
-    text1_x = 898
-    text1_y = 150
-    text2_x = 788
-    text2_y = 332
-    text3_x = 788
-    text3_y = 368
-
-    if (len(the_flag) < 9):
-        font3 = ImageFont.truetype("Roboto-Medium.ttf", 35)
-    else:
-        if (len(the_flag) < 12):
+        if (len(the_flag) < 9):
             font3 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            text1_y += 2
         else:
-            font3 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+            if (len(the_flag) < 12):
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+                text1_y += 5
+            else:
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 17)
+                text1_y += 10
 
-    if (len(flag2) < 9) and (len(flag3) < 9):
-        font5 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+        if (len(flag2) < 9):
+            font4 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            text2_y += 2
+        else:
+            if (len(flag2) < 12):
+                font4 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+                text2_y += 5
+            else:
+                font4 = ImageFont.truetype("Roboto-Medium.ttf", 17)
+                text2_y += 10
+
+        if (len(flag3) < 9):
+            font5 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            text3_y += 2
+        else:
+            if (len(flag3) < 12):
+                font5 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+                text3_y += 5
+            else:
+                font5 = ImageFont.truetype("Roboto-Medium.ttf", 17)
+                text3_y += 10
+
+        text_size = draw.textsize(the_flag, font=font3)
+        x = text1_x - (text_size[0] / 2)
+        draw.text((x, text1_y), the_flag, font=font3, fill='#ffffff')
+
+        text_size = draw.textsize(flag2, font=font4)
+        x = text2_x - (text_size[0] / 2)
+        draw.text((x, text2_y), flag2, font=font4, fill='#ffffff')
+
+        text_size = draw.textsize(flag3, font=font5)
+        x = text3_x - (text_size[0] / 2)
+        draw.text((x, text3_y), flag3, font=font5, fill='#ffffff')
     else:
-        font5 = ImageFont.truetype("Roboto-Medium.ttf", 14)
+        font1 = ImageFont.truetype("Roboto-Medium.ttf", 70)
 
-    text_size = draw.textsize(the_flag, font=font3)
-    x = text1_x - (text_size[0] / 2)
-    draw.text((x, text1_y), the_flag, font=font3, fill=(120, 120, 120))
+        font6 = ImageFont.truetype("Roboto-Medium.ttf", 20)
 
-    text_size = draw.textsize(flag2, font=font5)
-    x = text2_x - (text_size[0] / 2)
-    draw.text((x, text2_y), flag2, font=font5, fill='#969696')
+        font7 = ImageFont.truetype("Roboto-Medium.ttf", 25)
 
-    text_size = draw.textsize(flag3, font=font5)
-    x = text3_x - (text_size[0] / 2)
-    draw.text((x, text3_y), flag3, font=font5, fill='#969696')
+        font8 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+
+        draw.text((843, 70), str(d_n[the_flag]), (154, 154, 160), font=font1)
+        if characteristics['shareOrientation']:
+            draw.text((869, 426), str(characteristics['data']['straight']) + '%', '#ffffff', font=font6)
+            draw.text((869, 463), str(characteristics['data']['gay']) + '%', '#ffffff', font=font6)
+
+        if characteristics['shareOrientation']:
+            draw.text((1016, 421), str(characteristics['data']['age']), '#ffffff', font=font7)
+        else:
+            draw.text((1011, 425), str(characteristics['data']['age']), '#ffffff', font=font7)
+
+        draw.text((1058, 321), str(d_n[flag2]) + '%', '#ffffff', font=font8)
+        draw.text((1058, 358), str(d_n[flag3]) + '%', '#ffffff', font=font8)
+        font2 = ImageFont.truetype("Roboto-Medium.ttf", 50)
+        # draw.text((927, 81), "%", (154, 154, 160), font=font2)
+
+        text1_x = 898
+        text1_y = 150
+        text2_x = 788
+        text2_y = 332
+        text3_x = 788
+        text3_y = 368
+
+        if (len(the_flag) < 9):
+            font3 = ImageFont.truetype("Roboto-Medium.ttf", 35)
+        else:
+            if (len(the_flag) < 12):
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 25)
+            else:
+                font3 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+
+        if (len(flag2) < 9) and (len(flag3) < 9):
+            font5 = ImageFont.truetype("Roboto-Medium.ttf", 20)
+        else:
+            font5 = ImageFont.truetype("Roboto-Medium.ttf", 14)
+
+        text_size = draw.textsize(the_flag, font=font3)
+        x = text1_x - (text_size[0] / 2)
+        draw.text((x, text1_y), the_flag, font=font3, fill=(255, 255, 255))
+
+        text_size = draw.textsize(flag2, font=font5)
+        x = text2_x - (text_size[0] / 2)
+        draw.text((x, text2_y), flag2, font=font5, fill='#ffffff')
+
+        text_size = draw.textsize(flag3, font=font5)
+        x = text3_x - (text_size[0] / 2)
+        draw.text((x, text3_y), flag3, font=font5, fill='#ffffff')
 
     allchar = string.ascii_letters + string.digits
     rand_file_name = "".join(choice(allchar) for x in range(68))
@@ -220,6 +286,20 @@ def do_post_shit(jason):
 def put_element_overlay(position_h,position_w,elelment,podlozhka):
     for i in range(elelment.shape[0]):
         for j in range(elelment.shape[1]):
+            # if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
+            #     podlozhka[position_h + i, position_w + j][0] = 255
+            #     podlozhka[position_h + i, position_w + j][1] = 255
+            #     podlozhka[position_h + i, position_w + j][2] = 255
+            # else:
+            podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][2]
+            podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
+            podlozhka[position_h+i, position_w+ j][2] = elelment[i, j][0]
+                # podlozhka[position_h + i, position_w + j][3]=255
+    return podlozhka
+
+def put_element_overlay_circle(position_h,position_w,elelment,podlozhka):
+    for i in range(elelment.shape[0]):
+        for j in range(elelment.shape[1]):
             if ((elelment[i, j][0]==0) and(elelment[i, j][1]==0)and (elelment[i, j][2] == 0)):
                 podlozhka[position_h + i, position_w + j][0] = 255
                 podlozhka[position_h + i, position_w + j][1] = 255
@@ -228,7 +308,6 @@ def put_element_overlay(position_h,position_w,elelment,podlozhka):
                 podlozhka[position_h+i, position_w+ j][0] = elelment[i, j][2]
                 podlozhka[position_h+i, position_w+ j][1] = elelment[i, j][1]
                 podlozhka[position_h+i, position_w+ j][2] = elelment[i, j][0]
-                # podlozhka[position_h + i, position_w + j][3]=255
     return podlozhka
 
 def put_element_transperency_shit(position_h,position_w,elelment,podlozhka):
