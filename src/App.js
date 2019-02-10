@@ -27,7 +27,7 @@ class App extends Component {
         this.state = {
             appEnv: 'production',
             version: getVersion(),
-            page: 'report',
+            page: 'default',
             backPage: '',
             imgUrl: '',
             loadingStatus: '',
