@@ -10,10 +10,10 @@ import PageReport from "./pages/PageReport/PageReport";
 
 const getVersion = () => {
     const versions = [
-        'manChart',
-        'manNoOrientation',
-        'womanChart',
-        'womanNoOrientation'
+        'manChart'
+        // 'manNoOrientation',
+        // 'womanChart',
+        // 'womanNoOrientation'
         // 'woman'
     ];
     const random = Math.floor(Math.random() * versions.length);
@@ -39,7 +39,7 @@ class App extends Component {
             shareImg: '',
             shareTitle: 'Learn more about yourself',
             shareDescription: 'Machine leaning will tell your origin',
-            shareLpBtn: 'Try it',
+            shareLpBtn: 'Try free',
             shareLpTitle: 'One more step to learn about yourself',
             shareLpDescription: 'Our technology is integrated into Photo Lab app. Download it to learn your dominant nationalities and try out numerous photo filters and effects'
         };
