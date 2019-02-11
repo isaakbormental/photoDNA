@@ -68,7 +68,7 @@ class PageIndex extends Component {
                         </div>
                         <div className="page_index__charts">
                             <Chart data={{
-                                name: "British",
+                                name: "American",
                                 confidence: 65
                             }}/>
                             <Chart data={{
@@ -76,7 +76,7 @@ class PageIndex extends Component {
                                 confidence: 53
                             }}/>
                             <Chart data={{
-                                name: "Azerbaijanian",
+                                name: "Indian",
                                 confidence: 21
                             }}/>
                         </div>
@@ -149,7 +149,7 @@ class PageIndex extends Component {
                         </div>
                         <div className="page_index__charts">
                             <Chart data={{
-                                name: "British",
+                                name: "American",
                                 confidence: 65
                             }}/>
                             <Chart data={{
@@ -157,7 +157,7 @@ class PageIndex extends Component {
                                 confidence: 53
                             }}/>
                             <Chart data={{
-                                name: "Azerbaijanian",
+                                name: "Indian",
                                 confidence: 21
                             }}/>
                         </div>
